@@ -19,7 +19,8 @@ public class DisasterController {
 @RequestMapping("/")
 public String displayDisasters(){
     AllDisastersWrapper allDisastersWrapper = releafWebService.fetchDisasterData();
-   return allDisastersWrapper.getDisasterDataList().get(0).getFields().getName();
+    AllDisastersWrapper allDisastersDetailWrapper = releafWebService.fetchDisasterDetailData();
+   return allDisastersDetailWrapper.getDisasterDataList().get(0).getFields().getDescription();
 
 
 }

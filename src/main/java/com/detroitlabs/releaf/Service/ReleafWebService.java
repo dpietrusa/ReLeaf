@@ -11,5 +11,10 @@ public class ReleafWebService {
         return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters?appname=releaf", AllDisastersWrapper.class);
     }
 
+    public AllDisastersWrapper fetchDisasterDetailData(){
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters/45924", AllDisastersWrapper.class);
+    }
+
 
 }
