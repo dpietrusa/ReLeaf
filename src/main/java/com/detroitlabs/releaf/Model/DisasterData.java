@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisasterData {
 
     private String id;
-    private String fields;
+    private Fields fields;
 
     @JsonProperty("id")
     public String getId() {
@@ -20,12 +20,12 @@ public class DisasterData {
     }
 
     @JsonProperty("fields")
-    public String getFields() {
+    public Fields getFields() {
         return fields;
     }
 
     @JsonProperty("fields")
-    public void setFields(String fields) {
+    public void setFields(Fields fields) {
         this.fields = fields;
     }
 }
