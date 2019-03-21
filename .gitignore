@@ -3,5 +3,5 @@
 .gradle/*
 out/
 build/
-
+application.properties
 /gradle.properties
