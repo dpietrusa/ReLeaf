@@ -11,22 +11,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class DisasterController {
 
 
-@Autowired
+    @Autowired
     private ReleafWebService releafWebService;
 
 
-@ResponseBody
-@RequestMapping("/")
-public String displayDisasters(){
-    AllDisastersWrapper allDisastersWrapper = releafWebService.fetchDisasterData();
-    AllDisastersWrapper allDisastersDetailWrapper = releafWebService.fetchDisasterDetailData();
+    @ResponseBody
+    @RequestMapping("/")
+    public String displayDisasters() {
+        AllDisastersWrapper allDisastersWrapper = releafWebService.fetchDisasterData();
+        AllDisastersWrapper allDisastersDetailWrapper = releafWebService.fetchDisasterDetailData();
 //   return allDisastersDetailWrapper.getDisasterDataList().get(0).getFields().getDescription();
-    return allDisastersWrapper.getDisasterDataList().get(0).getId();
+        return allDisastersWrapper.getDisasterDataList().get(0).getId();
 
 
-}
-
-
+    }
 
 
 }
