@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 public class ReleafWebService {
     public AllDisastersWrapper fetchDisasterData(){
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters?appname=releaf", AllDisastersWrapper.class);
+        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters?appname=releaf&sort=date:desc", AllDisastersWrapper.class);
     }
 
     public AllDisastersWrapper fetchDisasterDetailData(){

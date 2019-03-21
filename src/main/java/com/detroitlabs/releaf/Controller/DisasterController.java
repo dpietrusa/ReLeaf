@@ -20,7 +20,8 @@ public class DisasterController {
 public String displayDisasters(){
     AllDisastersWrapper allDisastersWrapper = releafWebService.fetchDisasterData();
     AllDisastersWrapper allDisastersDetailWrapper = releafWebService.fetchDisasterDetailData();
-   return allDisastersDetailWrapper.getDisasterDataList().get(0).getFields().getDescription();
+//   return allDisastersDetailWrapper.getDisasterDataList().get(0).getFields().getDescription();
+    return allDisastersWrapper.getDisasterDataList().get(0).getId();
 
 
 }
