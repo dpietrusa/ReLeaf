@@ -1,0 +1,2486 @@
+/* =======================================================================
+Template Name:Grace html5 templete
+Author:  CrazyCafe
+Author URI:
+Version: 1.0
+Description: This Template is created for web template
+Developed By:Romana Nasrin
+--------------------------------------------------------------------------
+CSS INDEX
+** Home Page Css
+==> Header-Top Css
+==> Header-Bottom Css
+==> romana_hero_area Css
+==> romana_save_life_area Css
+==> romana_cause_area Css
+==> romana_cta_area Css
+==> romana_events_area Css
+==> romana_client_area Css
+==> romana_blog_area Css
+==> newsletter_area Css
+==> romana_footer_area Css
+** All_Page_Common  Css
+** About Page  Css
+** Event Page  Css
+** Event-detail Page  Css
+** Testimonial Page  Css
+** Blog Page  Css
+** Blog-dfetail Page  Css
+** Volunteer Page Css
+** Cause Page Css
+** Cause-Detail Page Css
+** Gallery Page Css
+** Donation Page Css
+** 404 Page Css
+** Contact Page Css
+** Preloader Css
+/* ===================================== Import Scss ================================== */
+.theme_color, .owl-nav div:hover, .romana_client_area .owl-nav div:hover, .romana_header_top a:hover, .save_life_text h4 span, .romana_cause_btn a:hover, .event_date h3, .event_btn a:hover, .romana_single_client_text_img:hover .romana_client_title, .newsletter_area .common_btn, .romana_footer_area .footer_widget:hover h2, .romana_footer_area .footer_widget ul li a:hover, .romana_footer_area a, .romana_footer_area span, .breadcrumb a:hover, .breadcrumb > li.active a, .days, .single_info a, .share_tag_area a:hover, .romana_comments_text a i, .romana_single_cause_next_right_content ul li:after, .romana_most_trusted_area .volunteer_inner_content, .gallery_hover, .romana_404_area h1 {
+  color: #19b968; }
+
+.heading_color, .btn2, label, .tab_area ul.tabs li, .tab_area .tab-content p span, .save_life_text h4, .romana_cause_btn a, .romana_cta_area .common_btn, .event_date h3 span, .romana_single_client_text_img h3, .blog_btns a i, .day_wrap, .single_info h5, .blog_pagination a, .share_tag_area a span, .romana_comments_text h4, .romana_comments_text a, .comment_form label, .romana_single_cause_next_right_content, .custom_donate a, .romana_404_area .search_form form a, .contact_icon {
+  color: #222222; }
+
+.heading_bg, .romana_header_top, .mean-container .mean-nav {
+  background: #222222; }
+
+.theme_bg, .mean-container .mean-nav ul li a, .mean-container .mean-nav ul li a:hover, .mean-container .mean-nav ul li a.mean-expand:hover, .save_life_st:after, .tab_area ul.tabs li.current, .blog_pagination a:hover {
+  background: #19b968; }
+
+.white_color, .romana_header_top a, .romana_hero_text h1, .tab_area ul.tabs li.current, .romana_cta_area h2, .newsletter_area, .newsletter_area h2 {
+  color: #fff; }
+
+.white_bg, .newsletter_area .common_btn {
+  background: #fff; }
+
+.trns, .breadcrumb a {
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.trns4 {
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s; }
+
+.trns5, .common_btn, .btn2, .owl-nav div, .romana_header_top a, .header-top-right .common_btn, .mean-container .mean-nav ul li a, .search, .romana_cause_btn a, .romana_single_client_text_img h3, .romana_client_title, .romana_footer_area .footer_widget h2, .romana_footer_area .footer_widget ul li, .romana_footer_area .footer_widget ul li a, .romana_footer_area a, .romana_footer_area span, .volunteer_content .volunteer_img:after, .volunteer_inner_content, .volunteer_inner_content .volunteer_social_icons a, .blog_pagination a, .share_tag_area, .share_tag_area a, .single_gallery_img .gallery_img:after, .gallery_hover {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+
+.sp {
+  padding: 95px 0px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .sp {
+      padding: 80px 0px; } }
+
+.spt {
+  padding-top: 95px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .spt {
+      padding-top: 80px; } }
+
+.spb {
+  padding-bottom: 95px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .spb {
+      padding-bottom: 80px; } }
+
+.sp100 {
+  padding: 100px 0px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .sp100 {
+      padding: 80px 0px; } }
+
+.spt100 {
+  padding-top: 100px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .spt100 {
+      padding-top: 80px; } }
+
+.spb100 {
+  padding-bottom: 100px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .spb100 {
+      padding-bottom: 80px; } }
+
+.mt66 {
+  margin-top: 66px; }
+
+.smt70 {
+  margin-top: 70px; }
+
+.ml18 {
+  margin-left: 18px; }
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #222222; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    h2 {
+      font-size: 27px; } }
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: inherit;
+  color: #222222; }
+
+.commonh3 {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: inherit;
+  color: #000; }
+
+.common_btn {
+  background: #19b968;
+  display: inline-block;
+  width: 170px;
+  height: 52px;
+  text-align: center;
+  line-height: 52px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1;
+  border-radius: 2px; }
+  .common_btn i {
+    padding-left: 12px;
+    position: relative;
+    top: 1px; }
+
+.btn2 {
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+  text-transform: capitalize; }
+  .btn2:before {
+    content: "\f0da  ";
+    font-family: FontAwesome;
+    right: -15px;
+    position: absolute;
+    top: -2px; }
+
+.hvr-sweep-to-bottom::before {
+  background: #12894d none repeat scroll 0 0;
+  border-radius: 2px; }
+
+.common_bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.common_after, .hero_slider_bg:after, .save_life_st:after, .save_life_img:after, .romana_cta_area:after, .romana_footer_area .romana_footer_top:after, .romana_allPage_area:after, .volunteer_content .volunteer_img:after, .romana_single_cause_next_right_content ul li:after, .single_gallery_img .gallery_img:after, .romana_donate_bg_area:after, .romana_donate_bg_area:before, .contact_form h3:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+
+.common_before, .romana_single_client_text:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0; }
+
+.romana_section_title {
+  margin: 0 auto;
+  max-width: 440px;
+  padding-bottom: 64px;
+  font-size: 15px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_section_title {
+      padding-bottom: 50px;
+      font-size: 15px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_section_title {
+      padding-bottom: 50px;
+      font-size: 15px; } }
+  .romana_section_title h2 {
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_section_title h2 {
+        font-size: 30px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_section_title h2 {
+        font-size: 30px; } }
+
+.common_shadow {
+  border: 10px solid #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12); }
+
+.common_shadow_btn {
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.15); }
+
+.common_input input, .common_input select, .common_input textarea {
+  background: #f9f9f9;
+  border: 1px solid #e9e9e9;
+  height: 50px;
+  margin-bottom: 2px;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 3px;
+  color: #5a5a5a; }
+  .common_input input:focus, .common_input select:focus, .common_input textarea:focus {
+    border: 1px solid #19b968; }
+.common_input textarea {
+  height: 156px;
+  padding-top: 14px;
+  resize: none; }
+
+label {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize; }
+
+.select_option_one {
+  position: relative;
+  display: inline; }
+
+.select_option_one::after {
+  background: transparent;
+  color: #7a7a7a;
+  content: "\f0d7 ";
+  cursor: pointer;
+  font-family: FontAwesome;
+  font-size: 17px;
+  height: 54px;
+  line-height: 58px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -17px;
+  width: 50px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .select_option_one::after {
+      top: -21px; } }
+
+option {
+  padding: 0px 20px; }
+
+.newsletter_area input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #f0f0f0;
+  opacity: 1; }
+
+.newsletter_area input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #f0f0f0;
+  opacity: 1; }
+
+.newsletter_area input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #f0f0f0;
+  opacity: 1; }
+
+.newsletter_area input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #f0f0f0;
+  opacity: 1; }
+
+.common_input input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #5a5a5a;
+  opacity: 1; }
+
+.common_input input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #5a5a5a;
+  opacity: 1; }
+
+.common_input input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #5a5a5a;
+  opacity: 1; }
+
+.common_input input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #5a5a5a;
+  opacity: 1; }
+
+.common_input textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #5a5a5a;
+  opacity: 1; }
+
+.common_input textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #5a5a5a;
+  opacity: 1; }
+
+.common_input textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #5a5a5a;
+  opacity: 1; }
+
+.common_input textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #5a5a5a;
+  opacity: 1; }
+
+.owl-nav div {
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  border: 2px solid #fff;
+  width: 35px;
+  height: 35px;
+  line-height: 31px;
+  text-align: center; }
+  .owl-nav div:hover {
+    border: 2px solid #19b968; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .owl-nav div {
+      bottom: 10%;
+      top: auto; } }
+
+.romana_hero_area .owl-nav div.owl-prev {
+  left: 12%; }
+  @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .romana_hero_area .owl-nav div.owl-prev {
+      left: 4%; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_hero_area .owl-nav div.owl-prev {
+      left: 4%; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_hero_area .owl-nav div.owl-prev {
+      left: 4%; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_hero_area .owl-nav div.owl-prev {
+      left: 50%;
+      margin-left: -37px; } }
+.romana_hero_area .owl-nav div.owl-next {
+  right: 12%; }
+  @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .romana_hero_area .owl-nav div.owl-next {
+      right: 4%; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_hero_area .owl-nav div.owl-next {
+      right: 4%; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_hero_area .owl-nav div.owl-next {
+      right: 4%; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_hero_area .owl-nav div.owl-next {
+      margin-right: -43px;
+      right: 50%; } }
+
+.romana_client_area .owl-nav div {
+  border: 2px solid #bababa;
+  color: #bababa; }
+  .romana_client_area .owl-nav div:hover {
+    border: 2px solid #19b968; }
+  @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .romana_client_area .owl-nav div {
+      bottom: -42%;
+      top: auto; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_client_area .owl-nav div {
+      bottom: 0%;
+      top: auto; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_client_area .owl-nav div {
+      bottom: 0%;
+      top: auto; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_client_area .owl-nav div {
+      bottom: 0%;
+      top: auto; } }
+.romana_client_area .owl-nav div.owl-prev {
+  left: -9%; }
+  @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .romana_client_area .owl-nav div.owl-prev {
+      left: 50%;
+      margin-left: -37px; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_client_area .owl-nav div.owl-prev {
+      left: 50%;
+      margin-left: -37px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_client_area .owl-nav div.owl-prev {
+      left: 50%;
+      margin-left: -37px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_client_area .owl-nav div.owl-prev {
+      left: 50%;
+      margin-left: -37px; } }
+.romana_client_area .owl-nav div.owl-next {
+  right: -9%; }
+  @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .romana_client_area .owl-nav div.owl-next {
+      margin-right: -43px;
+      right: 50%; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_client_area .owl-nav div.owl-next {
+      margin-right: -43px;
+      right: 50%; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_client_area .owl-nav div.owl-next {
+      margin-right: -43px;
+      right: 50%; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_client_area .owl-nav div.owl-next {
+      margin-right: -43px;
+      right: 50%; } }
+
+.owl-carousel .owl-item img {
+  width: auto; }
+
+/* ------------------------------------------------
+    1.***Base Css Start***
+------------------------------------------------- */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  outline: none; }
+
+a:hover, a:focus, input, textarea {
+  text-decoration: none;
+  outline: none; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px; }
+
+img {
+  max-width: 100%; }
+
+ol, ul {
+  margin: 0px;
+  padding: 0px; }
+
+select {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  color: #7a7a7a;
+  background: #fff;
+  font-weight: 300;
+  line-height: 1.8; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+      font-size: 14px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    body {
+      font-size: 14px; } }
+
+/* ==================================== Header-Top Css ============================== */
+.romana_header_top a {
+  font-weight: 400; }
+
+.header-top-left {
+  padding: 8px 15px; }
+  .header-top-left a {
+    margin-right: 30px; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .header-top-left a {
+        margin-right: 5px;
+        font-size: 12px; } }
+    .header-top-left a i {
+      margin-right: 12px;
+      position: relative;
+      top: 2px; }
+      @media only screen and (min-width: 0px) and (max-width: 767px) {
+        .header-top-left a i {
+          margin-right: 7px; } }
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .header-top-right {
+    margin-bottom: 30px;
+    margin-left: -13px;
+    margin-top: 20px;
+    text-align: left; } }
+.header-top-right a i {
+  font-size: 12px;
+  padding-left: 14px; }
+.header-top-right .common_btn {
+  width: 130px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 0px !important;
+  margin-left: 25px; }
+  .header-top-right .common_btn:hover {
+    color: #fff; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .header-top-right .common_btn {
+      width: 152px; } }
+
+/* ==================================== Header-Bottom Css =========================== */
+.romana_header_bottom {
+  position: relative;
+  z-index: 999; }
+
+.romana_logo {
+  margin-top: 25px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_logo {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      z-index: 99; } }
+
+/*menu*/
+@media only screen and (min-width: 768px) {
+  .main_menu {
+    float: right; }
+
+  .main_menu > li {
+    display: inline-block;
+    position: relative; }
+
+  .main_menu a {
+    color: #222;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 83px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.4s linear 0s;
+    text-transform: uppercase;
+    z-index: 99;
+    padding-left: 20px; }
+
+  .main_menu a:hover {
+    color: #19b968; }
+
+  .main_menu > li > a::before,
+  .main_menu > li > a::after {
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+    visibility: hidden; }
+
+  .main_menu > li > a:hover::before {
+    left: 50%;
+    opacity: 1;
+    visibility: visible;
+    animation-name: roundbounce; }
+
+  .main_menu > li > a:hover::after {
+    left: 0;
+    opacity: 1;
+    visibility: visible; }
+
+  .sub_menu a::before {
+    content: "\f101 ";
+    font-family: FontAwesome;
+    left: 0;
+    line-height: 44px;
+    opacity: 0;
+    padding-left: 5px;
+    position: absolute;
+    top: -1px;
+    transition: all 0.3s linear 0s;
+    visibility: hidden; }
+
+  .sub_menu a:hover:before {
+    left: 5px;
+    opacity: 1;
+    visibility: visible; }
+
+  ul.sub_menu {
+    background: #fff none repeat scroll 0 0;
+    border-top: 2px solid #19b968;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    position: absolute;
+    text-align: left;
+    top: 83px;
+    transform: rotateY(37deg) scale(1, 0.7);
+    transition: all 0.3s linear 0s;
+    visibility: hidden;
+    width: 183px;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+
+  .main_menu > Li:hover ul.sub_menu {
+    opacity: 1;
+    transform: rotate(0deg);
+    visibility: visible; }
+
+  .sub_menu > li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: block; }
+
+  .sub_menu a {
+    display: block;
+    line-height: normal;
+    margin: 0;
+    padding: 14px 25px;
+    font-size: 11px; } }
+/*mean menu*/
+.mean-container a.meanmenu-reveal span {
+  background-color: #fff; }
+
+.mean-container a.meanmenu-reveal {
+  color: #222222;
+  padding: 20px 18px;
+  position: absolute;
+  z-index: 2147483647; }
+
+.mean-container a.meanmenu-reveal span {
+  background-color: #222; }
+
+.mean-container .mean-bar {
+  background: transparent none repeat scroll 0 0;
+  display: inline-block;
+  height: 60px;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 2147483647; }
+
+.mean-container .mean-nav {
+  margin-top: 62px; }
+
+.mean-container .mean-nav ul li a.mean-expand {
+  line-height: 35px;
+  padding: 8px !important;
+  border: 0 !important; }
+
+.mean-container .mean-nav ul li a {
+  color: #fff;
+  font-size: 13px; }
+  .mean-container .mean-nav ul li a:hover {
+    color: #eee; }
+
+.mean-container .mean-nav ul li:last-child a {
+  border-bottom: 0px solid #f2f2f2 !important; }
+
+/* Menu Search Icon*/
+.search {
+  position: absolute;
+  right: 0%;
+  top: 27px; }
+
+.search input {
+  background: #fff;
+  border: 2px solid #19b968;
+  color: #222;
+  float: right;
+  padding: 5px 10px;
+  position: relative;
+  right: 0;
+  top: 56px;
+  width: 300px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .search input {
+      background: #19b968;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
+      top: 23px;
+      width: 298px; } }
+
+.search {
+  visibility: hidden;
+  opacity: 0; }
+
+.search.active {
+  visibility: visible;
+  opacity: 1; }
+
+/* ==================================== Hero-Area Css ======================= */
+.hero_slider_bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 644px;
+  position: relative; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .hero_slider_bg {
+      height: 500px; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .hero_slider_bg {
+      height: 500px; } }
+
+.hero_slider_bg:after {
+  background: rgba(0, 0, 0, 0.54); }
+
+.romana_hero_text {
+  position: relative;
+  z-index: 9;
+  padding-top: 170px;
+  padding-left: 100px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_hero_text {
+      font-size: 15px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_hero_text {
+      text-align: center;
+      padding-top: 85px;
+      padding-left: 0px; } }
+  .romana_hero_text h1 {
+    font-size: 45px;
+    font-weight: 300;
+    text-transform: inherit;
+    margin-bottom: 25px;
+    max-width: 452px;
+    line-height: 1.17; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_hero_text h1 {
+        font-size: 40px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_hero_text h1 {
+        font-size: 30px;
+        max-width: 100%; } }
+    .romana_hero_text h1 span {
+      color: #19b968; }
+  .romana_hero_text .common_btn {
+    margin-top: 12px; }
+
+.romana_hero_text h1.animated {
+  animation-duration: 1s; }
+
+.romana_hero_text p.animated {
+  animation-duration: 1.5s; }
+
+.romana_slider_btn.animated {
+  animation-duration: 2s; }
+
+/* ==================================== romana_save_life_area Css ======================= */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .romana_save_life_area .romana_section_title {
+    max-width: 100%; } }
+
+.save_life_st {
+  position: relative; }
+  .save_life_st h2 {
+    text-transform: inherit; }
+  .save_life_st:after {
+    width: 51px;
+    height: 6px;
+    top: 67%; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .save_life_st:after {
+        top: 76%; } }
+
+.tab_area {
+  padding-left: 62px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .tab_area {
+      margin-left: -10px;
+      padding-left: 0; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .tab_area {
+      padding-left: 0px; } }
+  .tab_area ul.tabs {
+    list-style: outside none none;
+    padding: 0; }
+    .tab_area ul.tabs li {
+      background: #f0efee none repeat scroll 0 0;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      height: 45px;
+      line-height: 45px;
+      margin-left: -6px;
+      padding: 0 15px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 132px;
+      border-right: 1px solid #fff;
+      border-left: 1px solid #fff; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .tab_area ul.tabs li {
+          padding: 0px 10px;
+          width: 103px; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .tab_area ul.tabs li {
+          padding: 0 10px;
+          width: 95px;
+          font-size: 10px; } }
+      @media only screen and (min-width: 0px) and (max-width: 767px) {
+        .tab_area ul.tabs li {
+          font-size: 12px;
+          margin-left: -5px;
+          padding: 0px;
+          width: 92px; } }
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .tab_area ul.tabs li {
+          width: 144px; } }
+    .tab_area ul.tabs li.current {
+      position: relative; }
+  .tab_area .tab-content {
+    display: none;
+    padding-right: 0px;
+    padding-top: 30px; }
+    .tab_area .tab-content p {
+      margin-bottom: 20px; }
+      .tab_area .tab-content p span {
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 400; }
+  .tab_area .tab-content.current {
+    display: inherit; }
+
+.save_life_text {
+  background: #fff none repeat scroll 0 0;
+  padding: 60px 26px;
+  z-index: 9; }
+  .save_life_text h4 {
+    font-size: 23px;
+    line-height: 1.5; }
+
+.save_life_img {
+  margin-left: 70px;
+  padding: 12px;
+  position: relative;
+  z-index: 1; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .save_life_img {
+      margin-left: 20px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .save_life_img {
+      margin-left: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .save_life_img {
+      margin-left: 0px;
+      margin-top: 25px; } }
+  .save_life_img:after {
+    background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+    z-index: -1; }
+  .save_life_img img {
+    width: 100%; }
+
+/* ==================================== romana_cause_area Css ======================= */
+.home .romana_cause_area {
+  padding-top: 70px; }
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .romana_single_cause_text_img.romana_single_cause_border {
+    margin-bottom: 30px;
+    margin-top: 20px; } }
+
+.romana_cause_area.pt66 {
+  padding-bottom: 63px; }
+
+.romana_single_cause_text_img {
+  padding-right: 45px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_single_cause_text_img {
+      padding-right: 10px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_single_cause_text_img {
+      padding-right: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_single_cause_text_img {
+      padding-right: 0px; } }
+
+.romana_recent_cause {
+  margin-bottom: 40px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_recent_cause {
+      margin-bottom: -25px; } }
+
+.romana_single_cause_text_img .romana_cause_img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  height: 228px;
+  background-position: center center;
+  margin-bottom: 34px; }
+
+.romana_day_left {
+  background: #19b968;
+  height: 43px;
+  left: 401px;
+  position: absolute;
+  text-align: center;
+  top: 135px;
+  width: 145px;
+  z-index: 9; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_day_left {
+      left: 335px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_day_left {
+      height: 38px;
+      left: 261px;
+      top: 130px;
+      width: 110px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_day_left {
+      display: none; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .romana_day_left {
+      left: 11px;
+      top: 795px; } }
+  .romana_day_left h2 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 41px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_day_left h2 {
+        font-size: 13px;
+        line-height: 37px; } }
+
+.romana_single_cause_text {
+  position: relative; }
+  .romana_single_cause_text h3 {
+    margin-top: 19px;
+    margin-bottom: 15px; }
+    .romana_single_cause_text h3 a {
+      color: #000;
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
+      transition-duration: 0.3s; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .romana_single_cause_text h3 {
+        font-size: 19px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_single_cause_text h3 {
+        font-size: 16px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_single_cause_text h3 {
+        font-size: 22px; } }
+  .romana_single_cause_text .romana_raise_right {
+    float: right;
+    text-transform: capitalize; }
+  .romana_single_cause_text .romana_raise_left {
+    display: block;
+    float: left;
+    text-transform: capitalize; }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .romana_single_cause_text > p {
+    margin-bottom: 36px; } }
+
+.romana_cause_btn {
+  margin-top: 16px;
+  padding-bottom: 30px; }
+  .romana_cause_btn a {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_cause_btn {
+      margin-top: -25px;
+      margin-bottom: -32px; } }
+
+.barfiller {
+  background: #e3e2e2 none repeat scroll 0 0;
+  border: 0 solid #cccccc;
+  border-radius: 8px;
+  box-shadow: none;
+  height: 6px;
+  margin-bottom: 26px;
+  margin-top: 6px; }
+
+.barfiller .fill {
+  background: #19b968;
+  border-radius: 3px; }
+
+.barfiller .tip {
+  display: none; }
+
+.barfiller .tip::after {
+  display: none; }
+
+.romana_single_cause_text_right .romana_single_cause_text_img {
+  padding-right: 0px; }
+
+.romana_single_cause_text_img.romana_single_cause_border {
+  border-bottom: 1px dashed #c2c2c2;
+  margin-bottom: 32px;
+  margin-top: -10px; }
+
+.romana_single_cause_text_img.mh480 {
+  min-height: 480px; }
+
+.romana_single_cause_text_img.mh240 {
+  min-height: 240px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_single_cause_text_img.mh240 {
+      min-height: 243px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_single_cause_text_img.mh240 {
+      min-height: 242px; } }
+
+/* ==================================== romana_cta_area Css ======================= */
+.romana_cta_area {
+  background: url(../../images/cta_bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 50px 0px; }
+  .romana_cta_area:after {
+    background: rgba(25, 185, 104, 0.98) none repeat scroll 0 0; }
+  .romana_cta_area h2 {
+    position: relative;
+    z-index: 9;
+    font-size: 35px;
+    font-weight: 400;
+    margin-top: 7px; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .romana_cta_area h2 {
+        font-size: 32px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_cta_area h2 {
+        font-size: 27px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_cta_area h2 {
+        font-size: 28px;
+        text-align: center; } }
+  .romana_cta_area .common_btn {
+    z-index: 99;
+    background: #fff;
+    position: relative; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_cta_area .common_btn {
+        width: 155px;
+        height: 50px;
+        line-height: 50px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_cta_area .common_btn {
+        display: block;
+        margin: 30px auto 0; } }
+
+/* ==================================== romana_event_area Css ======================= */
+.romana_events_area {
+  padding-bottom: 70px; }
+  .romana_events_area h2 {
+    margin-bottom: 42px; }
+
+.img_event {
+  display: inline-block;
+  float: left;
+  padding-left: 70px;
+  position: relative;
+  padding-right: 30px; }
+
+.text_event {
+  padding-left: 230px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .text_event {
+      padding-left: 215px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .text_event {
+      padding-left: 0;
+      padding-top: 170px; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .text_event h3 {
+      font-size: 15px; } }
+
+.single_event {
+  margin-bottom: 32px;
+  overflow: hidden; }
+
+.event_date {
+  background: #f9f9f9 none repeat scroll 0 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 70px; }
+  .event_date h3 {
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 35px;
+    position: absolute;
+    text-align: center;
+    text-transform: capitalize;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; }
+    .event_date h3 span {
+      font-size: 20px;
+      font-weight: 500;
+      display: block; }
+
+.event_btns {
+  margin-top: 5px;
+  margin-bottom: 8px; }
+
+.event_btns > p {
+  display: inline-block;
+  font-size: 13px;
+  margin-right: 15px; }
+
+.event_btns i {
+  color: #222;
+  margin-right: 9px; }
+
+.event_btn {
+  margin-top: 10px; }
+
+.sub_submit {
+  margin-top: 25px; }
+  .sub_submit .common_btn {
+    border: none;
+    width: 155px; }
+
+.common_input.Volunteer_input > h2 {
+  text-transform: inherit; }
+
+.Volunteer_input {
+  padding-left: 35px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .Volunteer_input {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .Volunteer_input {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .Volunteer_input {
+      padding-left: 0px; } }
+  .Volunteer_input .col-sm-6, .Volunteer_input .col-sm-12 {
+    padding: 10px; }
+
+/* ==================================== romana_client_area Css ======================= */
+.romana_client_area {
+  background: #f4f4f4 none repeat scroll 0 0; }
+  @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .romana_client_area {
+      padding-bottom: 140px; } }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .romana_client_crsl {
+    padding-bottom: 110px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .romana_client_crsl {
+    padding-bottom: 110px; } }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .romana_client_crsl {
+    padding-bottom: 110px; } }
+
+.romana_single_client_text_img {
+  font-style: italic;
+  color: #777777; }
+  .romana_single_client_text_img h3 {
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 20px; }
+
+.romana_client_img {
+  margin-bottom: 22px; }
+  .romana_client_img img {
+    border-radius: 50%; }
+
+.romana_client_title {
+  font-style: normal;
+  font-size: 13px; }
+
+.romana_single_client_text {
+  position: relative; }
+  .romana_single_client_text:after {
+    content: "\f10e ";
+    font-family: FontAwesome;
+    font-size: 49px;
+    color: #e8e8e8;
+    z-index: -1;
+    top: -32px;
+    right: 20px;
+    font-style: normal; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_single_client_text:after {
+        right: 17px;
+        top: -20px;
+        font-size: 32px; } }
+
+/* ==================================== romana_blog_area Css ======================= */
+.romana_blog_area {
+  padding-bottom: 34px; }
+
+.single_blog {
+  margin-bottom: 51px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .single_blog {
+      margin-bottom: 20px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single_blog {
+      max-width: 700px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .single_blog h3 {
+      font-size: 18px; } }
+
+.romana_blog_left .single_blog_text {
+  padding-left: 171px;
+  padding-top: 12px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_blog_left .single_blog_text {
+      padding-left: 0;
+      padding-top: 0; } }
+
+.blog_img_1 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  float: left;
+  height: 170px;
+  width: 140px;
+  border-radius: 5px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .blog_img_1 {
+      width: 100%;
+      margin-bottom: 20px; } }
+
+.blog_img_2 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 202px;
+  border-radius: 5px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .blog_img_2 {
+      width: 100%;
+      margin-bottom: 20px; } }
+
+.blog_btns a {
+  color: #7a7a7a;
+  display: inline-block;
+  font-size: 13px;
+  margin-bottom: 12px;
+  margin-right: 20px;
+  margin-top: 8px; }
+  .blog_btns a i {
+    margin-right: 7px; }
+
+.romana_blog_right {
+  padding-left: 38px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_blog_right {
+      padding-left: 15px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_blog_right {
+      padding-left: 15px; } }
+  .romana_blog_right h3 {
+    margin-top: 25px; }
+
+.blog_btn {
+  margin-top: 10px; }
+
+/* ==================================== romana_recentNews_area Css ======================= */
+.newsletter_area {
+  background: url(../../images/newsletter_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  padding-bottom: 44px;
+  padding-top: 57px; }
+  .newsletter_area h2 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 7px; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .newsletter_area h2 {
+        font-size: 32px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .newsletter_area h2 {
+        font-size: 30px;
+        margin-bottom: 20px; } }
+  .newsletter_area input {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: transparent none repeat scroll 0 0;
+    border-color: currentcolor currentcolor #fff;
+    border-image: none;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    padding: 12px 5px;
+    width: 100%;
+    margin-top: 10px; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .newsletter_area input {
+        margin-top: 16px; } }
+  .newsletter_area .common_btn {
+    margin-top: 10px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .newsletter_area .common_btn {
+      width: 145px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .newsletter_area .common_btn {
+      float: right; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .newsletter_area .common_btn {
+      display: block;
+      margin: 40px auto 0; } }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .newsletter_text {
+    font-size: 13px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .newsletter_text {
+    margin-bottom: 30px; } }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .newsletter_text {
+    text-align: center; } }
+
+/* ======================= romana_footer_area Scss ================================== */
+.romana_footer_area .romana_footer_top {
+  background: url(../../images/footer_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  padding-bottom: 100px;
+  padding-top: 118px; }
+  .romana_footer_area .romana_footer_top:after {
+    background: rgba(34, 34, 34, 0.98); }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_footer_area .romana_footer_top {
+      padding-top: 80px;
+      padding-bottom: 50px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_footer_area .romana_footer_top {
+      padding-top: 30px;
+      padding-bottom: 50px; } }
+.romana_footer_area .footer_widget_text {
+  padding-right: 40px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_footer_area .footer_widget_text {
+      padding-right: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_footer_area .footer_widget_text {
+      padding-right: 0px; } }
+.romana_footer_area .footer_widget_il {
+  padding-left: 37px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_footer_area .footer_widget_il {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_footer_area .footer_widget_il {
+      padding-left: 0px; } }
+.romana_footer_area .footer_widget_gl {
+  padding-left: 40px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_footer_area .footer_widget_gl {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_footer_area .footer_widget_gl {
+      padding-left: 0px; } }
+.romana_footer_area .footer_widget_sl {
+  padding-left: 14px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_footer_area .footer_widget_sl {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_footer_area .footer_widget_sl {
+      padding-left: 0px; } }
+.romana_footer_area .footer_widget {
+  position: relative;
+  z-index: 9999; }
+  .romana_footer_area .footer_widget img {
+    margin-bottom: 35px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_footer_area .footer_widget {
+      margin-top: 40px; } }
+  .romana_footer_area .footer_widget p {
+    margin-bottom: 19px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_footer_area .footer_widget p {
+        margin-bottom: 15px; } }
+  .romana_footer_area .footer_widget a {
+    display: block;
+    margin-bottom: 3px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_footer_area .footer_widget a {
+        font-size: 11px; } }
+  .romana_footer_area .footer_widget a,
+  .romana_footer_area .footer_widget h2 {
+    color: #fff; }
+  .romana_footer_area .footer_widget h2 {
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 40px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_footer_area .footer_widget h2 {
+        font-size: 16px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_footer_area .footer_widget h2 {
+        margin-bottom: 20px; } }
+  .romana_footer_area .footer_widget ul li:hover {
+    padding-left: 5px; }
+  .romana_footer_area .footer_widget ul li a {
+    color: #b0b0b0;
+    padding-bottom: 5px;
+    position: relative;
+    text-transform: capitalize; }
+.romana_footer_area a i, .romana_footer_area span i {
+  padding-right: 13px; }
+.romana_footer_area .pl120 {
+  padding-left: 110px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_footer_area .pl120 {
+      padding-left: 45px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_footer_area .pl120 {
+      padding-left: 25px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_footer_area .pl120 {
+      padding-left: 0px; } }
+
+.footer_widget.footer_widget_pl {
+  padding-left: 48px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .footer_widget.footer_widget_pl {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footer_widget.footer_widget_pl {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .footer_widget.footer_widget_pl {
+      padding-left: 0px; } }
+
+.romana_footer_bottom {
+  background: #373737;
+  color: #939393;
+  padding-top: 28px;
+  padding-bottom: 18px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_footer_bottom {
+      padding-bottom: 15px;
+      padding-top: 20px; } }
+  .romana_footer_bottom span {
+    margin: 0px 3px; }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .romana_footer_bottom_text {
+    font-size: 13px; } }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .romana_footer_bottom_text {
+    font-size: 13px;
+    text-align: center; } }
+
+/* ==================================== All_Page_Common Css ======================= */
+.romana_allPage_area {
+  background: url(../../images/all_page_bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  min-height: 217px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .romana_allPage_area:after {
+    background: rgba(0, 0, 0, 0.66);
+    z-index: -1; }
+  .romana_allPage_area .romana_allPage_text {
+    color: #fff;
+    position: relative; }
+    .romana_allPage_area .romana_allPage_text h1 {
+      font-size: 35px;
+      text-transform: capitalize;
+      font-weight: 500; }
+      @media only screen and (min-width: 0px) and (max-width: 767px) {
+        .romana_allPage_area .romana_allPage_text h1 {
+          font-size: 28px;
+          text-align: center; } }
+
+.breadcrumb {
+  background: transparent none repeat scroll 0 0;
+  margin-bottom: 0;
+  margin-top: 5px;
+  padding: 0;
+  position: relative;
+  z-index: 9; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .breadcrumb {
+      text-align: center; } }
+  .breadcrumb a {
+    color: #fff;
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: 300; }
+
+.breadcrumb > li + li::before {
+  content: "\f068 ";
+  font-family: FontAwesome;
+  color: #fff;
+  font-size: 8px;
+  margin-left: -3px; }
+
+/* ==============================================================================================
+    ************** About Page Css ******************
+================================================================================================= */
+.about .romana_client_area {
+  background: #fff; }
+.about .romana_volunteer_area.spt {
+  margin-bottom: -20px; }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .romana_volunteer_area .col-sm-3 {
+    padding: 5px; } }
+
+.romana_mission_area img {
+  width: 100%; }
+.romana_mission_area .mission_text {
+  padding-left: 40px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_mission_area .mission_text {
+      padding-left: 20px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_mission_area .mission_text {
+      padding-left: 0px; } }
+.romana_mission_area h2 {
+  margin-bottom: 26px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_mission_area h2 {
+      font-size: 25px;
+      margin-top: 40px; } }
+.romana_mission_area p {
+  margin-bottom: 25px; }
+
+.volunteer_content {
+  position: relative; }
+  .volunteer_content .volunteer_img {
+    position: relative; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .volunteer_content .volunteer_img {
+        display: block;
+        height: 250px;
+        margin: 0 auto;
+        width: 250px;
+        margin-bottom: 30px; } }
+    .volunteer_content .volunteer_img:after {
+      background: #222222;
+      opacity: .0;
+      transform: rotate(0);
+      border: 4px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0px 0px 22px rgba(0, 1, 1, 0.2); }
+    .volunteer_content .volunteer_img img {
+      border: 4px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0px 0px 22px rgba(0, 1, 1, 0.2);
+      width: 100%; }
+  .volunteer_content:hover .volunteer_img:after {
+    transform: rotate(1);
+    opacity: 1; }
+  .volunteer_content:hover .volunteer_inner_content {
+    opacity: 1; }
+
+.volunteer_inner_content {
+  color: #a1a1a1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  opacity: 0; }
+  .volunteer_inner_content h4 {
+    color: #fff;
+    font-size: 19px;
+    margin-top: 21px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .volunteer_inner_content h4 {
+        margin-top: 10px;
+        font-size: 15px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .volunteer_inner_content .volunteer_social_icons {
+      margin-top: 10px; } }
+  .volunteer_inner_content .volunteer_social_icons a {
+    border: 1px solid #b1b1b1;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    margin: 0 2px;
+    text-align: center;
+    width: 33px; }
+    .volunteer_inner_content .volunteer_social_icons a:hover {
+      background: #19b968;
+      border: 1px solid #19b968; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .volunteer_inner_content .volunteer_social_icons a {
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+        width: 30px; } }
+
+/* ==============================================================================================
+    ************** Event Page ******************
+================================================================================================= */
+.event .romana_events_area {
+  padding-bottom: 43px; }
+.event .single_event {
+  margin-bottom: 50px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .event .single_event {
+      margin-bottom: 30px; } }
+
+.event_top {
+  padding-bottom: 70px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .event_top {
+      padding-bottom: 30px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .event_top {
+      padding-bottom: 40px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .event_top .img_event {
+      margin-bottom: 30px;
+      width: 100%; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .event_top .img_event {
+      margin-bottom: 30px;
+      width: 100%; } }
+  .event_top .img_event img {
+    border-radius: 4px;
+    width: 100%; }
+  .event_top .text_event {
+    padding-left: 570px;
+    margin-top: 26px; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .event_top .text_event {
+        padding-left: 540px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .event_top .text_event {
+        padding-left: 0; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .event_top .text_event {
+        padding-left: 0; } }
+  .event_top .img_event {
+    padding-left: 100px; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .event_top .img_event {
+        padding-left: 70px; } }
+  .event_top .event_date {
+    height: 80%;
+    top: 10%;
+    width: 100px; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .event_top .event_date {
+        width: 70px; } }
+  .event_top .common_btn {
+    width: 135px;
+    height: 50px;
+    line-height: 50px; }
+    .event_top .common_btn:hover {
+      color: #fff; }
+
+.romana_clock {
+  margin-top: 30px;
+  margin-bottom: 40px; }
+
+.day_wrap {
+  position: relative;
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 700;
+  border: 1px solid #e1e1e1;
+  text-align: center;
+  width: 75px;
+  height: 65px;
+  border-radius: 5px;
+  margin-right: 15px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .day_wrap {
+      margin-right: 5px;
+      width: 62px;
+      font-size: 24px; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .day_wrap {
+      width: 65px; } }
+
+.days {
+  font-size: 12px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  font-weight: 500;
+  text-align: center;
+  z-index: 9;
+  text-transform: capitalize;
+  width: 100px;
+  margin-left: -50px;
+  text-align: center; }
+
+/* ==============================================================================================
+    ************** Event Detail Page ******************
+================================================================================================= */
+.event_detail_left {
+  padding-right: 40px; }
+
+.event_address_info {
+  overflow: hidden;
+  padding-bottom: 40px; }
+
+.single_info {
+  float: left;
+  width: 30%;
+  position: relative;
+  padding-left: 26px; }
+  .single_info h5 {
+    margin-bottom: 7px; }
+  .single_info a {
+    left: 0;
+    position: absolute;
+    top: -5px; }
+
+.event_discription h3 {
+  margin-top: 45px;
+  font-size: 22px; }
+.event_discription p {
+  margin-top: 30px; }
+
+.event_detail_right {
+  padding-right: 15px; }
+  .event_detail_right .romana_clock {
+    margin-top: 0px;
+    margin-bottom: 30px; }
+    .event_detail_right .romana_clock .day_wrap {
+      width: 72px; }
+      .event_detail_right .romana_clock .day_wrap:last-child {
+        margin-right: 0px; }
+
+.buy_ticket {
+  border: 1px solid #f2f2f2;
+  margin-bottom: 30px; }
+
+.buy_ticket > h3 {
+  background-color: #f2f2f2;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center; }
+
+.buy_ticket li {
+  border-bottom: 1px solid #f2f2f2;
+  padding: 13px 22px; }
+
+.buy_ticket span {
+  float: right;
+  text-align: right; }
+
+.ticket_btn {
+  padding-right: 15px; }
+  .ticket_btn img {
+    margin-top: 12px; }
+  .ticket_btn .common_btn {
+    width: 125px;
+    height: 48px;
+    line-height: 48px; }
+
+/* ==============================================================================================
+    ************** Testimonial Page ******************
+================================================================================================= */
+.testimonial .romana_testimonial_area {
+  padding-bottom: 58px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .testimonial .romana_testimonial_area {
+      padding-bottom: 40px; } }
+.testimonial .romana_single_client_text_img {
+  margin-bottom: 42px; }
+.testimonial .romana_single_client_text::after {
+  right: 32px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .testimonial .romana_single_client_text::after {
+      font-size: 32px;
+      top: -16px; } }
+
+/* ==============================================================================================
+    ************** Blog-Page ******************
+================================================================================================= */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blog .single_blog {
+    margin-bottom: 43px; } }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blog .single_blog h3 {
+    font-size: 17px; } }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blog .blog_img_1 {
+    height: 180px; } }
+
+.blog_pagination {
+  padding-bottom: 65px; }
+  .blog_pagination a {
+    background: #eceded none repeat scroll 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: 500;
+    height: 38px;
+    line-height: 38px;
+    margin-right: 3px;
+    text-align: center;
+    width: 38px; }
+    .blog_pagination a:hover {
+      color: #fff; }
+
+/* ==============================================================================================
+    ************** Blog-Detail-Page ******************
+================================================================================================= */
+.blog_img_3 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  height: 420px;
+  margin-bottom: 40px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .blog_img_3 {
+      height: 250px;
+      margin-bottom: 22px; } }
+
+.blog_detail_content {
+  padding-bottom: 100px; }
+  .blog_detail_content .blog_text p {
+    margin-bottom: 25px; }
+
+.share_tag_area {
+  border-top: 1px solid #e2e2e2;
+  overflow: hidden;
+  padding: 20px 0; }
+  .share_tag_area a {
+    color: #818181;
+    margin-right: 2px;
+    text-transform: capitalize; }
+    .share_tag_area a span {
+      font-weight: 400; }
+
+.share {
+  float: left; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .share {
+      float: none;
+      text-align: center;
+      margin-bottom: 10px; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .share {
+      float: left;
+      text-align: left;
+      margin-bottom: 0px; } }
+
+.tags {
+  float: right; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .tags {
+      float: none;
+      text-align: center; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .tags {
+      float: right;
+      text-align: right; } }
+
+.romana_news_comments h3, .comment_form h3 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 46px;
+  text-transform: uppercase;
+  margin-top: 50px; }
+
+.romana_single_comments .romana_comments_img {
+  display: block;
+  float: left; }
+  .romana_single_comments .romana_comments_img img {
+    border-radius: 50%; }
+
+.romana_single_comments {
+  margin-bottom: 50px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_single_comments {
+      margin-bottom: 100px; } }
+
+.romana_comments_text h4 {
+  font-size: 17px;
+  font-weight: 500; }
+  .romana_comments_text h4 span {
+    display: block;
+    color: #969696;
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 12px; }
+
+.romana_single_comments .romana_comments_text {
+  padding-left: 127px;
+  position: relative; }
+
+.romana_single_comments.romana_single_comments:nth-child(odd) {
+  padding-left: 98px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_single_comments.romana_single_comments:nth-child(odd) {
+      padding-left: 0px; } }
+
+.romana_comments_text a {
+  font-size: 17px;
+  font-weight: 500;
+  left: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: auto; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_comments_text a {
+      bottom: -52px;
+      top: auto;
+      left: 50%;
+      margin-left: -17px; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .romana_comments_text a {
+      left: auto;
+      right: 0;
+      top: 0;
+      bottom: auto; } }
+  .romana_comments_text a i {
+    margin-right: 6px; }
+
+.comment_form.common_input > h3 {
+  margin-bottom: 38px;
+  margin-top: 68px; }
+
+.comment_form label {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 13px;
+  text-transform: capitalize; }
+.comment_form input {
+  margin-bottom: 18px; }
+.comment_form .common_btn {
+  border: none;
+  width: 160px;
+  margin-top: 20px; }
+.comment_form textarea {
+  height: 267px; }
+
+/* ==============================================================================================
+    ************** Volunteer-Page ******************
+================================================================================================= */
+.romana_volunteer_tab_form_area {
+  padding-bottom: 70px; }
+  .romana_volunteer_tab_form_area .common_input.Volunteer_input > h2 {
+    margin-bottom: 33px; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_volunteer_tab_form_area .common_input.Volunteer_input > h2 {
+        font-size: 28px;
+        margin-top: 20px; } }
+
+.volunteer .tab_area {
+  padding-left: 0px; }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .volunteer .tab_area ul.tabs li {
+    margin-left: -3px; } }
+.volunteer .romana_volunteer_area {
+  padding-bottom: 40px; }
+  .volunteer .romana_volunteer_area .volunteer_content {
+    margin-bottom: 60px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .volunteer .romana_volunteer_area .volunteer_content {
+        margin-bottom: 35px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .volunteer .romana_volunteer_area .volunteer_content {
+        margin-bottom: 30px; } }
+
+/* ==============================================================================================
+    ************** Causes-Page ******************
+================================================================================================= */
+.causes .romana_cause_area {
+  padding-bottom: 40px; }
+.causes .romana_single_cause_text_img {
+  margin-bottom: 22px; }
+
+/* ==============================================================================================
+    ************** Cause-Deail Page ******************
+================================================================================================= */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .causes_detail .romana_single_cause_right_img .romana_cause_img {
+    margin-bottom: 0; } }
+.causes_detail .romana_single_cause_text_img {
+  padding-right: 0px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .causes_detail .romana_single_cause_text_img {
+      margin-bottom: 30px; } }
+.causes_detail .romana_single_cause_text p {
+  margin-bottom: 18px; }
+.causes_detail .romana_cause_btn {
+  margin-top: 34px;
+  padding-bottom: 30px; }
+  .causes_detail .romana_cause_btn a {
+    color: #fff; }
+
+.romana_single_cause_right_img {
+  padding-left: 40px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_single_cause_right_img {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_single_cause_right_img {
+      padding-left: 0px; } }
+
+.romana_single_cause_right_img .romana_cause_img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 384px;
+  background-position: center center;
+  margin-bottom: 34px;
+  border-radius: 5px; }
+  .romana_single_cause_right_img .romana_cause_img img {
+    width: 100%; }
+
+.romana_caus_detail_next {
+  padding-top: 68px;
+  padding-bottom: 68px; }
+  .romana_caus_detail_next .romana_single_cause_right_img {
+    padding-left: 0px; }
+
+.romana_single_cause_next_right_img {
+  padding-right: 70px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .romana_single_cause_next_right_img {
+      padding-right: 0px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_single_cause_next_right_img {
+      padding-right: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_single_cause_next_right_img {
+      padding-right: 0px; } }
+  .romana_single_cause_next_right_img .romana_cause_img {
+    height: 300px; }
+
+.romana_single_cause_next_right_content {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_single_cause_next_right_content {
+      margin-top: 40px; } }
+  .romana_single_cause_next_right_content ul {
+    margin-top: 20px; }
+    .romana_single_cause_next_right_content ul li {
+      font-size: 14px;
+      font-weight: 300;
+      font-style: normal;
+      padding: 5px 0 8px 30px;
+      position: relative; }
+      .romana_single_cause_next_right_content ul li:after {
+        content: "\f058 ";
+        font-family: FontAwesome;
+        font-size: 20px;
+        left: 0;
+        top: 0; }
+
+.romana_most_trusted_area .romana_section_title {
+  margin: 0;
+  max-width: 440px;
+  padding-bottom: 57px; }
+.romana_most_trusted_area .save_life_st::after {
+  top: 74%; }
+.romana_most_trusted_area .volunteer_inner_content {
+  font-size: 13px; }
+.romana_most_trusted_area .volunteer_social_icons a {
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  width: 30px; }
+.romana_most_trusted_area .volunteer_inner_content h4 {
+  font-size: 15px;
+  margin-top: 15px; }
+.romana_most_trusted_area .col-sm-4 {
+  padding: 0 5px; }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .romana_most_trusted_area .volunteer_content {
+    margin-bottom: 20px; } }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .romana_most_trusted_area .most_trust_content {
+    margin-bottom: 40px; } }
+
+/* ==============================================================================================
+    ************** Gallery Page ******************
+================================================================================================= */
+.romana_gallery_area {
+  padding-bottom: 70px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_gallery_area {
+      padding-bottom: 80px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .romana_gallery_area .col-sm-3 {
+      padding: 0 10px; } }
+
+.single_gallery_img {
+  margin-bottom: 30px;
+  position: relative; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single_gallery_img {
+      margin-bottom: 20px; } }
+  .single_gallery_img .gallery_img {
+    position: relative;
+    margin-bottom: 30px; }
+    .single_gallery_img .gallery_img img {
+      width: 100%; }
+    .single_gallery_img .gallery_img:after {
+      background: #222;
+      opacity: 0; }
+    .single_gallery_img .gallery_img:hover .gallery_hover {
+      opacity: 1;
+      visibility: visible; }
+  .single_gallery_img:hover .gallery_img:after {
+    opacity: .89; }
+  .single_gallery_img:hover {
+    cursor: url(../../images/plus.png), auto; }
+
+.gallery_hover {
+  z-index: 9;
+  font-size: 13px;
+  font-weight: 400;
+  left: 28px;
+  position: absolute;
+  opacity: 0;
+  bottom: 37px;
+  visibility: hidden; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .gallery_hover {
+      left: 20px; } }
+  .gallery_hover h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    line-height: 25px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .gallery_hover h4 {
+        font-size: 16px;
+        line-height: 20px; } }
+
+/* ==============================================================================================
+    ************** Donation Page ******************
+================================================================================================= */
+.romana_donate_bg_area {
+  overflow: hidden;
+  position: relative; }
+  .romana_donate_bg_area:after {
+    background-color: #f4fbf8;
+    height: 52%;
+    left: -50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10000px;
+    z-index: -1; }
+  .romana_donate_bg_area:before {
+    background-image: url("../../images/man.png");
+    background-repeat: no-repeat;
+    bottom: -73px;
+    left: 50%;
+    margin-left: -550px;
+    top: auto;
+    z-index: 0; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .romana_donate_bg_area:before {
+        margin-left: -470px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_donate_bg_area:before {
+        display: none; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_donate_bg_area:before {
+        display: none; } }
+  .romana_donate_bg_area .contact_form {
+    position: relative;
+    top: 0;
+    margin-top: 0px;
+    background: #fff;
+    z-index: 1;
+    padding: 0px;
+    margin-right: 0px; }
+    .romana_donate_bg_area .contact_form .inner {
+      padding: 60px; }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .romana_donate_bg_area .contact_form .inner {
+          padding: 60px 20px; } }
+      @media only screen and (min-width: 0px) and (max-width: 767px) {
+        .romana_donate_bg_area .contact_form .inner {
+          padding: 40px 20px; } }
+  .romana_donate_bg_area .common_btn {
+    float: left; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_donate_bg_area .common_btn {
+        margin-right: 16px; } }
+
+.custom_donate > input {
+  margin-right: 9px;
+  width: 50%; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .custom_donate > input {
+      margin-right: 3px;
+      width: 48%; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .custom_donate > input {
+      width: 100%; } }
+
+.custom_donate {
+  margin-bottom: 30px;
+  margin-top: 40px; }
+  .custom_donate a {
+    border: 1px solid #e9e9e9;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+    padding: 9px;
+    background: #f9f9f9; }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .custom_donate a {
+        margin-left: 0px;
+        margin-right: 13px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .custom_donate a:last-child {
+        margin-right: 0px; } }
+
+.custom_donate a.active {
+  border: 1px solid #19b968;
+  background: #19b968;
+  color: #fff; }
+
+.payment_img {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 23px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .payment_img {
+      margin-left: 0px; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .payment_img {
+      margin-left: 20px; } }
+
+.payment_img > label {
+  margin-bottom: 5px !important; }
+
+.donation .contact_form h3 {
+  font-size: 20px; }
+
+/* ==============================================================================================
+    ************** 404 Page ******************
+================================================================================================= */
+.romana_404_area {
+  padding: 140px 0px; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .romana_404_area {
+      padding: 100px 0px; } }
+  .romana_404_area h1 {
+    font-size: 110px;
+    font-weight: 700; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_404_area h1 {
+        font-size: 90px; } }
+  .romana_404_area h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin-top: 4px;
+    font-weight: 100; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .romana_404_area h2 {
+        font-size: 20px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .romana_404_area h2 {
+        font-size: 20px; } }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      .romana_404_area h2 {
+        font-size: 20px; } }
+    .romana_404_area h2 span {
+      font-weight: 500; }
+  .romana_404_area input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e5e5; }
+  .romana_404_area .search_form {
+    position: relative; }
+    .romana_404_area .search_form form a {
+      border-left: 1px solid #e5e5e5;
+      padding: 0 20px 0 17px;
+      position: absolute;
+      right: 0;
+      top: 11px; }
+  .romana_404_area .common_btn {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 25px;
+    width: 160px; }
+
+.error_img img {
+  padding-left: 75px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .error_img img {
+      padding-left: 0px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .error_img img {
+      padding-left: 0px;
+      margin-top: 80px; } }
+
+/* ==============================================================================================
+    ************** Contact Page ******************
+================================================================================================= */
+#g_Map {
+  height: 500px;
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: 198px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    #g_Map {
+      margin-bottom: 140px;
+      margin-top: 52px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    #g_Map {
+      height: 250px;
+      margin-bottom: 100px; } }
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .romana_contact_area {
+    padding-bottom: 60px; } }
+
+.contact_wrapper {
+  background: #f9f9f9 none repeat scroll 0 0;
+  padding: 35px 0px;
+  padding-left: 35px;
+  padding-right: 20px;
+  border: 1px solid #e9e9e9; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact_wrapper {
+      padding: 28px 5px 24px 15px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .contact_wrapper {
+      margin-bottom: 30px;
+      padding: 35px 20px 35px 25px; } }
+
+.contact_icon {
+  display: flex;
+  float: left;
+  font-size: 44px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact_icon {
+      font-size: 26px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .contact_icon {
+      font-size: 26px; } }
+
+.contact_text {
+  border-left: 2px solid #19b968;
+  margin-left: 67px;
+  padding-left: 20px; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .contact_text {
+      margin-left: 60px;
+      padding-left: 11px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact_text {
+      margin-left: 36px;
+      padding-left: 10px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .contact_text {
+      margin-left: 44px;
+      padding-left: 17px; } }
+  .contact_text a {
+    color: #666666;
+    font-size: 15px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .contact_text a {
+        font-size: 13px; } }
+
+.contact_form {
+  background: #fff none repeat scroll 0 0;
+  margin-top: 80px;
+  padding: 60px;
+  position: absolute;
+  top: -100px;
+  z-index: 99;
+  margin-right: 15px;
+  box-shadow: 0px 0px 9px rgba(0, 1, 1, 0.1); }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact_form {
+      padding: 30px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .contact_form {
+      margin-right: 0;
+      margin-top: 0;
+      position: relative;
+      top: 0;
+      padding: 20px; } }
+  .contact_form h3 {
+    font-weight: 500;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    padding-bottom: 18px;
+    position: relative; }
+    .contact_form h3:after {
+      width: 66px;
+      background: #19b968;
+      height: 3px;
+      top: auto;
+      bottom: 0; }
+  .contact_form .common_btn {
+    margin-top: 30px;
+    border: none; }
+  .contact_form input {
+    margin-bottom: 15px; }
+  .contact_form textarea {
+    height: 160px; }
+  .contact_form label {
+    margin-bottom: 12px; }
+
+/* ==============================================================================================
+    ************** Preloder Css start ******************
+================================================================================================= */
+body.preloader_active {
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+#preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F9F9FA;
+  z-index: 99999999999; }
+
+.preloader_spinner {
+  background: transparent url("../../images/spinner.gif") no-repeat scroll center center;
+  display: block;
+  height: 120px;
+  left: 50%;
+  margin-left: -32px;
+  margin-top: -32px;
+  position: absolute;
+  top: 50%;
+  width: 142px;
+  z-index: 2147483647; }
+
+/*# sourceMappingURL=style.css.map */
