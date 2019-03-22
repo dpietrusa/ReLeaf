@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
-
-<!-- Mirrored from tf.wpcheatsheet.net/html/grace/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2019 00:19:24 GMT -->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +12,7 @@
         ***Favicon***
     ================================================================= -->
 
-    <link rel="shortcut icon" type="image/png" href="images/fevicon.png">
+    <link rel="shortcut icon" type="image/png" th:href="@{..//images/fevicon.png}">
 
     <!-- ================================================================
         ***CSS File***
@@ -24,29 +21,29 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
     <!-- ================= *** Animate CSS *** ======================= -->
-    <link href="css/animate.min.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/animate.min.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Bootstrap CSS *** ===================== -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/bootstrap.min.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Meanmenu CSS *** ===================== -->
-    <link href="css/meanmenu.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/meanmenu.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Hover CSS *** ================== -->
-    <link href="css/hover-min.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/hover-min.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Font-awesome CSS *** ======================= -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/font-awesome.min.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** bar CSS *** =========================== -->
-    <link href="css/bar.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/bar.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Owl Carousel CSS *** ================== -->
-    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/owl.carousel.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Main CSS *** ========================== -->
 
-    <link href="css/custom/style.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/style.css}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,9 +54,9 @@
 </head>
 
 <body class="home">
-    <div id="preloader">
-        <div class="preloader_spinner"></div>
-    </div>
+    <!--<div id="preloader">-->
+        <!--<div class="preloader_spinner"></div>-->
+    <!--</div>-->
     <!-- preloader end -->
 <!-- ==========================================================
     *Header_area start
@@ -69,10 +66,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-7 col-xs-12 header-top-left">
-                        <a href="mailto:gardenhouse@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>gardenhouse@gmail.com</a>
-                        <a href="tel:+88075975854"><i class="fa fa-phone" aria-hidden="true"></i>+88 075 975 854</a>
+                        <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>ReLeaf@ReLeaf.com</a>
+                        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>555-123-4567</a>
                     </div>
-                    <!-- column End -->
+                    <!--&lt;!&ndash; column End &ndash;&gt;-->
                     <div class="col-sm-5 col-xs-12 text-right header-top-right">
                         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -92,7 +89,7 @@
                 <div class="row">
                     <div class="col-sm-2 col-xs-6">
                         <div class="romana_logo">
-                            <a href="index-2.html"><img src="images/logo.png" alt=""></a>
+                            <a href="index-2.html"><img th:src="@{../images/logo.png}" alt=""></a>
                         </div>
                     </div>
                     <!-- column End -->
@@ -154,7 +151,7 @@
 ============================================================ -->
     <section class="romana_hero_area">
         <div class="hero_slider">
-            <div class="hero_slider_bg" style="background-image:url(images/slider_bg.jpg)">
+            <div class="hero_slider_bg" style="background-image:url(/images/slider_bg.jpg)">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
@@ -171,22 +168,22 @@
                 <!-- container end -->
             </div>
             <!-- item one end -->
-            <div class="hero_slider_bg" style="background-image:url(images/slider_bg2.jpg)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="romana_hero_text">
-                                <h1>Let your life be an inspiration help us to
-                                give food to 100+ childrens.</h1>
-                                <a href="donation.html" class="hvr-sweep-to-bottom common_btn">Donate Now <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- column end -->
-                    </div>
-                    <!-- row end -->
-                </div>
-                <!-- container end -->
-            </div>
+            <!--<div class="hero_slider_bg" style="background-image:url(static/images/slider_bg2.jpg)">-->
+                <!--<div class="container">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-12">-->
+                            <!--<div class="romana_hero_text">-->
+                                <!--<h1>Let your life be an inspiration help us to-->
+                                <!--give food to 100+ childrens.</h1>-->
+                                <!--<a href="donation.html" class="hvr-sweep-to-bottom common_btn">Donate Now <i class="fa fa-long-arrow-right"></i></a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; column end &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; row end &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; container end &ndash;&gt;-->
+            <!--</div>-->
             <!-- item two end -->
         </div>
     </section>
@@ -194,60 +191,60 @@
 <!-- ==========================================================
 *romana_save_life_area start
 ============================================================ -->
-    <div class="romana_save_life_area spt100">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="romana_section_title save_life_st">
-                        <h2>Save the life to make the better world.</h2>
-                    </div>
-                </div>
-                <!-- column End -->
-                <div class="col-sm-5">
-                    <div class="tab_area">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <ul class="tabs">
-                                    <li class="tab-link current" data-tab="tab-1">DONATION</li>
-                                    <li class="tab-link" data-tab="tab-2">VOLUNTEER</li>
-                                    <li class="tab-link" data-tab="tab-3">MAKE A GIFT</li>
-                                </ul>
-                                <div id="tab-1" class="tab-content current">
-                                    <p>Duis autem vel eum iriure dolor hendrer in vutate vesseum molestie consequat, vel illum dolore eu feugiat nulla fac at vero eros et accusan et iusto odio dignissim blandit mei dolore eu feugiat nulla facat vero eros et accusan et iusto nt luptatum zzril delenit augue duis.</p>
-                                    <p><span>Duis autem vium eum iriure dolor in hendrer vutate molestie consequat, vel illum dolore eu feugiat accumsan et iusto odio dignissim.</span></p>
-                                </div>
-                                <div id="tab-2" class="tab-content">
-                                    <p>dolor in hendrer in vutate vesse molestie consequat, vel illum dolore Duis autem vel eum iriure .</p>
-                                    <p><span>Duis autem vel eum iriure dolor in hendrer in vutate molestie consequat, vel illum dolore eu feugiat nul at vero</span></p>
-                                </div>
-                                <div id="tab-3" class="tab-content">
-                                    <p>Duis autem vel eum iriure dolor in hendrer in vutate vesse molestie consequat, vel illum dolore eu feugiat nulla fac at ver dolore eu feugiat nulla facat vero eros et accusan et iusto nt luptatum</p>
-                                    <p><span>Duis autem vel eum iriure dolor in hendrer in vutate molestie consequat</span></p>
-                                </div>
-                                <div id="tab-4" class="tab-content">
-                                    <p>Lorem ipsum dolor sit amet</p>
-                                </div>
-                            </div>
-                            <!-- column End -->
-                        </div>
-                        <!-- row End -->
-                    </div>
-                </div>
-                <!-- column End -->
-                <div class="col-sm-4">
-                    <div class="save_life_img" style="background-image:url(images/save_life_img.jpg)">
-                        <div class="save_life_text">
-                            <h4>We are served since <span>22+ years</span> to helpness people with trust and we
-                        are happy.</h4>
-                        </div>
-                    </div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-        </div>
-        <!-- container End -->
-    </div>
+    <!--<div class="romana_save_life_area spt100">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-sm-3">-->
+                    <!--<div class="romana_section_title save_life_st">-->
+                        <!--<h2>Save the life to make the better world.</h2>-->
+                    <!--</div>div-->
+                <!--</div>-->
+                <!--&lt;!&ndash; column End &ndash;&gt;-->
+                <!--<div class="col-sm-5">-->
+                    <!--<div class="tab_area">-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-xs-12">-->
+                                <!--<ul class="tabs">-->
+                                    <!--<li class="tab-link current" data-tab="tab-1">DONATION</li>-->
+                                    <!--<li class="tab-link" data-tab="tab-2">VOLUNTEER</li>-->
+                                    <!--<li class="tab-link" data-tab="tab-3">MAKE A GIFT</li>-->
+                                <!--</ul>-->
+                                <!--<div id="tab-1" class="tab-content current">-->
+                                    <!--<p>Duis autem vel eum iriure dolor hendrer in vutate vesseum molestie consequat, vel illum dolore eu feugiat nulla fac at vero eros et accusan et iusto odio dignissim blandit mei dolore eu feugiat nulla facat vero eros et accusan et iusto nt luptatum zzril delenit augue duis.</p>-->
+                                    <!--<p><span>Duis autem vium eum iriure dolor in hendrer vutate molestie consequat, vel illum dolore eu feugiat accumsan et iusto odio dignissim.</span></p>-->
+                                <!--</div>-->
+                                <!--<div id="tab-2" class="tab-content">-->
+                                    <!--<p>dolor in hendrer in vutate vesse molestie consequat, vel illum dolore Duis autem vel eum iriure .</p>-->
+                                    <!--<p><span>Duis autem vel eum iriure dolor in hendrer in vutate molestie consequat, vel illum dolore eu feugiat nul at vero</span></p>-->
+                                <!--</div>-->
+                                <!--<div id="tab-3" class="tab-content">-->
+                                    <!--<p>Duis autem vel eum iriure dolor in hendrer in vutate vesse molestie consequat, vel illum dolore eu feugiat nulla fac at ver dolore eu feugiat nulla facat vero eros et accusan et iusto nt luptatum</p>-->
+                                    <!--<p><span>Duis autem vel eum iriure dolor in hendrer in vutate molestie consequat</span></p>-->
+                                <!--</div>-->
+                                <!--<div id="tab-4" class="tab-content">-->
+                                    <!--<p>Lorem ipsum dolor sit amet</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; column End &ndash;&gt;-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; row End &ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; column End &ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="col-sm-4">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="save_life_img" style="background-image:url(static/images/save_life_img.jpg)">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="save_life_text">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<h4>We are served since <span>22+ years</span> to helpness people with trust and we&ndash;&gt;-->
+                        <!--&lt;!&ndash;are happy.</h4>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash; column End &ndash;&gt;&ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; row End &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; container End &ndash;&gt;-->
+    <!--</div>-->
 <!-- ==========================================================
 4.*romana_cause_area start
 ============================================================ -->
@@ -266,7 +263,7 @@
             <div class="row ">
                 <div class="col-sm-4">
                     <div class="romana_single_cause_text_img mh480">
-                        <div class="romana_cause_img" style="background-image:url(images/cause_img1.jpg)"></div>
+                        <div class="romana_cause_img" style="background-image:url(static/images/cause_img1.jpg)"></div>
                         <div class="romana_single_cause_text">
                             <div class="romana_raise_goal clearfix">
                                 <div class="romana_raise_left">
@@ -293,7 +290,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="romana_single_cause_text_img mh480">
-                        <div class="romana_cause_img" style="background-image:url(images/cause_img2.jpg)"></div>
+                        <div class="romana_cause_img" style="background-image:url(static/images/cause_img2.jpg)"></div>
                         <div class="romana_single_cause_text">
                             <div class="romana_raise_goal clearfix">
                                 <div class="romana_raise_left">
@@ -405,7 +402,7 @@
                     <div class="single_event">
                         <div class="single_event_left ">
                             <div class="img_event">
-                                <img src="images/event_img1.jpg" alt="">
+                                <img src="../static/images/event_img1.jpg" alt="">
                                 <div class="event_date">
                                     <h3>22 <span>feb</span></h3>
                                 </div>
@@ -429,7 +426,7 @@
                     <div class="single_event">
                         <div class="single_event_left ">
                             <div class="img_event">
-                                <img src="images/event_img2.jpg" alt="">
+                                <img src="../static/images/event_img2.jpg" alt="">
                                 <div class="event_date">
                                     <h3>25 <span>feb</span></h3>
                                 </div>
@@ -503,140 +500,140 @@
 <!-- ==========================================================
 *romana_client_area start
 ============================================================ -->
-    <div class="romana_client_area sp">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="romana_section_title text-center">
-                        <h2>What people <span>says</span> </h2>
-                        <p>Duis autem vel eum iriure dolor in hendrer ammer vutate molestie conseuat amad vel illum dolore eu feuna</p>
-                    </div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-            <div class="row ">
-                <div class="col-xs-12">
-                    <div class="romana_client_crsl">
-                        <div class="romana_single_client_text_img">
-                            <div class="romana_client_img"> <img src="images/client_img1.jpg" alt="">
-                            </div>
-                            <div class="romana_single_client_text">
-                                <p>Duis autem vel kinmeum iriure dolor hendrerit vulputa illum dolore blandit eu feugiat facilii at vero erost en praesent luptatum zzril delenit anyonm afad augmee cilisi. Nam liber tempor cum nobis.</p>
-                            </div>
-                            <div class="romana_client_title">
-                                <h3>Rubel Hossen</h3>
-                                <p>Graphic Designer</p>
-                            </div>
-                        </div>
-                        <!-- romana_single_client_text End -->
-                        <div class="romana_single_client_text_img">
-                            <div class="romana_client_img"> <img src="images/client_img2.jpg" alt="">
-                            </div>
-                            <div class="romana_single_client_text">
-                                <p>Duis autem vel kinmeum iriure dolor hendrerit vulputa illum dolore blandit eu feugiat facilii at vero erost en praesent luptatum zzril delenit anyonm afad augmee cilisi. Nam liber tempor cum nobis.</p>
-                            </div>
-                            <div class="romana_client_title">
-                                <h3>Romana Nasrin</h3>
-                                <p>Webhost Lead</p>
-                            </div>
-                        </div>
-                        <!-- romana_single_client_text End -->
-                        <div class="romana_single_client_text_img">
-                            <div class="romana_client_img"> <img src="images/client_img1.jpg" alt="">
-                            </div>
-                            <div class="romana_single_client_text">
-                                <p>Duis autem vel kinmeum iriure dolor hendrerit vulputa illum dolore blandit eu feugiat facilii at vero erost en praesent luptatum zzril delenit anyonm afad augmee cilisi. Nam liber tempor cum nobis.</p>
-                            </div>
-                            <div class="romana_client_title">
-                                <h3>Delowar Hossen</h3>
-                                <p>Webhost Lead</p>
-                            </div>
-                        </div>
-                        <!-- romana_single_client_text End -->
-                    </div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-        </div>
-        <!-- container End -->
-    </div>
+    <!--<div class="romana_client_area sp">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-xs-12">-->
+                    <!--<div class="romana_section_title text-center">-->
+                        <!--<h2>What people <span>says</span> </h2>-->
+                        <!--<p>Duis autem vel eum iriure dolor in hendrer ammer vutate molestie conseuat amad vel illum dolore eu feuna</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; column End &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; row End &ndash;&gt;-->
+            <!--<div class="row ">-->
+                <!--<div class="col-xs-12">-->
+                    <!--<div class="romana_client_crsl">-->
+                        <!--<div class="romana_single_client_text_img">-->
+                            <!--<div class="romana_client_img"> <img src="../static/images/client_img1.jpg" alt="">-->
+                            <!--</div>-->
+                            <!--<div class="romana_single_client_text">-->
+                                <!--<p>Duis autem vel kinmeum iriure dolor hendrerit vulputa illum dolore blandit eu feugiat facilii at vero erost en praesent luptatum zzril delenit anyonm afad augmee cilisi. Nam liber tempor cum nobis.</p>-->
+                            <!--</div>-->
+                            <!--<div class="romana_client_title">-->
+                                <!--<h3>Rubel Hossen</h3>-->
+                                <!--<p>Graphic Designer</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; romana_single_client_text End &ndash;&gt;-->
+                        <!--<div class="romana_single_client_text_img">-->
+                            <!--<div class="romana_client_img"> <img src="../static/images/client_img2.jpg" alt="">-->
+                            <!--</div>-->
+                            <!--<div class="romana_single_client_text">-->
+                                <!--<p>Duis autem vel kinmeum iriure dolor hendrerit vulputa illum dolore blandit eu feugiat facilii at vero erost en praesent luptatum zzril delenit anyonm afad augmee cilisi. Nam liber tempor cum nobis.</p>-->
+                            <!--</div>-->
+                            <!--<div class="romana_client_title">-->
+                                <!--<h3>Romana Nasrin</h3>-->
+                                <!--<p>Webhost Lead</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; romana_single_client_text End &ndash;&gt;-->
+                        <!--<div class="romana_single_client_text_img">-->
+                            <!--<div class="romana_client_img"> <img src="../static/images/client_img1.jpg" alt="">-->
+                            <!--</div>-->
+                            <!--<div class="romana_single_client_text">-->
+                                <!--<p>Duis autem vel kinmeum iriure dolor hendrerit vulputa illum dolore blandit eu feugiat facilii at vero erost en praesent luptatum zzril delenit anyonm afad augmee cilisi. Nam liber tempor cum nobis.</p>-->
+                            <!--</div>-->
+                            <!--<div class="romana_client_title">-->
+                                <!--<h3>Delowar Hossen</h3>-->
+                                <!--<p>Webhost Lead</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; romana_single_client_text End &ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; column End &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; row End &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; container End &ndash;&gt;-->
+    <!--</div>-->
 <!-- ==========================================================
 *romana_blog_area start
 ============================================================ -->
-    <div class="romana_blog_area spt">
-        <div class="container">
-            <div class="row ">
-                <div class="col-xs-12">
-                    <div class="romana_section_title text-center">
-                        <h2>Latest Blog</h2>
-                        <p>Duis autem vel eum iriure dolor in hendrer ammer vutate molestie conseuat amad vel illum dolore eu feuna</p>
-                    </div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-            <div class="row ">
-                <div class="col-md-7 col-sm-12 romana_blog_left">
-                    <div class="single_blog">
-                        <div class="blog_img_1" style="background-image:url(images/blog_img1.jpg)"></div>
-                        <div class="single_blog_text">
-                            <a href="blog-detail.html"><h3>Children national helping kids.</h3></a>
-                            <div class="blog_btns">
-                                <a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>
-                                <a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>
-                            </div>
-                            <div class="blog_text">
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse consequat, vel illum dolore eu feugiat nulla facilisis at vero.</p>
-                                <div class="blog_btn">
-                                    <a href="blog-detail.html" class="btn2">view detail</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_blog">
-                        <div class="blog_img_1" style="background-image:url(images/blog_img2.jpg)"></div>
-                        <div class="single_blog_text">
-                            <a href="blog-detail.html"><h3>How to use international network</h3></a>
-                            <div class="blog_btns">
-                                <a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>
-                                <a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>
-                            </div>
-                            <div class="blog_text">
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse consequat, vel illum dolore eu feugiat nulla facilisis at vero.</p>
-                                <div class="blog_btn">
-                                    <a href="blog-detail.html" class="btn2">view detail</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- column End -->
-                <div class="col-md-5 col-sm-12 romana_blog_right">
-                    <div class="single_blog">
-                        <div class="blog_img_2" style="background-image:url(images/blog_img3.jpg)"></div>
-                        <div class="single_blog_text">
-                            <a href="blog-detail.html"><h3>Gardening blog post title here</h3></a>
-                            <div class="blog_btns">
-                                <a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>
-                                <a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>
-                            </div>
-                            <div class="blog_text">
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit ameas molestie consequat, vel illum dolore eu feugiat nulla facilisis at eros.</p>
-                                <div class="blog_btn">
-                                    <a href="blog-detail.html" class="btn2">view detail</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- column End -->
-            </div>
-            <!-- row End -->
-        </div>
-        <!-- container End -->
-    </div>
+    <!--<div class="romana_blog_area spt">-->
+        <!--<div class="container">-->
+            <!--<div class="row ">-->
+                <!--<div class="col-xs-12">-->
+                    <!--<div class="romana_section_title text-center">-->
+                        <!--<h2>Latest Blog</h2>-->
+                        <!--<p>Duis autem vel eum iriure dolor in hendrer ammer vutate molestie conseuat amad vel illum dolore eu feuna</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; column End &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; row End &ndash;&gt;-->
+            <!--<div class="row ">-->
+                <!--<div class="col-md-7 col-sm-12 romana_blog_left">-->
+                    <!--<div class="single_blog">-->
+                        <!--<div class="blog_img_1" style="background-image:url(static/images/blog_img1.jpg)"></div>-->
+                        <!--<div class="single_blog_text">-->
+                            <!--<a href="blog-detail.html"><h3>Children national helping kids.</h3></a>-->
+                            <!--<div class="blog_btns">-->
+                                <!--<a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>-->
+                                <!--<a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>-->
+                            <!--</div>-->
+                            <!--<div class="blog_text">-->
+                                <!--<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse consequat, vel illum dolore eu feugiat nulla facilisis at vero.</p>-->
+                                <!--<div class="blog_btn">-->
+                                    <!--<a href="blog-detail.html" class="btn2">view detail</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="single_blog">-->
+                        <!--<div class="blog_img_1" style="background-image:url(static/images/blog_img2.jpg)"></div>-->
+                        <!--<div class="single_blog_text">-->
+                            <!--<a href="blog-detail.html"><h3>How to use international network</h3></a>-->
+                            <!--<div class="blog_btns">-->
+                                <!--<a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>-->
+                                <!--<a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>-->
+                            <!--</div>-->
+                            <!--<div class="blog_text">-->
+                                <!--<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse consequat, vel illum dolore eu feugiat nulla facilisis at vero.</p>-->
+                                <!--<div class="blog_btn">-->
+                                    <!--<a href="blog-detail.html" class="btn2">view detail</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; column End &ndash;&gt;-->
+                <!--<div class="col-md-5 col-sm-12 romana_blog_right">-->
+                    <!--<div class="single_blog">-->
+                        <!--<div class="blog_img_2" style="background-image:url(static/images/blog_img3.jpg)"></div>-->
+                        <!--<div class="single_blog_text">-->
+                            <!--<a href="blog-detail.html"><h3>Gardening blog post title here</h3></a>-->
+                            <!--<div class="blog_btns">-->
+                                <!--<a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>-->
+                                <!--<a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>-->
+                            <!--</div>-->
+                            <!--<div class="blog_text">-->
+                                <!--<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit ameas molestie consequat, vel illum dolore eu feugiat nulla facilisis at eros.</p>-->
+                                <!--<div class="blog_btn">-->
+                                    <!--<a href="blog-detail.html" class="btn2">view detail</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; column End &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; row End &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; container End &ndash;&gt;-->
+    <!--</div>-->
 <!-- ==========================================================
 *newsletter_area start
 ============================================================ -->
@@ -672,7 +669,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="footer_widget footer_widget_text">
-                            <a href="index-2.html"><img src="images/footer_logo.png" alt="logo"></a>
+                            <a href="index-2.html"><img src="../static/images/footer_logo.png" alt="logo"></a>
                             <p>Duis autem vel eum iriure dolor in hendrerit int dolore eueuat nulla faces at vero eros eneie.</p>
                             <a href="#"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Grant Ave. Central New Road, 8360</a>
                             <a href="mailto:gardenhouse@gmail.com"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>gardenhouse@gmail.com</a>
@@ -709,7 +706,7 @@
                     <div class="col-sm-3">
                         <div class="footer_widget footer_widget_gl">
                             <a href="gallery.html"><h2>our gallery</h2></a>
-                            <a href="gallery.html"><img src="images/home_gallery.png" alt=""></a>
+                            <a href="gallery.html"><img src="../static/images/home_gallery.png" alt=""></a>
                         </div>
                     </div>
                     <!-- column End -->
@@ -744,23 +741,23 @@
 =========================================================== -->
 
     <!-- ================= Main Js ==================== -->
-    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="../static/js/jquery-3.1.0.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
     <!-- ================= Bootstrap min Js =========== -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
 
     <!-- ================= Meanmenu Js =========== -->
-    <script src="js/jquery.meanmenu.js"></script>
+    <script src="../static/js/jquery.meanmenu.js"></script>
 
     <!-- ================= owl carousel min Js ======== -->
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
 
     <!-- ================= barfiller  Js ============== -->
-    <script src="js/jquery.barfiller.js"></script>
+    <script src="../static/js/jquery.barfiller.js"></script>
 
     <!-- ================= Active Js ================== -->
-    <script src="js/active.js"></script>
+    <script src="../static/js/active.js"></script>
 </body>
 
 
