@@ -1026,7 +1026,7 @@ body {
 
 /* ==================================== romana_cta_area Css ======================= */
 .romana_cta_area {
-  background: url(../../images/cta_bg.jpg);
+  background: url(../images/cta_bg.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1282,7 +1282,7 @@ body {
 
 /* ==================================== romana_recentNews_area Css ======================= */
 .newsletter_area {
-  background: url(../../images/newsletter_bg.png);
+  background: url(../images/newsletter_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1341,7 +1341,7 @@ body {
 
 /* ======================= romana_footer_area Scss ================================== */
 .romana_footer_area .romana_footer_top {
-  background: url(../../images/footer_bg.jpg);
+  background: url(../images/footer_bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1478,7 +1478,7 @@ body {
 
 /* ==================================== All_Page_Common Css ======================= */
 .romana_allPage_area {
-  background: url(../../images/all_page_bg.jpg);
+  background: url(../images/all_page_bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2148,7 +2148,7 @@ body {
   .single_gallery_img:hover .gallery_img:after {
     opacity: .89; }
   .single_gallery_img:hover {
-    cursor: url(../../images/plus.png), auto; }
+    cursor: url(../images/plus.png), auto; }
 
 .gallery_hover {
   z-index: 9;
@@ -2188,7 +2188,7 @@ body {
     width: 10000px;
     z-index: -1; }
   .romana_donate_bg_area:before {
-    background-image: url("../../images/man.png");
+    background-image: url("../images/man.png");
     background-repeat: no-repeat;
     bottom: -73px;
     left: 50%;
@@ -2472,7 +2472,7 @@ body.preloader_active {
   z-index: 99999999999; }
 
 .preloader_spinner {
-  background: transparent url("../../images/spinner.gif") no-repeat scroll center center;
+  background: transparent url("../images/spinner.gif") no-repeat scroll center center;
   display: block;
   height: 120px;
   left: 50%;
