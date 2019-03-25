@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AllDisastersWrapper {
+public class TopTenDisastersWrapper {
 
     private ArrayList<DisasterData> disasterDataList;
 
