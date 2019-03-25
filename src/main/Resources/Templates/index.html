@@ -261,9 +261,10 @@
             </div>
             <!-- row End -->
             <div class="row ">
+                <div th:each="disaster : ${disasterData}">
                 <div class="col-sm-4">
                     <div class="romana_single_cause_text_img mh480">
-                        <div class="romana_cause_img" style="background-image:url(static/images/cause_img1.jpg)"></div>
+                        <!--<div class="romana_cause_img" style="background-image:url(static/images/cause_img1.jpg)"></div>-->
                         <div class="romana_single_cause_text">
                             <div class="romana_raise_goal clearfix">
                                 <div class="romana_raise_left">
@@ -279,93 +280,94 @@
                                 </div>
                                 <span class="fill1 fill" data-percentage="60"></span>
                             </div>
-                            <h3><a href="cause-detail.html">Build school for children</a></h3>
+                            <h3 th:text="${disaster.fields.name}"><a href="cause-detail.html">Build school for children</a></h3>
                             <p>Duis autem vel eum iriure dolor in hendrert nmuen utate velit esse molestie vel illum.</p>
                             <div class="romana_cause_btn">
                                 <a href="donation.html" class="btn2">Donate Now</a>
                             </div>
                         </div>
                     </div>
-                    <!-- romana_single_cause_text End -->
-                </div>
-                <div class="col-sm-4">
-                    <div class="romana_single_cause_text_img mh480">
-                        <div class="romana_cause_img" style="background-image:url(static/images/cause_img2.jpg)"></div>
-                        <div class="romana_single_cause_text">
-                            <div class="romana_raise_goal clearfix">
-                                <div class="romana_raise_left">
-                                    <p>Raised: <span>$2300</span></p>
-                                </div>
-                                <div class="romana_raise_right">
-                                    <p>goal: <span>$2600</span></p>
-                                </div>
-                            </div>
-                            <div id="bar2" class="barfiller">
-                                <div class="tipWrap">
-                                    <span class="tip"></span>
-                                </div>
-                                <span class="fill" data-percentage="70"></span>
-                            </div>
-
-                            <h3><a href="cause-detail.html">Education for a child to live</a></h3>
-                            <p>Duis autem vel eum iriure dolor in hendrert nmuen utate velit esse molestie vel illum.</p>
-                            <div class="romana_cause_btn">
-                                <a href="donation.html" class="btn2">Donate Now</a>
-                            </div>
-                        </div>
                     </div>
                     <!-- romana_single_cause_text End -->
-                </div>
-                <div class="col-sm-4 romana_single_cause_text_right">
-                    <div class="romana_single_cause_text_img romana_single_cause_border mh240">
-                        <div class="romana_single_cause_text">
-                            <div class="romana_raise_goal clearfix">
-                                <div class="romana_raise_left">
-                                    <p>Raised: <span>$2400</span></p>
-                                </div>
-                                <div class="romana_raise_right">
-                                    <p>goal: <span>$2500</span></p>
-                                </div>
-                            </div>
-                            <div id="bar1" class="barfiller">
-                                <div class="tipWrap">
-                                    <span class="tip"></span>
-                                </div>
-                                <span class="fill" data-percentage="80"></span>
-                            </div>
+                <!--</div>-->
+                <!--<div class="col-sm-4">-->
+                    <!--<div class="romana_single_cause_text_img mh480">-->
+                        <!--<div class="romana_cause_img" style="background-image:url(static/images/cause_img2.jpg)"></div>-->
+                        <!--<div class="romana_single_cause_text">-->
+                            <!--<div class="romana_raise_goal clearfix">-->
+                                <!--<div class="romana_raise_left">-->
+                                    <!--<p>Raised: <span>$2300</span></p>-->
+                                <!--</div>-->
+                                <!--<div class="romana_raise_right">-->
+                                    <!--<p>goal: <span>$2600</span></p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div id="bar2" class="barfiller">-->
+                                <!--<div class="tipWrap">-->
+                                    <!--<span class="tip"></span>-->
+                                <!--</div>-->
+                                <!--<span class="fill" data-percentage="70"></span>-->
+                            <!--</div>-->
 
-                            <h3><a href="cause-detail.html">Help us to send vegetables</a></h3>
-                            <p>Duis autem vel eum iriure dolor in hendrert nmuen utate velit esse molestie vel illum.</p>
-                            <div class="romana_cause_btn">
-                                <a href="donation.html" class="btn2">Donate Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- romana_single_cause_text End -->
-                    <div class="romana_single_cause_text_img mh240">
-                        <div class="romana_single_cause_text">
-                            <div class="romana_raise_goal clearfix">
-                                <div class="romana_raise_left">
-                                    <p>Raised: <span>$2800</span></p>
-                                </div>
-                                <div class="romana_raise_right">
-                                    <p>goal: <span>$2900</span></p>
-                                </div>
-                            </div>
-                            <div id="bar6" class="barfiller">
-                                <div class="tipWrap">
-                                    <span class="tip"></span>
-                                </div>
-                                <span class="fill" data-percentage="50"></span>
-                            </div>
+                            <!--<h3><a href="cause-detail.html">Education for a child to live</a></h3>-->
+                            <!--<p>Duis autem vel eum iriure dolor in hendrert nmuen utate velit esse molestie vel illum.</p>-->
+                            <!--<div class="romana_cause_btn">-->
+                                <!--<a href="donation.html" class="btn2">Donate Now</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; romana_single_cause_text End &ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 romana_single_cause_text_right">-->
+                    <!--<div class="romana_single_cause_text_img romana_single_cause_border mh240">-->
+                        <!--<div class="romana_single_cause_text">-->
+                            <!--<div class="romana_raise_goal clearfix">-->
+                                <!--<div class="romana_raise_left">-->
+                                    <!--<p>Raised: <span>$2400</span></p>-->
+                                <!--</div>-->
+                                <!--<div class="romana_raise_right">-->
+                                    <!--<p>goal: <span>$2500</span></p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div id="bar1" class="barfiller">-->
+                                <!--<div class="tipWrap">-->
+                                    <!--<span class="tip"></span>-->
+                                <!--</div>-->
+                                <!--<span class="fill" data-percentage="80"></span>-->
+                            <!--</div>-->
 
-                            <h3><a href="cause-detail.html">Clean water for rural poor</a></h3>
-                            <p>Duis autem vel eum iriure dolor in hendrert nmuen utate velit esse molestie vel illum.utem vel eum.</p>
-                            <div class="romana_cause_btn">
-                                <a href="donation.html" class="btn2">Donate Now</a>
-                            </div>
-                        </div>
-                    </div>
+                            <!--<h3><a href="cause-detail.html" >Help us to send vegetables</a></h3>-->
+                            <!--<p>Duis autem vel eum iriure dolor in hendrert nmuen utate velit esse molestie vel illum.</p>-->
+                            <!--<div class="romana_cause_btn">-->
+                                <!--<a href="donation.html" class="btn2">Donate Now</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; romana_single_cause_text End &ndash;&gt;-->
+                    <!--<div class="romana_single_cause_text_img mh240">-->
+                        <!--<div class="romana_single_cause_text">-->
+                            <!--<div class="romana_raise_goal clearfix">-->
+                                <!--<div class="romana_raise_left">-->
+                                    <!--<p>Raised: <span>$2800</span></p>-->
+                                <!--</div>-->
+                                <!--<div class="romana_raise_right">-->
+                                    <!--<p>goal: <span>$2900</span></p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div id="bar6" class="barfiller">-->
+                                <!--<div class="tipWrap">-->
+                                    <!--<span class="tip"></span>-->
+                                <!--</div>-->
+                                <!--<span class="fill" data-percentage="50"></span>-->
+                            <!--</div>-->
+
+                            <!--<h3><a href="cause-detail.html">Clean water for rural poor</a></h3>-->
+                            <!--<p>Duis autem vel eum iriure dolor in hendrert nmuen utate velit esse molestie vel illum.utem vel eum.</p>-->
+                            <!--<div class="romana_cause_btn">-->
+                                <!--<a href="donation.html" class="btn2">Donate Now</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <!-- romana_single_cause_text End -->
                 </div>
                 <!-- column End -->
