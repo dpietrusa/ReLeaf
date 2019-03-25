@@ -8,7 +8,7 @@ public class Fields {
 
     private String name;
     private String description;
-    private int id;
+    private String id;
 
     @JsonProperty("name")
     public String getName() {
@@ -31,12 +31,12 @@ public class Fields {
     }
 
     @JsonProperty("id")
-    public int getId() {
+    public String getId() {
         return id;
     }
 
     @JsonProperty("id")
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 }
