@@ -1,20 +1,20 @@
 package com.detroitlabs.releaf.Service;
 
-import com.detroitlabs.releaf.Model.AllDisastersWrapper;
-import com.detroitlabs.releaf.Model.HomePageDetails;
+import com.detroitlabs.releaf.Model.DisasterDetailsWrapper;
+import com.detroitlabs.releaf.Model.TopTenDisastersWrapper;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
 public class ReleafWebService {
-    public HomePageDetails fetchDisasterData(){
+    public TopTenDisastersWrapper fetchDisasterData(){
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters?appname=releaf&sort=date:desc", HomePageDetails.class);
+        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters?appname=releaf&sort=date:desc", TopTenDisastersWrapper.class);
     }
 
-    public AllDisastersWrapper fetchDisasterDetailData(String id){
+    public DisasterDetailsWrapper fetchDisasterDetailData(String url){
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters/" + id, AllDisastersWrapper.class);
+        return restTemplate.getForObject(url, DisasterDetailsWrapper.class);
     }
 
 

@@ -264,7 +264,7 @@
         </div>
         <!-- row End -->
         <div class="row ">
-                <div th:each="disaster : ${disasterData}">
+                <div th:each="disasterItems : ${fieldsList}">
                     <div class="col-sm-4">
                         <div class="romana_single_cause_text_img mh480">
                             <!--<div class="romana_cause_img" style="background-image:url(static/images/cause_img1.jpg)"></div>-->
@@ -283,17 +283,15 @@
                                     </div>
                                     <span class="fill1 fill" data-percentage="60"></span>
                                 </div>
-                                <div th:each="disasterDetails : ${disasterDetails}">
-                                <h3 th:text="${disaster.fields.name}"><a href="cause-detail.html">Build school
+                                <h3 th:text="${disasterItems.name}"><a href="cause-detail.html">Build school
                                     for children</a></h3>
-                                <div><p th:text="${disasterDetails.fields.description}">Description Details</p>
+                                <div><p th:text="${disasterItems.description}">Description Details</p>
                                     <div>
                                         <div class="romana_cause_btn">
                                             <a href="donation.html" class="btn2">Donate Now</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                         <!-- romana_single_cause_text End -->
                         <!--</div>-->
