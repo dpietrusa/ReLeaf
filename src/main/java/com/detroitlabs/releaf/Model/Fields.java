@@ -28,7 +28,7 @@ public class Fields {
 
     @JsonProperty("description")
     public void setDescription(String description) {
-        this.shortDescription = description.substring(0, 240) + "...";
+        this.shortDescription = description.substring(0, 480) + "...";
         this.description = description;
     }
 
