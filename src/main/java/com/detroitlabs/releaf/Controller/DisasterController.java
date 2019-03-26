@@ -42,7 +42,9 @@ public class DisasterController {
 
     @RequestMapping("/details/{id}")
     public String displayDisasterDetails(@PathVariable String id, ModelMap modelMap){
-
+        DisasterDetailsWrapper disasterDetailsWrapper = releafWebService.fetchDisasterDetailDataByID(id);
+        Fields fields = disasterDetailsWrapper.getData().get(0).getFields();
+        modelMap.put("fields", fields);
         return "disasterdetails";
     }
 

@@ -17,7 +17,10 @@ public class ReleafWebService {
         return restTemplate.getForObject(url, DisasterDetailsWrapper.class);
     }
 
-
+    public DisasterDetailsWrapper fetchDisasterDetailDataByID(String id){
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters/" + id, DisasterDetailsWrapper.class);
+    }
 
 
 }

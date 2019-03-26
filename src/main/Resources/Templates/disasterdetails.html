@@ -1,148 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
-<!-- Mirrored from tf.wpcheatsheet.net/html/grace/disasterdetails.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2019 00:21:47 GMT -->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Title -->
-    <title>Grace || Blog-Detail Page</title>
+    <title>Re.Leaf || Home Page</title>
 
     <!-- ================================================================
         ***Favicon***
     ================================================================= -->
 
-    <link rel="shortcut icon" type="image/png" href="../static/images/fevicon-old.png">
+    <link rel="shortcut icon" type="image/png" th:href="@{..//images/fevicon.png}">
 
     <!-- ================================================================
         ***CSS File***
     ================================================================= -->
     <!-- ================= *** Google Font-Rubik *** ======================= -->
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
+          rel="stylesheet">
 
     <!-- ================= *** Animate CSS *** ======================= -->
-    <link href="../static/css/animate.min.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/animate.min.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Bootstrap CSS *** ===================== -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/bootstrap.min.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Meanmenu CSS *** ===================== -->
-    <link href="../static/css/meanmenu.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/meanmenu.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Hover CSS *** ================== -->
-    <link href="../static/css/hover-min.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/hover-min.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Font-awesome CSS *** ======================= -->
-    <link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+
+    <!-- ================= *** bar CSS *** =========================== -->
+    <link th:href="@{/../css/bar.css}" rel="stylesheet" type="text/css">
+    <!-- ================= *** Owl Carousel CSS *** ================== -->
+    <link th:href="@{/../css/owl.carousel.css}" rel="stylesheet" type="text/css">
 
     <!-- ================= *** Main CSS *** ========================== -->
 
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/../css/style.css}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
-<body class="blog_detail">
-    <div id="preloader">
-        <div class="preloader_spinner"></div>
-    </div>
-    <!-- preloader end -->
+<body class="home">
+<!--<div id="preloader">-->
+<!--<div class="preloader_spinner"></div>-->
+<!--</div>-->
+<!-- preloader end -->
 <!-- ==========================================================
     *Header_area start
 ============================================================ -->
-    <header>
-        <div class="romana_header_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-7 col-xs-12 header-top-left">
-                        <a href="mailto:gardenhouse@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>gardenhouse@gmail.com</a>
-                        <a href="tel:+88075975854"><i class="fa fa-phone" aria-hidden="true"></i>+88 075 975 854</a>
-                    </div>
-                    <!-- column End -->
-                    <div class="col-sm-5 col-xs-12 text-right header-top-right">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        <a href="donation.html" class="common_btn hvr-sweep-to-bottom">DONATE NOW</a>
-                    </div>
-                    <!-- column End -->
+<header>
+    <div class="romana_header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-xs-12 header-top-left">
+                    <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>ReLeaf@ReLeaf.com</a>
+                    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>555-123-4567</a>
                 </div>
-                <!-- row End -->
-            </div>
-            <!-- container End -->
-        </div>
-        <!-- Header-Top End -->
-        <div class="romana_header_bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2 col-xs-6">
-                        <div class="romana_logo">
-                            <a href="index-2.html"><img src="../static/images/logo-original.png" alt=""></a>
-                        </div>
-                    </div>
-                    <!-- column End -->
-                    <div class="col-sm-10">
-                        <nav>
-                            <ul class="main_menu">
-                                <li><a href="index-2.html">Home</a></li>
-                                <li><a href="#">causes</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="causes.html">cause page</a></li>
-                                        <li><a href="causes-detail.html">cause detail</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">events</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="event.html">event page</a></li>
-                                        <li><a href="event-detail.html">events-detail</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="gallery.html">gallery</a></li>
-                                <li><a href="#">pages</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="about.html">about page</a></li>
-                                        <li><a href="volunteer.html">volunteer page</a></li>
-                                        <li><a href="donation.html">donation page</a></li>
-                                        <li><a href="testimonial.html">testimonial</a></li>
-                                        <li><a href="404.html">404 page</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">blog</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="blog.html">blog page</a></li>
-                                        <li><a href="disasterdetails.html">blog detail</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">contact</a></li>
-                                <li class="search_expand"><a href="#"><i class="fa fa-search"></i></a>
-                                    <div class="search">
-                                        <form action="#">
-                                            <input id="search" name="search" type="text" placeholder="Search...">
-                                        </form>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- nav End -->
-                    </div>
-                    <!-- column End -->
+                <!--&lt;!&ndash; column End &ndash;&gt;-->
+                <div class="col-sm-5 col-xs-12 text-right header-top-right">
+                    <a href="https://www.facebook.com/reliefweb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/reliefweb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/reliefweb"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="donation.html" class="common_btn hvr-sweep-to-bottom">DONATE NOW</a>
                 </div>
-                <!-- row End -->
+                <!-- column End -->
             </div>
-            <!-- container End -->
+            <!-- row End -->
         </div>
-        <!-- Header Bottom End -->
-    </header>
-    <!-- Header End -->
+        <!-- container End -->
+    </div>
+    <!-- Header-Top End -->
+    <div class="romana_header_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-xs-6">
+                    <div class="romana_logo">
+                        <a href="index-2.html"><img th:src="@{../images/logo.png}" alt=""></a>
+                    </div>
+                </div>
+                <!-- column End -->
+                <div class="col-sm-10">
+                    <nav>
+                        <ul class="main_menu">
+                            <li><a href="index-2.html">Home</a></li>
+                            <li><a href="#">causes</a>
+                                <ul class="sub_menu">
+                                    <li><a href="causes.html">cause page</a></li>
+                                    <li><a href="causes-detail.html">cause detail</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">pages</a>
+                                <ul class="sub_menu">
+                                    <li><a href="about.html">about page</a></li>
+                                    <li><a href="volunteer.html">volunteer page</a></li>
+                                    <li><a href="donation.html">donation page</a></li>
+                                    <li><a href="testimonial.html">testimonial</a></li>
+                                    <li><a href="404.html">404 page</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">blog</a>
+                                <ul class="sub_menu">
+                                    <li><a href="blog.html">blog page</a></li>
+                                    <li><a href="disasterdetails.html">blog detail</a></li>
+                                </ul>
+                            </li>
+                            <li class="search_expand"><a href="#"><i class="fa fa-search"></i></a>
+                                <div class="search">
+                                    <form action="#">
+                                        <input id="search" name="search" type="text" placeholder="Search...">
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- nav End -->
+                </div>
+                <!-- column End -->
+            </div>
+            <!-- row End -->
+        </div>
+        <!-- container End -->
+    </div>
+    <!-- Header Bottom End -->
+</header>
+<!-- Header End -->
 <!-- ==========================================================
 *Hero_area start
 ============================================================ -->
@@ -151,7 +146,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="romana_allPage_text wow zoomIn">
-                        <h1>Blog Details</h1>
+                        <h1>Cause Details</h1>
                         <ol class="breadcrumb">
                             <li><a href="index-2.html">Home</a><span></span></li>
                             <li class="active"><a href="#">blog</a></li>
@@ -174,15 +169,15 @@
                     <div class="single_blog">
                         <div class="blog_img_3" style="background-image:url(static/images/blog-detail.jpg)"></div>
                         <div class="single_blog_text">
-                            <a href="disasterdetails.html"><h3>Children national helping kids grow up stronger.</h3></a>
+                            <a href="disasterdetails.html"><h3 th:text="${fields.name}">Name</h3></a>
                             <div class="blog_btns">
-                                <a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>
-                                <a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>
+                                <!--<a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>-->
+                                <!--<a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>-->
                             </div>
                             <div class="blog_text">
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseuat vem dolore eummer feugiatn ulla facilisis an vero eros etac cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisi. Nam liberte mpor cumso luta nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum. Typi non habent claritatem insit tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseuat vem dolore eummer feugiatn ulla facilisis an vero eros etac cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisi. Nam liberte mpor cumso luta nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum.</p>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseuat vem dolore eummer feugiatn ulla facilisis an vero eros etac cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisi. Nam liberte mpor cumso luta nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum. Typi non habent claritatem insit tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                                <p th:remove="tag" th:utext="${fields.descriptionHtml}"></p>
+                                <!--<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseuat vem dolore eummer feugiatn ulla facilisis an vero eros etac cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisi. Nam liberte mpor cumso luta nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum.</p>-->
+                                <!--<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseuat vem dolore eummer feugiatn ulla facilisis an vero eros etac cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisi. Nam liberte mpor cumso luta nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum. Typi non habent claritatem insit tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>-->
                             </div>
                         </div>
                     </div>

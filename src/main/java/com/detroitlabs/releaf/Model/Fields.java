@@ -10,6 +10,18 @@ public class Fields {
     private String description;
     private String id;
     private String shortDescription;
+    private String descriptionHtml;
+
+
+    @JsonProperty("description-html")
+    public String getDescriptionHtml() {
+        return descriptionHtml;
+    }
+
+    @JsonProperty("description-html")
+    public void setDescriptionHtml(String descriptionHtml) {
+        this.descriptionHtml = descriptionHtml;
+    }
 
     @JsonProperty("name")
     public String getName() {
