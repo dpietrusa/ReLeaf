@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 
 <!-- Mirrored from tf.wpcheatsheet.net/html/grace/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2019 00:21:30 GMT -->
@@ -392,40 +392,55 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <form action="https://formspree.io/crazycafe@gmail.com" method="post">
+                    <form th:action="@{/volunteer}" th:object="${newVolunteer}" method="post">
                         <div class="common_input Volunteer_input">
                             <h2>Become a Volunteer</h2>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <input type="text" name="check_first_name" placeholder=" Name">
+                                    <input th:name="name" th:field="*{name}" type="text" placeholder="Name">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="email" name="check_last_name" placeholder="Email">
+                                    <input th:name="email" th:field="*{email}" type="text" placeholder="Email">
                                 </div>
+                                <div class="col-sm-6">
+                                    <input th:name="phone" th:field="*{phone}" type="text" placeholder="Phone">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input th:name="personalDescription" th:field="*{personalDescription}" type="text" placeholder="Personal Description">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input th:name="dateAvailable" th:field="*{dateAvailable}" type="text" placeholder="Date Available">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input th:name="volunteerOffering" th:field="*{volunteerOffering}" type="text" placeholder="Volunteer Offering">
+                                </div>
+                                <!--<div class="col-sm-6">-->
+                                    <!--<input type="email" name="check_last_name" placeholder="Email">-->
+                                <!--</div>-->
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="select_option_one">
-                                        <select name="userSelect2" id="userSelect2" class="">
-                                            <option value="1">Gender</option>
-                                            <option value="2">Male</option>
-                                            <option value="3">Femail</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="select_option_one">
-                                        <select name="userSelect" id="userSelect" class="">
-                                            <option value="1">Country</option>
-                                            <option value="2">Bangladesh</option>
-                                            <option value="3">Unitade Sate</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            <!--<div class="row">-->
+                                <!--<div class="col-sm-6">-->
+                                    <!--<div class="select_option_one">-->
+                                        <!--<select name="userSelect2" id="userSelect2" class="">-->
+                                            <!--<option value="1">Gender</option>-->
+                                            <!--<option value="2">Male</option>-->
+                                            <!--<option value="3">Femail</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="col-sm-6">-->
+                                    <!--<div class="select_option_one">-->
+                                        <!--<select name="userSelect" id="userSelect" class="">-->
+                                            <!--<option value="1">Country</option>-->
+                                            <!--<option value="2">Bangladesh</option>-->
+                                            <!--<option value="3">Unitade Sate</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+                                <!--</div>-->
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <textarea name="c_textarea" id="c_textarea" cols="30" rows="10" placeholder="Message..."></textarea>
+                                    <!--<textarea name="c_textarea" id="c_textarea" cols="30" rows="10" placeholder="Message..."></textarea>-->
                                     <div class="sub_submit">
                                         <button type="submit" class="common_btn hvr-sweep-to-bottom" name="sumit">Apply Now<i class="fa fa-long-arrow-right"></i></button>
                                     </div>
