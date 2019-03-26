@@ -12,6 +12,13 @@ public class Fields {
     private String shortDescription;
     private String descriptionHtml;
 
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
 
     @JsonProperty("description-html")
     public String getDescriptionHtml() {
@@ -53,5 +60,6 @@ public class Fields {
     public void setId(String id) {
         this.id = id;
     }
+}
 
 
