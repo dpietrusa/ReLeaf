@@ -2,9 +2,11 @@ package com.detroitlabs.releaf.Controller;
 
 import com.detroitlabs.releaf.Model.*;
 import com.detroitlabs.releaf.Service.ReleafWebService;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -36,11 +38,14 @@ public class DisasterController {
         }
         modelMap.put("fieldsList", fieldsList);
         return "index";
-
-
-
     }
 
-
+    @RequestMapping("/details/{id}")
+    public String displayDisasterDetails(@PathVariable String id, ModelMap modelMap){
+        DisasterDetailsWrapper disasterDetailsWrapper = releafWebService.fetchDisasterDetailDataByID(id);
+        Fields fields = disasterDetailsWrapper.getData().get(0).getFields();
+        modelMap.put("fields", fields);
+        return "disasterdetails";
+    }
 
 }
