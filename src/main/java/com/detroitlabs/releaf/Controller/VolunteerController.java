@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(path = "/volunteer")
+@RequestMapping(path = "/")
 public class VolunteerController {
 
 
@@ -38,33 +38,33 @@ public class VolunteerController {
 //
 //    }
 
-//    @GetMapping("/volunteer")
-//    public String addVolunteer(Model model){
-//        model.addAttribute("newVolunteer", new NewVolunteer());
-//        return "volunteer";
-//    }
-//
-//    @PostMapping("/volunteer")
-//    public String addNewVolunteer(@ModelAttribute NewVolunteer newVolunteer) {
-//        String name = newVolunteer.getName();
-//        String email = newVolunteer.getEmail();
-//        String phone = newVolunteer.getPhone();
-//        String personalDescription = newVolunteer.getPersonalDescription();
-//        String dateAvailable = newVolunteer.getDateAvailable();
-//        String volunteerOffering = newVolunteer.getVolunteerOffering();
-//
-//            Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable, volunteerOffering);
-//
-//            volunteerToAdd.setName(name);
-//            volunteerToAdd.setEmail(email);
-//            volunteerToAdd.setPhone(phone);
-//            volunteerToAdd.setPersonalDescription(personalDescription);
-//            volunteerToAdd.setDateAvailable(dateAvailable);
-//            volunteerToAdd.setVolunteerOffering(volunteerOffering);
-//            volunteerRepository.save(volunteerToAdd);
-//            return "volunteer";
-//
-//        }
+    @GetMapping("/volunteer")
+    public String addVolunteer(Model model){
+        model.addAttribute("newVolunteer", new NewVolunteer());
+        return "volunteer";
+    }
+
+    @PostMapping("/volunteer")
+    public String addNewVolunteer(@ModelAttribute NewVolunteer newVolunteer) {
+        String name = newVolunteer.getName();
+        String email = newVolunteer.getEmail();
+        String phone = newVolunteer.getPhone();
+        String personalDescription = newVolunteer.getPersonalDescription();
+        String dateAvailable = newVolunteer.getDateAvailable();
+        String volunteerOffering = newVolunteer.getVolunteerOffering();
+
+            Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable, volunteerOffering);
+
+            volunteerToAdd.setName(name);
+            volunteerToAdd.setEmail(email);
+            volunteerToAdd.setPhone(phone);
+            volunteerToAdd.setPersonalDescription(personalDescription);
+            volunteerToAdd.setDateAvailable(dateAvailable);
+            volunteerToAdd.setVolunteerOffering(volunteerOffering);
+            volunteerRepository.save(volunteerToAdd);
+            return "volunteer";
+
+        }
 
         @GetMapping(path = "/all")
         public @ResponseBody Iterable<Volunteer> getAllVolunteers () {
