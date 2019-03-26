@@ -9,6 +9,7 @@ public class Fields {
     private String name;
     private String description;
     private String id;
+    private String shortDescription;
 
     @JsonProperty("name")
     public String getName() {
@@ -27,6 +28,7 @@ public class Fields {
 
     @JsonProperty("description")
     public void setDescription(String description) {
+        this.shortDescription = description.substring(0, 480) + "...";
         this.description = description;
     }
 
@@ -40,4 +42,4 @@ public class Fields {
         this.id = id;
     }
 
-}
+

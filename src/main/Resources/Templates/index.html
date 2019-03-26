@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Title -->
-    <title>Grace || Home Page</title>
+    <title>Re.Leaf || Home Page</title>
 
     <!-- ================================================================
         ***Favicon***
@@ -38,7 +38,6 @@
 
     <!-- ================= *** bar CSS *** =========================== -->
     <link th:href="@{/../css/bar.css}" rel="stylesheet" type="text/css">
-
     <!-- ================= *** Owl Carousel CSS *** ================== -->
     <link th:href="@{/../css/owl.carousel.css}" rel="stylesheet" type="text/css">
 
@@ -72,10 +71,10 @@
                 </div>
                 <!--&lt;!&ndash; column End &ndash;&gt;-->
                 <div class="col-sm-5 col-xs-12 text-right header-top-right">
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/reliefweb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/reliefweb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/reliefweb"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                     <a href="donation.html" class="common_btn hvr-sweep-to-bottom">DONATE NOW</a>
                 </div>
                 <!-- column End -->
@@ -104,13 +103,6 @@
                                     <li><a href="causes-detail.html">cause detail</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">events</a>
-                                <ul class="sub_menu">
-                                    <li><a href="event.html">event page</a></li>
-                                    <li><a href="event-detail.html">events-detail</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="gallery.html">gallery</a></li>
                             <li><a href="#">pages</a>
                                 <ul class="sub_menu">
                                     <li><a href="about.html">about page</a></li>
@@ -126,7 +118,6 @@
                                     <li><a href="blog-detail.html">blog detail</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">contact</a></li>
                             <li class="search_expand"><a href="#"><i class="fa fa-search"></i></a>
                                 <div class="search">
                                     <form action="#">
@@ -152,13 +143,12 @@
 ============================================================ -->
 <section class="romana_hero_area">
     <div class="hero_slider">
-        <div class="hero_slider_bg" style="background-image:url(/images/slider_bg.jpg)">
+        <div class="hero_slider_bg" style="background-image:url(/images/leafhands.jpg)">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="romana_hero_text">
-                            <h1>Let your life be an inspiration help us to
-                                give food to 100+ childrens.</h1>
+                            <h1>Replanting hope, around the world and in your neighborhood.</h1>
                             <a href="donation.html" class="hvr-sweep-to-bottom common_btn">Donate Now <i
                                     class="fa fa-long-arrow-right"></i></a>
                         </div>
@@ -255,9 +245,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="romana_section_title text-center">
-                    <h2>Recent Causes</h2>
-                    <p>Duis autem vel eum iriure dolor in hendrer ammer vutate molestie conseuat amad vel illum dolore
-                        eu feuna</p>
+                    <h2>Global Causes</h2>
+                    <p>These are the most recent causes in need of Re.Leaf.</p>
                 </div>
             </div>
             <!-- column End -->
@@ -285,10 +274,10 @@
                                 </div>
                                 <h3 th:text="${disasterItems.name}"><a href="cause-detail.html">Build school
                                     for children</a></h3>
-                                <div><p th:text="${disasterItems.description}">Description Details</p>
+                                <div><p th:text="${disasterItems.shortDescription}">Description Details</p>
                                     <div>
                                         <div class="romana_cause_btn">
-                                            <a href="donation.html" class="btn2">Donate Now</a>
+                                            <a href="donation.html" class="btn2">More Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -388,7 +377,7 @@
             <div class="container">
                 <div class="row ">
                     <div class="col-md-8 col-md-offset-1 col-sm-9">
-                        <h2>Lest make the world better togethers.</h2>
+                        <h2>Lets make the world better together.</h2>
                     </div>
                     <!-- column End -->
                     <div class="col-sm-3">
@@ -406,57 +395,57 @@
             <div class="container">
                 <div class="row ">
                     <div class="col-md-6 col-sm-12">
-                        <h2>Upcoming Events</h2>
-                        <div class="single_event">
-                            <div class="single_event_left ">
-                                <div class="img_event">
-                                    <img src="../static/images/event_img1.jpg" alt="">
-                                    <div class="event_date">
-                                        <h3>22 <span>feb</span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text_event">
-                                <a href="event-detail.html"><h3>Helping kids grow up stronger</h3></a>
-                                <div class="event_btns">
-                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i>8:00 am - 5:00 pm</p>
-                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>Buffalo, New Yourk</p>
-                                </div>
-                                <div class="event_text">
-                                    <p></p>
-                                    <div class="event_btn">
-                                        <a href="event-detail.html" class="btn2">details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single_event End -->
-                        <div class="single_event">
-                            <div class="single_event_left ">
-                                <div class="img_event">
-                                    <img src="../static/images/event_img2.jpg" alt="">
-                                    <div class="event_date">
-                                        <h3>25 <span>feb</span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text_event">
-                                <a href="event-detail.html"><h3>Helping kids grow up stronger</h3></a>
-                                <div class="event_btns">
-                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i>8:00 am - 5:00 pm</p>
-                                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>Buffalo, New Yourk</p>
-                                </div>
-                                <div class="event_text">
-                                    <p>Duis autem vel eum iriure dolor in hendrerit invutm ate velit esse molestie
-                                        conseuat meum.</p>
-                                    <div class="event_btn">
-                                        <a href="event-detail.html" class="btn2">details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single_event End -->
-                    </div>
+                        <!--<h2>Upcoming Events</h2>-->
+                        <!--<div class="single_event">-->
+                            <!--<div class="single_event_left ">-->
+                                <!--<div class="img_event">-->
+                                    <!--<img src="../static/images/event_img1.jpg" alt="">-->
+                                    <!--<div class="event_date">-->
+                                        <!--<h3>22 <span>feb</span></h3>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="text_event">-->
+                                <!--<a href="event-detail.html"><h3>Helping kids grow up stronger</h3></a>-->
+                                <!--<div class="event_btns">-->
+                                    <!--<p><i class="fa fa-clock-o" aria-hidden="true"></i>8:00 am - 5:00 pm</p>-->
+                                    <!--<p><i class="fa fa-map-marker" aria-hidden="true"></i>Buffalo, New Yourk</p>-->
+                                <!--</div>-->
+                                <!--<div class="event_text">-->
+                                    <!--<p></p>-->
+                                    <!--<div class="event_btn">-->
+                                        <!--<a href="event-detail.html" class="btn2">details</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; single_event End &ndash;&gt;-->
+                        <!--<div class="single_event">-->
+                            <!--<div class="single_event_left ">-->
+                                <!--<div class="img_event">-->
+                                    <!--<img src="../static/images/event_img2.jpg" alt="">-->
+                                    <!--<div class="event_date">-->
+                                        <!--<h3>25 <span>feb</span></h3>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="text_event">-->
+                                <!--<a href="event-detail.html"><h3>Helping kids grow up stronger</h3></a>-->
+                                <!--<div class="event_btns">-->
+                                    <!--<p><i class="fa fa-clock-o" aria-hidden="true"></i>8:00 am - 5:00 pm</p>-->
+                                    <!--<p><i class="fa fa-map-marker" aria-hidden="true"></i>Buffalo, New Yourk</p>-->
+                                <!--</div>-->
+                                <!--<div class="event_text">-->
+                                    <!--<p>Duis autem vel eum iriure dolor in hendrerit invutm ate velit esse molestie-->
+                                        <!--conseuat meum.</p>-->
+                                    <!--<div class="event_btn">-->
+                                        <!--<a href="event-detail.html" class="btn2">details</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; single_event End &ndash;&gt;-->
+                    <!--</div>-->
                     <!-- column End -->
                     <div class="col-md-6 col-sm-12">
                         <form action="https://formspree.io/crazycafe@gmail.com" method="post">
@@ -680,9 +669,8 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="footer_widget footer_widget_text">
-                                <a href="index-2.html"><img src="../static/images/footer_logo.png" alt="logo"></a>
-                                <p>Duis autem vel eum iriure dolor in hendrerit int dolore eueuat nulla faces at vero
-                                    eros eneie.</p>
+                                <a href="index-2.html"><img th:src="@{../images/logo-reversed.png}" alt="logo"></a>
+                                <p>Replanting hope, around the world and in your neighborhood.</p>
                                 <a href="#"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Grant Ave.
                                     Central New Road, 8360</a>
                                 <a href="mailto:gardenhouse@gmail.com"> <span><i class="fa fa-envelope-o"
@@ -728,28 +716,28 @@
                     </div>
                 </div>
             </div>
-            <!-- footer_top End -->
-            <div class="romana_footer_bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="romana_footer_bottom_text">
-                                <p>Copyrigth <span>&copy;</span> 2017, All Right Reserved</p>
-                            </div>
-                        </div>
-                        <!-- column End -->
-                        <div class="col-sm-6">
-                            <div class="romana_footer_bottom_text text-right">
-                                <p>Designed by: <a href="#">Crazycafe</a></p>
-                            </div>
-                        </div>
-                        <!-- column End -->
-                    </div>
-                    <!-- row End -->
-                </div>
-                <!-- container End -->
-            </div>
-            <!-- footer_bottom End -->
+            <!--&lt;!&ndash; footer_top End &ndash;&gt;-->
+            <!--<div class="romana_footer_bottom">-->
+                <!--<div class="container">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-sm-6">-->
+                            <!--<div class="romana_footer_bottom_text">-->
+                                <!--<p>Copyrigth <span>&copy;</span> 2017, All Right Reserved</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; column End &ndash;&gt;-->
+                        <!--<div class="col-sm-6">-->
+                            <!--<div class="romana_footer_bottom_text text-right">-->
+                                <!--<p>Designed by: <a href="#">Crazycafe</a></p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; column End &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; row End &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; container End &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; footer_bottom End &ndash;&gt;-->
         </footer>
         <!-- ======================================================
             ***Js Files***
@@ -776,5 +764,4 @@
 </body>
 
 
-<!-- Mirrored from tf.wpcheatsheet.net/html/grace/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2019 00:20:06 GMT -->
 </html>

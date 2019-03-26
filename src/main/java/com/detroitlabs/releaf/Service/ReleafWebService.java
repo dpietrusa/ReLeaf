@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class ReleafWebService {
     public TopTenDisastersWrapper fetchDisasterData(){
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters?appname=releaf&sort=date:desc", TopTenDisastersWrapper.class);
+        return restTemplate.getForObject("https://api.reliefweb.int/v1/disasters?appname=releaf&sort=date:desc&limit=12", TopTenDisastersWrapper.class);
     }
 
     public DisasterDetailsWrapper fetchDisasterDetailData(String url){
