@@ -2,6 +2,7 @@ package com.detroitlabs.releaf.Controller;
 
 import com.detroitlabs.releaf.Model.*;
 import com.detroitlabs.releaf.Service.ReleafWebService;
+import com.detroitlabs.releaf.Service.VolunteerService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,9 @@ public class DisasterController {
 
     @Autowired
     private ReleafWebService releafWebService;
+
+    @Autowired
+    private VolunteerService volunteerService;
 
     @Autowired VolunteerRepository volunteerRepository;
 
@@ -48,32 +52,39 @@ public class DisasterController {
         return "disasterdetails";
     }
 
-    @GetMapping("/volunteer")
-    public String addVolunteer(Model model){
-        model.addAttribute("newVolunteer", new NewVolunteer());
-        return "volunteer";
-    }
+//    @GetMapping("/volunteer")
+//    public String addVolunteer(Model model){
+//        model.addAttribute("newVolunteer", new NewVolunteer());
+//        return "volunteer";
+//    }
+//
+//    @PostMapping("/volunteer")
+//    public String addNewVolunteer(@ModelAttribute NewVolunteer newVolunteer) {
+//        String name = newVolunteer.getName();
+//        String email = newVolunteer.getEmail();
+//        String phone = newVolunteer.getPhone();
+//        String personalDescription = newVolunteer.getPersonalDescription();
+//        String dateAvailable = newVolunteer.getDateAvailable();
+//        String volunteerOffering = newVolunteer.getVolunteerOffering();
+//
+//        Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable, volunteerOffering);
+//
+//        volunteerToAdd.setName(name);
+//        volunteerToAdd.setEmail(email);
+//        volunteerToAdd.setPhone(phone);
+//        volunteerToAdd.setPersonalDescription(personalDescription);
+//        volunteerToAdd.setDateAvailable(dateAvailable);
+//        volunteerToAdd.setVolunteerOffering(volunteerOffering);
+//        volunteerRepository.save(volunteerToAdd);
+//        return "volunteer";
+//
+//    }
 
-    @PostMapping("/volunteer")
-    public String addNewVolunteer(@ModelAttribute NewVolunteer newVolunteer) {
-        String name = newVolunteer.getName();
-        String email = newVolunteer.getEmail();
-        String phone = newVolunteer.getPhone();
-        String personalDescription = newVolunteer.getPersonalDescription();
-        String dateAvailable = newVolunteer.getDateAvailable();
-        String volunteerOffering = newVolunteer.getVolunteerOffering();
-
-        Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable, volunteerOffering);
-
-        volunteerToAdd.setName(name);
-        volunteerToAdd.setEmail(email);
-        volunteerToAdd.setPhone(phone);
-        volunteerToAdd.setPersonalDescription(personalDescription);
-        volunteerToAdd.setDateAvailable(dateAvailable);
-        volunteerToAdd.setVolunteerOffering(volunteerOffering);
-        volunteerRepository.save(volunteerToAdd);
-        return "volunteer";
-
+    @RequestMapping ("/testimonial")
+    public String displayVolunteerDetails(ModelMap modelMap){
+        VolunteerWrapper volunteerWrapper = volunteerService.fetchAllVolunteers();
+        modelMap.put("volunteerWrapper", volunteerWrapper);
+        return "testimonial";
     }
 
 }

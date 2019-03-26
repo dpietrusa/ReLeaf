@@ -8,6 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Volunteer {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -25,6 +26,9 @@ public class Volunteer {
         this.personalDescription = personalDescription;
         this.dateAvailable = dateAvailable;
         this.volunteerOffering = volunteerOffering;
+    }
+
+    public Volunteer() {
     }
 
     public Integer getId() {
