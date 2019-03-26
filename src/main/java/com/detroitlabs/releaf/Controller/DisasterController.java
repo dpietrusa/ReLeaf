@@ -5,10 +5,9 @@ import com.detroitlabs.releaf.Service.ReleafWebService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -21,6 +20,7 @@ public class DisasterController {
     @Autowired
     private ReleafWebService releafWebService;
 
+    @Autowired VolunteerRepository volunteerRepository;
 
     @RequestMapping("/")
     public String displayDisasters(ModelMap modelMap) {
@@ -46,6 +46,34 @@ public class DisasterController {
         Fields fields = disasterDetailsWrapper.getData().get(0).getFields();
         modelMap.put("fields", fields);
         return "disasterdetails";
+    }
+
+    @GetMapping("/volunteer")
+    public String addVolunteer(Model model){
+        model.addAttribute("newVolunteer", new NewVolunteer());
+        return "volunteer";
+    }
+
+    @PostMapping("/volunteer")
+    public String addNewVolunteer(@ModelAttribute NewVolunteer newVolunteer) {
+        String name = newVolunteer.getName();
+        String email = newVolunteer.getEmail();
+        String phone = newVolunteer.getPhone();
+        String personalDescription = newVolunteer.getPersonalDescription();
+        String dateAvailable = newVolunteer.getDateAvailable();
+        String volunteerOffering = newVolunteer.getVolunteerOffering();
+
+        Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable, volunteerOffering);
+
+        volunteerToAdd.setName(name);
+        volunteerToAdd.setEmail(email);
+        volunteerToAdd.setPhone(phone);
+        volunteerToAdd.setPersonalDescription(personalDescription);
+        volunteerToAdd.setDateAvailable(dateAvailable);
+        volunteerToAdd.setVolunteerOffering(volunteerOffering);
+        volunteerRepository.save(volunteerToAdd);
+        return "volunteer";
+
     }
 
 }

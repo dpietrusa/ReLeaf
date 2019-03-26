@@ -18,6 +18,15 @@ public class Volunteer {
     private String dateAvailable;
     private String volunteerOffering;
 
+    public Volunteer(String name, String email, String phone, String personalDescription, String dateAvailable, String volunteerOffering) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.personalDescription = personalDescription;
+        this.dateAvailable = dateAvailable;
+        this.volunteerOffering = volunteerOffering;
+    }
+
     public Integer getId() {
         return id;
     }
