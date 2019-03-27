@@ -202,29 +202,9 @@
                             <div class="romana_comments_img">
                                 <img src="../static/images/comment_img1.jpg" alt="">
                             </div>
-                            <div class="romana_comments_text">
-                                <h4>Anjel joe <span>Graphic Designer</span></h4>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseua dolore eummer feugiatn ulla numnbs facilisis cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisista. Namm nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum.</p>
-                                <a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i>Reply</a>
-                            </div>
-                        </div>
-                        <div class="romana_single_comments romana_single_comments2">
-                            <div class="romana_comments_img">
-                                <img src="../static/images/comment_img2.jpg" alt="">
-                            </div>
-                            <div class="romana_comments_text">
-                                <h4>Romana Nasrin <span>Web Developer</span></h4>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseuat vem dolore eummer feugi cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue dolore te feugait nufa luta nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer.</p>
-                                <a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i>Reply</a>
-                            </div>
-                        </div>
-                        <div class="romana_single_comments romana_single_comments2">
-                            <div class="romana_comments_img">
-                                <img src="../static/images/comment_img1.jpg" alt="">
-                            </div>
-                            <div class="romana_comments_text">
-                                <h4>Anjel joe <span>Graphic Designer</span></h4>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseua dolore eummer feugiatn ulla numnbs facilisis cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisista. Namm nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum.</p>
+                            <div class="romana_comments_text" th:each="comment : ${commentList}">
+                                <h4 th:text="${comment.firstName}">First Name<span>Graphic Designer</span></h4>
+                                <p th:text="${comment.message}">Message</p>
                                 <a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i>Reply</a>
                             </div>
                         </div>

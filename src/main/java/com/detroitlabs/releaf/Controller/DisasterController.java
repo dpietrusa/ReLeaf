@@ -1,6 +1,7 @@
 package com.detroitlabs.releaf.Controller;
 
 import com.detroitlabs.releaf.Model.*;
+import com.detroitlabs.releaf.Service.CommentService;
 import com.detroitlabs.releaf.Service.ReleafWebService;
 import com.detroitlabs.releaf.Service.VolunteerService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
@@ -24,7 +25,13 @@ public class DisasterController {
     @Autowired
     private VolunteerService volunteerService;
 
+    @Autowired
+    private CommentService commentService;
+
     @Autowired VolunteerRepository volunteerRepository;
+
+    @Autowired
+    private CommentRepository commentRepository;
 
     @RequestMapping("/")
     public String displayDisasters(ModelMap modelMap) {
@@ -48,6 +55,19 @@ public class DisasterController {
     public String displayDisasterDetails(@PathVariable String id, ModelMap modelMap){
         DisasterDetailsWrapper disasterDetailsWrapper = releafWebService.fetchDisasterDetailDataByID(id);
         Fields fields = disasterDetailsWrapper.getData().get(0).getFields();
+//
+//        CommentWrapper commentWrapper = commentService.fetchAllComments();
+//        System.out.println(commentWrapper);
+////        List<Comment> commentList = new ArrayList<>();
+//        for (Comment comments : commentWrapper){
+//            System.out.println(comments);
+//            if (comments.getDisasterId() == id) {
+//                commentList.add(comments);
+//            }
+//        }
+
+//        modelMap.put("commentList", commentList);
+
         modelMap.put("fields", fields);
         return "disasterdetails";
     }
@@ -86,5 +106,7 @@ public class DisasterController {
         modelMap.put("volunteerWrapper", volunteerWrapper);
         return "testimonial";
     }
+
+
 
 }
