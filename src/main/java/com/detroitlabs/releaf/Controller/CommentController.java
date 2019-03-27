@@ -1,11 +1,11 @@
 package com.detroitlabs.releaf.Controller;
 
-import com.detroitlabs.releaf.Model.Comment;
-import com.detroitlabs.releaf.Model.CommentRepository;
-import com.detroitlabs.releaf.Model.NewComment;
+import com.detroitlabs.releaf.Model.*;
+import com.detroitlabs.releaf.Service.ReleafWebService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -15,14 +15,20 @@ public class CommentController {
     @Autowired
     private CommentRepository commentRepository;
 
-    @GetMapping("/comment")
-    public String addNewComment(Model model){
+    @Autowired
+    private ReleafWebService releafWebService;
+
+    @GetMapping("/details/{id}")
+    public String addNewComment(@PathVariable String id, Model model, ModelMap modelMap){
+        DisasterDetailsWrapper disasterDetailsWrapper = releafWebService.fetchDisasterDetailDataByID(id);
+        Fields fields = disasterDetailsWrapper.getData().get(0).getFields();
+        modelMap.put("fields", fields);
         model.addAttribute("newComment", new NewComment());
         return "disasterdetails";
 
     }
 
-    @PostMapping("/comment")
+    @PostMapping("/")
     public String addNewComment(@ModelAttribute NewComment newComment) {
         String firstName = newComment.getFirstName();
         String lastName = newComment.getLastName();
@@ -39,7 +45,7 @@ public class CommentController {
         commentToAdd.setMessage(message);
         commentRepository.save(commentToAdd);
 
-        return "disasterdetails";
+        return "index";
     }
 
     @GetMapping(path = "/allcomments")
