@@ -1,12 +1,16 @@
 package com.detroitlabs.releaf.Controller;
 
 import com.detroitlabs.releaf.Model.*;
+import com.detroitlabs.releaf.Service.CommentService;
 import com.detroitlabs.releaf.Service.ReleafWebService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping(path = "/")
@@ -18,6 +22,9 @@ public class CommentController {
     @Autowired
     private ReleafWebService releafWebService;
 
+    @Autowired
+    private CommentService commentService;
+
     private String disasterId;
 
     @GetMapping("/details/{id}")
@@ -25,6 +32,19 @@ public class CommentController {
         DisasterDetailsWrapper disasterDetailsWrapper = releafWebService.fetchDisasterDetailDataByID(id);
         Fields fields = disasterDetailsWrapper.getData().get(0).getFields();
         this.disasterId = fields.getId();
+
+        CommentWrapper commentWrapper = commentService.fetchAllComments();
+
+        List<Comment> commentList = new ArrayList<>();
+
+        for (Comment comments : commentWrapper) {
+            if (comments.getDisasterId().equals(id)) {
+                commentList.add(comments);
+            }
+        }
+
+        modelMap.put("commentList", commentList);
+
         modelMap.put("fields", fields);
         model.addAttribute("newComment", new NewComment());
         return "disasterdetails";
