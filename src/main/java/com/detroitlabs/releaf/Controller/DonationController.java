@@ -43,7 +43,7 @@ public class DonationController {
 
     }
 
-    @GetMapping(path = "/all")
+    @GetMapping(path = "/alldonations")
     public @ResponseBody Iterable<Donation> getAllVolunteers () {
         return donationRepository.findAll();
     }
