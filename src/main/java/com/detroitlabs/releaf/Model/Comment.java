@@ -12,13 +12,15 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    private String disasterId;
     private String firstName;
     private String lastName;
     private String phone;
     private String email;
     private String message;
 
-    public Comment(String firstName, String lastName, String phone, String email, String message) {
+    public Comment(String disasterId, String firstName, String lastName, String phone, String email, String message) {
+        this.disasterId = disasterId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
@@ -27,6 +29,14 @@ public class Comment {
     }
 
     public Comment() {
+    }
+
+    public String getDisasterId() {
+        return disasterId;
+    }
+
+    public void setDisasterId(String disasterId) {
+        this.disasterId = disasterId;
     }
 
     public Integer getId() {

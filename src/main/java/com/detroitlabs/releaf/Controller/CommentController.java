@@ -18,10 +18,13 @@ public class CommentController {
     @Autowired
     private ReleafWebService releafWebService;
 
+    private String disasterId;
+
     @GetMapping("/details/{id}")
     public String addNewComment(@PathVariable String id, Model model, ModelMap modelMap){
         DisasterDetailsWrapper disasterDetailsWrapper = releafWebService.fetchDisasterDetailDataByID(id);
         Fields fields = disasterDetailsWrapper.getData().get(0).getFields();
+        this.disasterId = fields.getId();
         modelMap.put("fields", fields);
         model.addAttribute("newComment", new NewComment());
         return "disasterdetails";
@@ -30,14 +33,16 @@ public class CommentController {
 
     @PostMapping("/")
     public String addNewComment(@ModelAttribute NewComment newComment) {
+//        String disasterId = newComment.getDisasterId();
         String firstName = newComment.getFirstName();
         String lastName = newComment.getLastName();
         String phone = newComment.getPhone();
         String email = newComment.getEmail();
         String message = newComment.getMessage();
 
-        Comment commentToAdd = new Comment(firstName, lastName, phone, email, message);
+        Comment commentToAdd = new Comment(disasterId, firstName, lastName, phone, email, message);
 
+        commentToAdd.setDisasterId(this.disasterId);
         commentToAdd.setFirstName(firstName);
         commentToAdd.setLastName(lastName);
         commentToAdd.setPhone(phone);
