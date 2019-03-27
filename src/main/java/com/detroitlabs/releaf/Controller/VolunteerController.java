@@ -17,26 +17,6 @@ public class VolunteerController {
     @Autowired
     private VolunteerRepository volunteerRepository;
 
-//    @GetMapping(path = "/add")
-//    public @ResponseBody String addNewVolunteer (@RequestParam String name,
-//                                                 @RequestParam String email,
-//                                                 @RequestParam String phone,
-//                                                 @RequestParam String personalDescription,
-//                                                 @RequestParam String dateAvailable,
-//                                                 @RequestParam String volunteerOffering){
-//
-//        Volunteer volunteerToAdd = new Volunteer();
-//
-//        volunteerToAdd.setName(name);
-//        volunteerToAdd.setEmail(email);
-//        volunteerToAdd.setPhone(phone);
-//        volunteerToAdd.setPersonalDescription(personalDescription);
-//        volunteerToAdd.setDateAvailable(dateAvailable);
-//        volunteerToAdd.setVolunteerOffering(volunteerOffering);
-//        volunteerRepository.save(volunteerToAdd);
-//        return "saved";
-//
-//    }
 
     @GetMapping("/volunteer")
     public String addVolunteer(Model model){
