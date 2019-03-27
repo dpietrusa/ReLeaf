@@ -155,6 +155,24 @@ h3 {
     position: relative;
     top: 1px; }
 
+.donate_btn {
+  background: #19b968;
+  display: inline-block;
+  width: 250px;
+  height: 52px;
+  text-align: center;
+  line-height: 52px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1;
+  border-radius: 2px; }
+.donate_btn i {
+  padding-left: 12px;
+  position: relative;
+  top: 1px; }
+
 .btn2 {
   font-weight: 500;
   font-size: 15px;
