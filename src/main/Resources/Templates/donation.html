@@ -167,7 +167,7 @@
                 <div class="col-md-7 col-md-offset-5 col-sm-12">
                     <div class="contact_form common_input">
                         <div class="inner">
-                            <form action="https://formspree.io/crazycafe@gmail.com" method="POST">
+                            <form th:action="@{/donation}" th:object="${newDonation}" method="POST">
                                 <h3>How much would you like to donate?</h3>
                                 <!--<div class="custom_donate">-->
                                     <!--<input type="text" placeholder="Custome donate">-->
@@ -176,37 +176,29 @@
                                     <!--<a href="#">$70</a>-->
                                     <!--<a href="#">$80</a>-->
                                 <!--</div>-->
-                                <h3>Carefully fill up this form.</h3>
+                                <!--<h3>Carefully fill up this form.</h3>-->
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <label for="firstName">First Name:</label>
-                                        <input type="text" name="firstName" id="firstName" placeholder="Ex:">
-                                        <label for="phoneNumber">phone here:</label>
-                                        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Ex:">
-                                        <label for="phoneNumber">City:</label>
-                                        <input type="text" name="city" id="city" placeholder="Ex:">
-                                        <label for="firstName">Address:</label>
-                                        <input type="text" name="address" id="address" placeholder="Ex:">
+                                        <input type="text" th:name="amountToDonate" th:field="*{amountToDonate}" placeholder="Donation Amount?">
+                                        <input type="text" th:name="firstName" th:field="*{firstName}" placeholder="First Name">
+                                        <input type="text" th:name="lastName" th:field="*{lastName}" placeholder="Last Name">
+                                        <input type="text" th:name="email" th:field="*{email}" placeholder="Email Address">
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label for="firstName">Last Name:</label>
-                                        <input type="text" name="lastName" id="lastName" placeholder="Ex:">
-                                        <label for="email">email here:</label>
-                                        <input type="email" name="email" id="email" placeholder="Ex:">
-                                        <label for="email">Postal code:</label>
-                                        <input type="email" name="postalCode" id="postalCode" placeholder="Ex:">
-                                        <label for="firstName">Address 2:</label>
-                                        <input type="text" name="address2" id="address2" placeholder="Ex:">
-                                    </div>
+                                    <!--<div class="col-sm-6">-->
+                                        <!--<input type="text" name="lastName" id="lastName" placeholder="Ex:">-->
+                                        <!--<input type="email" name="email" id="email" placeholder="Ex:">-->
+                                        <!--<input type="email" name="postalCode" id="postalCode" placeholder="Ex:">-->
+                                        <!--<input type="text" name="address2" id="address2" placeholder="Ex:">-->
+                                    <!--</div>-->
                                     <div class="col-sm-12">
                                         <button type="submit" class="common_btn" name="sumit">DONATE NOW<i class="fa fa-long-arrow-right"></i></button>
                                         <div class="payment_img">
                                             <label>Payment method:</label>
                                             <br>
-                                            <img src="../static/images/p_logo1.jpg" alt="">
-                                            <img src="../static/images/p_logo2.jpg" alt="">
-                                            <img src="../static/images/p_logo3.jpg" alt="">
-                                            <img src="../static/images/p_logo.jpg" alt="">
+                                            <img th:src="@{../images/p_logo1.jpg}" alt="">
+                                            <img th:src="@{../images/p_logo2.jpg}" alt="">
+                                            <img th:src="@{../images/p_logo3.jpg}" alt="">
+                                            <img th:src="@{../images/p_logo.jpg}" alt="">
                                         </div>
                                     </div>
                                 </div>

@@ -17,23 +17,27 @@ public class DonationController {
     @Autowired
     private DonationRepository donationRepository;
 
+    private String disasterId;
 
-    @GetMapping("/donation")
-    public String addDonation(Model model){
-        model.addAttribute("newVolunteer", new NewDonation());
+
+    @GetMapping("/donation/{id}")
+    public String addDonation(@PathVariable String id,  Model model){
+        model.addAttribute("newDonation" , new NewDonation());
+        this.disasterId = id;
         return "donation";
     }
 
     @PostMapping("/donation")
-    public String addNewVolunteer(@ModelAttribute NewDonation newDonation) {
+    public String addNewDonation(@ModelAttribute NewDonation newDonation) {
         String firstName = newDonation.getFirstName();
         String lastName = newDonation.getLastName();
         String email = newDonation.getEmail();
-        String disasterId = newDonation.getDisasterIdForDonation();
         int donationAmount = newDonation.getAmountToDonate();
+//      String disasterId = newDonation.getDisasterIdForDonation();
 
-        Donation donationToAdd = new Donation(donationAmount,firstName,lastName, email, disasterId);
+        Donation donationToAdd = new Donation(donationAmount, firstName, lastName, email, this.disasterId);
 
+        donationToAdd.setDisasterIdForDonation(this.disasterId);
         donationToAdd.setFirstName(firstName);
         donationToAdd.setLastName(lastName);
         donationToAdd.setEmail(email);
@@ -41,10 +45,11 @@ public class DonationController {
         donationRepository.save(donationToAdd);
         return "donation";
 
-    }
+   }
+
 
     @GetMapping(path = "/alldonations")
-    public @ResponseBody Iterable<Donation> getAllVolunteers () {
+    public @ResponseBody Iterable<Donation> getAllDonations () {
         return donationRepository.findAll();
     }
 }
