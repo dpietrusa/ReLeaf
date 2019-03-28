@@ -64,4 +64,10 @@ public class DisasterController {
         return "donation";
     }
 
+    @RequestMapping("confirmation")
+    public String displayConfirmation(){
+        return "confirmation";
+    }
+
+
 }
