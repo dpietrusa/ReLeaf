@@ -6,6 +6,7 @@ import com.detroitlabs.releaf.Model.DonationWrapper;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class DonationService {
         return restTemplate.getForObject("http://localhost:8080/alldonations", DonationWrapper.class);
     }
 
-    public int fetchDonationSum(String id) {
+    public double fetchDonationSum(String id) {
         DonationWrapper donationWrapper = fetchAllDonations();
         List<Donation> donationList = new ArrayList<>();
 
@@ -26,11 +27,25 @@ public class DonationService {
             }
         }
 
-        int sum = 0;
+        double sum = 0;
         for (Donation donation : donationList) {
             sum += donation.getAmountToDonate();
         }
         return sum;
+    }
+
+    public double findPercentageOfDonationGoal(double donationSum) {
+        double donationGoal = 5000;
+        double percentageOfDonation;
+
+        if (donationSum >= donationGoal) {
+            percentageOfDonation = 100;
+
+        } else {
+            percentageOfDonation = (donationSum / donationGoal) * 100;
+
+        }
+        return percentageOfDonation;
     }
 }
 

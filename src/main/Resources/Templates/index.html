@@ -12,7 +12,7 @@
         ***Favicon***
     ================================================================= -->
 
-    <link rel="shortcut icon" type="image/png" th:href="@{..//images/fevicon.png}">
+    <link rel="shortcut icon" type="image/png" th:href="@{../images/fevicon.png}">
 
     <!-- ================================================================
         ***CSS File***
@@ -259,17 +259,17 @@
                             <div class="romana_single_cause_text">
                                 <div class="romana_raise_goal clearfix">
                                     <div class="romana_raise_left">
-                                        <p>Raised: <span th:text="'$' + ${disasterItems.donationSum}"></span></p>
+                                        <p>Raised: <span th:text="'$' + ${disasterItems.donationSum} + '0'"></span></p>
                                     </div>
                                     <div class="romana_raise_right">
-                                        <p>goal: <span>$2500</span></p>
+                                        <p>goal: <span>$5000</span></p>
                                     </div>
                                 </div>
                                 <div id="bar3" class="barfiller">
                                     <div class="tipWrap">
                                         <span class="tip"></span>
                                     </div>
-                                    <span class="fill1 fill" data-percentage="60"></span>
+                                    <span class="fill1 fill" th:attr="data-percentage=${disasterItems.donationPercentage}"></span>
                                 </div>
                                 <h3 th:text="${disasterItems.name}"><a href="cause-detail.html">Build school
                                     for children</a></h3>
@@ -743,23 +743,23 @@
         =========================================================== -->
 
         <!-- ================= Main Js ==================== -->
-        <script src="../static/js/jquery-3.1.0.min.js"></script>
+        <script th:src="@{../js/jquery-3.1.0.min.js}"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
 
         <!-- ================= Bootstrap min Js =========== -->
-        <script src="../static/js/bootstrap.min.js"></script>
+        <script th:src="@{../js/bootstrap.min.js}"></script>
 
         <!-- ================= Meanmenu Js =========== -->
-        <script src="../static/js/jquery.meanmenu.js"></script>
+        <script th:src="@{../js/jquery.meanmenu.js}"></script>
 
         <!-- ================= owl carousel min Js ======== -->
-        <script src="../static/js/owl.carousel.min.js"></script>
+        <script th:src="@{../js/owl.carousel.min.js}"></script>
 
         <!-- ================= barfiller  Js ============== -->
-        <script src="../static/js/jquery.barfiller.js"></script>
+        <script th:src="@{../js/jquery.barfiller.js}"></script>
 
         <!-- ================= Active Js ================== -->
-        <script src="../static/js/active.js"></script>
+        <script th:src="@{../js/active.js}"></script>
 </body>
 
 

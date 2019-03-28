@@ -44,6 +44,8 @@ public class DisasterController {
             fieldsList.add(fields);
             fields.setDonationSum(donationService.fetchDonationSum(fields.getId()));
 
+            fields.setDonationPercentage(donationService.findPercentageOfDonationGoal(fields.getDonationSum()));
+//                fields.setDonationPercentage(20);
 
         }
 
