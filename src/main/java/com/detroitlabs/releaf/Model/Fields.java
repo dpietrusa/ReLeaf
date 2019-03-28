@@ -11,6 +11,15 @@ public class Fields {
     private String id;
     private String shortDescription;
     private String descriptionHtml;
+    private int donationSum;
+
+    public int getDonationSum() {
+        return donationSum;
+    }
+
+    public void setDonationSum(int donationSum) {
+        this.donationSum = donationSum;
+    }
 
     public String getShortDescription() {
         return shortDescription;
