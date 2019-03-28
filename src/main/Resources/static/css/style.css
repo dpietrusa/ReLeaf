@@ -168,6 +168,21 @@ h3 {
   font-size: 13px;
   letter-spacing: 1;
   border-radius: 2px; }
+
+.donate_btn_detail {
+  background: #19b968;
+  display: inline-block;
+  width: 230px;
+  height: 52px;
+  text-align: center;
+  line-height: 52px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1;
+  border-radius: 2px; }
+
 .donate_btn i {
   padding-left: 12px;
   position: relative;
@@ -2222,6 +2237,26 @@ body {
     @media only screen and (min-width: 0px) and (max-width: 767px) {
       .romana_donate_bg_area:before {
         display: none; } }
+
+.confirmation_donate_bg_area:before {
+  /*background-image: url("../images/sprout1.jpeg");*/
+  background-repeat: no-repeat;
+  bottom: -73px;
+  left: 50%;
+  margin-left: -550px;
+  top: auto;
+  z-index: 0; }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .romana_donate_bg_area:before {
+    margin-left: -470px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .romana_donate_bg_area:before {
+    display: none; } }
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .romana_donate_bg_area:before {
+    display: none; } }
+
   .romana_donate_bg_area .contact_form {
     position: relative;
     top: 0;
