@@ -1,6 +1,7 @@
 package com.detroitlabs.releaf.Controller;
 
 import com.detroitlabs.releaf.Model.*;
+import com.detroitlabs.releaf.Service.DonationService;
 import com.detroitlabs.releaf.Service.ReleafWebService;
 import com.detroitlabs.releaf.Service.VolunteerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,11 @@ public class DisasterController {
     private VolunteerService volunteerService;
 
 
-    @Autowired VolunteerRepository volunteerRepository;
+    @Autowired
+    VolunteerRepository volunteerRepository;
+
+    @Autowired
+    DonationService donationService;
 
 
     @RequestMapping("/")
@@ -30,14 +35,19 @@ public class DisasterController {
         ArrayList<DisasterData> disasterDataList = topTenDisastersWrapper.getDisasterDataList();
 
         ArrayList<Fields> fieldsList = new ArrayList<>();
+//        ArrayList<Integer> donationSum = new ArrayList<>();
 
         for (DisasterData disasterData: disasterDataList){
             String detailsUrl = disasterData.getDetailsUrl();
             DisasterDetailsWrapper disasterDetailsWrapper = releafWebService.fetchDisasterDetailData(detailsUrl);
             Fields fields = disasterDetailsWrapper.getData().get(0).getFields();
             fieldsList.add(fields);
+            fields.setDonationSum(donationService.fetchDonationSum(fields.getId()));
+
 
         }
+
+//        modelMap.put("donationSum", donationSum);
         modelMap.put("fieldsList", fieldsList);
         return "index";
     }
