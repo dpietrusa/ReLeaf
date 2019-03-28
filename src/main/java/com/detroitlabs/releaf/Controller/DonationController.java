@@ -43,7 +43,7 @@ public class DonationController {
         donationToAdd.setEmail(email);
         donationToAdd.setAmountToDonate(donationAmount);
         donationRepository.save(donationToAdd);
-        return "donation";
+        return "confirmation";
 
    }
 

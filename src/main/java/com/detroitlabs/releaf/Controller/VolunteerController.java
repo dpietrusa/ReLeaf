@@ -42,7 +42,7 @@ public class VolunteerController {
             volunteerToAdd.setDateAvailable(dateAvailable);
             volunteerToAdd.setVolunteerOffering(volunteerOffering);
             volunteerRepository.save(volunteerToAdd);
-            return "volunteer";
+            return "confirmation";
 
         }
 
