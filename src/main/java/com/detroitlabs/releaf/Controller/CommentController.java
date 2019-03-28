@@ -70,7 +70,7 @@ public class CommentController {
         commentToAdd.setMessage(message);
         commentRepository.save(commentToAdd);
 
-        return "index";
+        return "confirmation";
     }
 
     @GetMapping(path = "/allcomments")

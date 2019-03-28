@@ -10,6 +10,8 @@ import javax.persistence.Id;
 @Entity
 public class Donation {
 
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -18,6 +20,7 @@ public class Donation {
     private String lastName;
     private String email;
     private String disasterIdForDonation;
+
 
     public Donation(int amountToDonate, String firstName, String lastName, String email, String disasterIdForDonation) {
         this.amountToDonate = amountToDonate;
