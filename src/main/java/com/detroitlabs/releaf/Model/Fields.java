@@ -3,6 +3,8 @@ package com.detroitlabs.releaf.Model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.math.BigDecimal;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Fields {
 
@@ -11,13 +13,22 @@ public class Fields {
     private String id;
     private String shortDescription;
     private String descriptionHtml;
-    private int donationSum;
+    private double donationSum;
+    private double donationPercentage;
 
-    public int getDonationSum() {
+    public double getDonationPercentage() {
+        return donationPercentage;
+    }
+
+    public void setDonationPercentage(double donationPercentage) {
+        this.donationPercentage = donationPercentage;
+    }
+
+    public double getDonationSum() {
         return donationSum;
     }
 
-    public void setDonationSum(int donationSum) {
+    public void setDonationSum(double donationSum) {
         this.donationSum = donationSum;
     }
 
