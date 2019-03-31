@@ -54,10 +54,7 @@
 </head>
 
 <body class="home">
-<!--<div id="preloader">-->
-<!--<div class="preloader_spinner"></div>-->
-<!--</div>-->
-<!-- preloader end -->
+
 <!-- ==========================================================
     *Header_area start
 ============================================================ -->
@@ -69,12 +66,12 @@
                     <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>ReLeaf@ReLeaf.com</a>
                     <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>555-123-4567</a>
                 </div>
-                <!--&lt;!&ndash; column End &ndash;&gt;-->
                 <div class="col-sm-5 col-xs-12 text-right header-top-right">
                     <a href="https://www.facebook.com/reliefweb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/reliefweb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     <a href="https://www.linkedin.com/company/reliefweb"><i class="fa fa-skype" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus"
+                                                                                          aria-hidden="true"></i></a>
                 </div>
                 <!-- column End -->
             </div>
@@ -140,165 +137,125 @@
 <!-- ==========================================================
 *Hero_area start
 ============================================================ -->
-    <div class="romana_allPage_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="romana_allPage_text wow zoomIn">
-                        <h1>Cause Details</h1>
-                        <a th:href="@{/donation/} + ${fields.id}" class="donate_btn_detail hvr-sweep-to-bottom">Donate to this cause</a>
-
-                        <!--<ol class="breadcrumb">-->
-                            <!--<li><a href="index-2.html">Home</a><span></span></li>-->
-                            <!--<li class="active"><a href="#">blog</a></li>-->
-                        <!--</ol>-->
-                    </div>
+<div class="romana_allPage_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="romana_allPage_text wow zoomIn">
+                    <h1>Cause Details</h1>
+                    <a th:href="@{/donation/} + ${fields.id}" class="donate_btn_detail hvr-sweep-to-bottom">Donate to
+                        this cause</a>
                 </div>
-                <!-- column End -->
             </div>
-            <!-- row End -->
+            <!-- column End -->
         </div>
-        <!-- container End -->
+        <!-- row End -->
     </div>
+    <!-- container End -->
+</div>
 <!-- ==========================================================
 *romana_blog_area start
 ============================================================ -->
-    <div class="romana_blog_area blog_detail_content spt100">
-        <div class="container">
-            <div class="row ">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="single_blog">
-                        <!--<div class="blog_img_3" style="background-image:url(static/images/blog-detail.jpg)"></div>-->
-                        <div class="single_blog_text">
-                            <a href="disasterdetails.html"><h3 th:text="${fields.name}">Name</h3></a>
-                            <div class="blog_btns">
-                                <!--<a><i class="fa fa-user" aria-hidden="true"></i>Mashok Khan</a>-->
-                                <!--<a><i class="fa fa-calendar" aria-hidden="true"></i>08th June, 2017</a>-->
-                            </div>
-                            <div class="blog_text">
-                                <p th:remove="tag" th:utext="${fields.descriptionHtml}"></p>
-                                <!--<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseuat vem dolore eummer feugiatn ulla facilisis an vero eros etac cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisi. Nam liberte mpor cumso luta nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum.</p>-->
-                                <!--<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conseuat vem dolore eummer feugiatn ulla facilisis an vero eros etac cumsanet iusto odio dignissim qui blandit praesent luptatum zzril delenit aute gue duis dolore te feugait nulla facilisi. Nam liberte mpor cumso luta nobis eleifend option congue nihil impemme diet doming id quod mazm ame placerat facer possim assum. Typi non habent claritatem insit tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>-->
-                            </div>
+<div class="romana_blog_area blog_detail_content spt100">
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="single_blog">
+                    <div class="single_blog_text">
+                        <a href="disasterdetails.html"><h3 th:text="${fields.name}">Name</h3></a>
+                        <div class="blog_btns">
                         </div>
-                    </div>
-                    <!-- single_blog End -->
-                    <div class="share_tag_area">
-                        <div class="share">
-                            <a href="#"><span>share:</span></a>
-                            <a href="#">Facebook,</a>
-                            <a href="#">Skype,</a>
-                            <a href="#">Google+</a>
+                        <div class="blog_text">
+                            <p th:remove="tag" th:utext="${fields.descriptionHtml}"></p>
                         </div>
-                        <div class="tags">
-                            <a href="#"><span>Tags:</span></a>
-                            <a href="#"> Business,</a>
-                            <a href="#">Corporate,</a>
-                            <a href="#">Charity</a>
-                        </div>
-                    </div>
-                    <div class="romana_news_comments">
-                        <h3>Comments</h3>
-                        <div class="romana_single_comments">
-                            <div class="romana_comments_img">
-                                <img src="../static/images/comment_img1.jpg" alt="">
-                            </div>
-                            <div class="romana_comments_text" th:each="comment : ${commentList}">
-                                <h4 th:text="${comment.firstName}">First Name<span>Graphic Designer</span></h4>
-                                <p th:text="${comment.message}">Message</p>
-                                <a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i>Reply</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- romana_news_comments end -->
-                    <div class="comment_form common_input">
-                        <h3>WRITE A COMMENT</h3>
-                        <form th:action="@{/}" th:object="${newComment}" method="post">
-                            <div class="common_input Volunteer_input">
-                                <h2>Become a Volunteer</h2>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <input th:name="firstName" th:field="*{firstName}" type="text" placeholder="Name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input th:name="lastName" th:field="*{lastName}" type="text" placeholder="Name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input th:name="email" th:field="*{email}" type="text" placeholder="Email">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input th:name="phone" th:field="*{phone}" type="text" placeholder="Phone">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input th:name="message" th:field="*{message}" type="text" placeholder="Message">
-                                    </div>
-                                    <!--<div class="col-sm-6">-->
-                                        <!--<input th:name="dateAvailable" th:field="*{dateAvailable}" type="text" placeholder="Date Available">-->
-                                    <!--</div>-->
-                                    <!--<div class="col-sm-6">-->
-                                        <!--<input th:name="volunteerOffering" th:field="*{volunteerOffering}" type="text" placeholder="Volunteer Offering">-->
-                                    <!--</div>-->
-                                    <!--<div class="col-sm-6">-->
-                                    <!--<input type="email" name="check_last_name" placeholder="Email">-->
-                                    <!--</div>-->
-                                </div>
-                                <!--<div class="row">-->
-                                <!--<div class="col-sm-6">-->
-                                <!--<div class="select_option_one">-->
-                                <!--<select name="userSelect2" id="userSelect2" class="">-->
-                                <!--<option value="1">Gender</option>-->
-                                <!--<option value="2">Male</option>-->
-                                <!--<option value="3">Femail</option>-->
-                                <!--</select>-->
-                                <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="col-sm-6">-->
-                                <!--<div class="select_option_one">-->
-                                <!--<select name="userSelect" id="userSelect" class="">-->
-                                <!--<option value="1">Country</option>-->
-                                <!--<option value="2">Bangladesh</option>-->
-                                <!--<option value="3">Unitade Sate</option>-->
-                                <!--</select>-->
-                                <!--</div>-->
-                                <!--</div>-->
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <!--<textarea name="c_textarea" id="c_textarea" cols="30" rows="10" placeholder="Message..."></textarea>-->
-                                    <div class="sub_submit">
-                                        <button type="submit" class="common_btn hvr-sweep-to-bottom" name="sumit">Apply Now<i class="fa fa-long-arrow-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-
-                    </form>
                     </div>
                 </div>
-                <!-- column End -->
+                <!-- single_blog End -->
+                <div class="share_tag_area">
+                    <div class="share">
+                        <a href="#"><span>share:</span></a>
+                        <a href="#">Facebook,</a>
+                        <a href="#">Skype,</a>
+                        <a href="#">Google+</a>
+                    </div>
+                    <div class="tags">
+                        <a href="#"><span>Tags:</span></a>
+                        <a href="#"> Business,</a>
+                        <a href="#">Corporate,</a>
+                        <a href="#">Charity</a>
+                    </div>
+                </div>
+                <div class="romana_news_comments">
+                    <h3>Comments</h3>
+                    <div class="romana_single_comments">
+                        <div class="romana_comments_img">
+                            <img src="../static/images/comment_img1.jpg" alt="">
+                        </div>
+                        <div class="romana_comments_text" th:each="comment : ${commentList}">
+                            <h4 th:text="${comment.firstName}">First Name<span>Graphic Designer</span></h4>
+                            <p th:text="${comment.message}">Message</p>
+                            <a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i>Reply</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- romana_news_comments end -->
+                <div class="comment_form common_input">
+                    <form th:action="@{/}" th:object="${newComment}" method="post">
+                        <div class="common_input Volunteer_input">
+                            <h2>WRITE A COMMENT</h2>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input th:name="firstName" th:field="*{firstName}" type="text"
+                                           placeholder="First Name">
+                                    <input th:name="lastName" th:field="*{lastName}" type="text"
+                                           placeholder="Last Name">
+                                    <input th:name="email" th:field="*{email}" type="text" placeholder="Email">
+                                    <input th:name="phone" th:field="*{phone}" type="text" placeholder="Phone">
+                                </div>
+                                <div class="col-sm-6">
+                                    <textarea th:name="message" th:field="*{message}" type="text" placeholder="Message"
+                                              cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sub_submit">
+                                    <button type="submit" class="common_btn hvr-sweep-to-bottom" name="sumit">Apply
+                                        Now<i class="fa fa-long-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                </form>
             </div>
-            <!-- row End -->
         </div>
-        <!-- container End -->
+        <!-- column End -->
     </div>
+    <!-- row End -->
+</div>
+<!-- container End -->
+</div>
 <!-- ==========================================================
 *romana_cta_area start
 ============================================================ -->
-    <div class="romana_cta_area">
-        <div class="container">
-            <div class="row ">
-                <div class="col-md-8 col-md-offset-1 col-sm-9">
-                    <h2>Lest make the world better togethers.</h2>
-                </div>
-                <!-- column End -->
-                <div class="col-sm-3">
-                    <a href="volunteer.html" class="hvr-box-shadow-outset common_btn">join with us<i class="fa fa-long-arrow-right"></i></a>
-                </div>
-                <!-- column End -->
+<div class="romana_cta_area">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-8 col-md-offset-1 col-sm-9">
+                <h2>Lest make the world better togethers.</h2>
             </div>
-            <!-- row End -->
+            <!-- column End -->
+            <div class="col-sm-3">
+                <a href="volunteer.html" class="hvr-box-shadow-outset common_btn">join with us<i
+                        class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <!-- column End -->
         </div>
+        <!-- row End -->
     </div>
+</div>
 <!-- ==================================================
 *Footer_area start
 =================================================== -->
@@ -355,46 +312,21 @@
             </div>
         </div>
     </div>
-    <!--&lt;!&ndash; footer_top End &ndash;&gt;-->
-    <!--<div class="romana_footer_bottom">-->
-    <!--<div class="container">-->
-    <!--<div class="row">-->
-    <!--<div class="col-sm-6">-->
-    <!--<div class="romana_footer_bottom_text">-->
-    <!--<p>Copyrigth <span>&copy;</span> 2017, All Right Reserved</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; column End &ndash;&gt;-->
-    <!--<div class="col-sm-6">-->
-    <!--<div class="romana_footer_bottom_text text-right">-->
-    <!--<p>Designed by: <a href="#">Crazycafe</a></p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; column End &ndash;&gt;-->
-    <!--</div>-->
-    <!--&lt;!&ndash; row End &ndash;&gt;-->
-    <!--</div>-->
-    <!--&lt;!&ndash; container End &ndash;&gt;-->
-    <!--</div>-->
-    <!--&lt;!&ndash; footer_bottom End &ndash;&gt;-->
 </footer><!-- ======================================================
     ***Js Files***
 =========================================================== -->
 
-    <!-- ================= Main Js ==================== -->
-    <script src="../static/js/jquery-3.1.0.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- ================= Main Js ==================== -->
+<script src="../static/js/jquery-3.1.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
 
-    <!-- ================= Bootstrap min Js =========== -->
-    <script src="../static/js/bootstrap.min.js"></script>
+<!-- ================= Bootstrap min Js =========== -->
+<script src="../static/js/bootstrap.min.js"></script>
 
-    <!-- ================= Meanmenu min Js =========== -->
-    <script src="../static/js/jquery.meanmenu.js"></script>
+<!-- ================= Meanmenu min Js =========== -->
+<script src="../static/js/jquery.meanmenu.js"></script>
 
-    <!-- ================= Active Js ================== -->
-    <script src="../static/js/active.js"></script>
+<!-- ================= Active Js ================== -->
+<script src="../static/js/active.js"></script>
 </body>
-
-
-<!-- Mirrored from tf.wpcheatsheet.net/html/grace/disasterdetails.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2019 00:21:54 GMT -->
 </html>
