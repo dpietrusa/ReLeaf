@@ -13,6 +13,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -27,23 +28,23 @@ public class VolunteerController {
     private VolunteerService volunteerService;
 
     @GetMapping("/volunteer")
-    public String addVolunteer(Model model, ModelMap modelMap){
+    public String addVolunteer(Model model, ModelMap modelMap) {
         model.addAttribute("newVolunteer", new NewVolunteer());
 
-            VolunteerWrapper volunteerWrapper = volunteerService.fetchAllVolunteers();
-//
+        VolunteerWrapper volunteerWrapper = volunteerService.fetchAllVolunteers();
+
         List<Volunteer> topFiveVolunteers = new ArrayList<>();
 
-        for (int i = 0; i <= 4; i++) {
+        Collections.reverse(volunteerWrapper);
+
+        for (int i = 9; i >= 5; i--) {
             topFiveVolunteers.add(volunteerWrapper.get(i));
         }
 
-            modelMap.put("volunteerWrapper", topFiveVolunteers);
+        modelMap.put("volunteerWrapper", topFiveVolunteers);
 
-            return "volunteer";
-        }
-
-
+        return "volunteer";
+    }
 
 
     @PostMapping("/volunteer")
@@ -55,23 +56,24 @@ public class VolunteerController {
         String dateAvailable = newVolunteer.getDateAvailable();
         String volunteerOffering = newVolunteer.getVolunteerOffering();
 
-            Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable, volunteerOffering);
+        Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable, volunteerOffering);
 
-            volunteerToAdd.setName(name);
-            volunteerToAdd.setEmail(email);
-            volunteerToAdd.setPhone(phone);
-            volunteerToAdd.setPersonalDescription(personalDescription);
-            volunteerToAdd.setDateAvailable(dateAvailable);
-            volunteerToAdd.setVolunteerOffering(volunteerOffering);
-            volunteerRepository.save(volunteerToAdd);
-            return "confirmation";
-
-        }
-
-        @GetMapping(path = "/all")
-        public @ResponseBody Iterable<Volunteer> getAllVolunteers () {
-            return volunteerRepository.findAll();
-        }
-
+        volunteerToAdd.setName(name);
+        volunteerToAdd.setEmail(email);
+        volunteerToAdd.setPhone(phone);
+        volunteerToAdd.setPersonalDescription(personalDescription);
+        volunteerToAdd.setDateAvailable(dateAvailable);
+        volunteerToAdd.setVolunteerOffering(volunteerOffering);
+        volunteerRepository.save(volunteerToAdd);
+        return "confirmation";
 
     }
+
+    @GetMapping(path = "/all")
+    public @ResponseBody
+    Iterable<Volunteer> getAllVolunteers() {
+        return volunteerRepository.findAll();
+    }
+
+
+}
