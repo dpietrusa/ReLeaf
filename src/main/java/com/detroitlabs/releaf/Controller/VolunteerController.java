@@ -40,7 +40,7 @@ public class VolunteerController {
 
             modelMap.put("volunteerWrapper", topFiveVolunteers);
 
-            return "volunteeredit";
+            return "volunteer";
         }
 
 
