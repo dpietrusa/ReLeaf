@@ -2362,6 +2362,10 @@ body {
     margin-right: 16px; } }
 
 
+.volunteer_name {
+  color: black;
+}
+
 
 .custom_donate > input {
   margin-right: 9px;

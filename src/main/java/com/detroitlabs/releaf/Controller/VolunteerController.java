@@ -4,10 +4,16 @@ package com.detroitlabs.releaf.Controller;
 import com.detroitlabs.releaf.Model.NewVolunteer;
 import com.detroitlabs.releaf.Model.Volunteer;
 import com.detroitlabs.releaf.Model.VolunteerRepository;
+import com.detroitlabs.releaf.Model.VolunteerWrapper;
+import com.detroitlabs.releaf.Service.VolunteerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping(path = "/")
@@ -17,12 +23,28 @@ public class VolunteerController {
     @Autowired
     private VolunteerRepository volunteerRepository;
 
+    @Autowired
+    private VolunteerService volunteerService;
 
     @GetMapping("/volunteer")
-    public String addVolunteer(Model model){
+    public String addVolunteer(Model model, ModelMap modelMap){
         model.addAttribute("newVolunteer", new NewVolunteer());
-        return "volunteeredit";
-    }
+
+            VolunteerWrapper volunteerWrapper = volunteerService.fetchAllVolunteers();
+//
+        List<Volunteer> topFiveVolunteers = new ArrayList<>();
+
+        for (int i = 0; i <= 4; i++) {
+            topFiveVolunteers.add(volunteerWrapper.get(i));
+        }
+
+            modelMap.put("volunteerWrapper", topFiveVolunteers);
+
+            return "volunteeredit";
+        }
+
+
+
 
     @PostMapping("/volunteer")
     public String addNewVolunteer(@ModelAttribute NewVolunteer newVolunteer) {
@@ -50,4 +72,6 @@ public class VolunteerController {
         public @ResponseBody Iterable<Volunteer> getAllVolunteers () {
             return volunteerRepository.findAll();
         }
+
+
     }
