@@ -21,7 +21,7 @@ public class VolunteerController {
     @GetMapping("/volunteer")
     public String addVolunteer(Model model){
         model.addAttribute("newVolunteer", new NewVolunteer());
-        return "volunteer";
+        return "volunteeredit";
     }
 
     @PostMapping("/volunteer")
