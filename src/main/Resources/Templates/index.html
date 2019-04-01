@@ -69,7 +69,8 @@
                     <a href="https://www.facebook.com/reliefweb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/reliefweb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     <a href="https://www.linkedin.com/company/reliefweb"><i class="fa fa-skype" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus"
+                                                                                          aria-hidden="true"></i></a>
 
                 </div>
                 <!-- column End -->
@@ -84,42 +85,22 @@
             <div class="row">
                 <div class="col-sm-2 col-xs-6">
                     <div class="romana_logo">
-                        <a href="index-2.html"><img th:src="@{../images/logo.png}" alt=""></a>
+                        <a th:href="@{/}"><img th:src="@{../images/logo.png}" alt=""></a>
                     </div>
                 </div>
                 <!-- column End -->
                 <div class="col-sm-10">
                     <nav>
                         <ul class="main_menu">
-                            <li><a href="index-2.html">Home</a></li>
-                            <li><a href="#">causes</a>
-                                <ul class="sub_menu">
-                                    <li><a href="causes.html">cause page</a></li>
-                                    <li><a href="causes-detail.html">cause detail</a></li>
-                                </ul>
+                            <li><a th:href="@{/}">Home</a></li>
+
+                            <li><a th:href="@{/volunteer}">Volunteer</a>
+
                             </li>
-                            <li><a href="#">pages</a>
-                                <ul class="sub_menu">
-                                    <li><a href="about.html">about page</a></li>
-                                    <li><a href="volunteer.html">volunteer page</a></li>
-                                    <li><a href="donation.html">donation page</a></li>
-                                    <li><a href="testimonial.html">testimonial</a></li>
-                                    <li><a href="404.html">404 page</a></li>
-                                </ul>
+                            <li><a href="https://reliefweb.int/blog">blog</a>
+
                             </li>
-                            <li><a href="#">blog</a>
-                                <ul class="sub_menu">
-                                    <li><a href="blog.html">blog page</a></li>
-                                    <li><a href="disasterdetails.html">blog detail</a></li>
-                                </ul>
-                            </li>
-                            <li class="search_expand"><a href="#"><i class="fa fa-search"></i></a>
-                                <div class="search">
-                                    <form action="#">
-                                        <input id="search" name="search" type="text" placeholder="Search...">
-                                    </form>
-                                </div>
-                            </li>
+
                         </ul>
                     </nav>
                     <!-- nav End -->
@@ -144,7 +125,8 @@
                     <div class="col-xs-12">
                         <div class="romana_hero_text">
                             <h1>Replanting hope, around the world and in your neighborhood.</h1>
-                            <a th:href="@{/donation/} + ${fieldsList.get(0).id}" class="donate_btn hvr-sweep-to-bottom">Donate to most recent cause</a>
+                            <a th:href="@{/donation/} + ${fieldsList.get(0).id}" class="donate_btn hvr-sweep-to-bottom">Donate
+                                to most recent cause</a>
                         </div>
                     </div>
                     <!-- column end -->
@@ -175,33 +157,34 @@
         </div>
         <!-- row End -->
         <div class="row ">
-                <div th:each="disasterItems : ${fieldsList}">
-                    <div class="col-sm-4">
-                        <div class="romana_single_cause_text_img mh480">
-                            <div class="romana_single_cause_text">
-                                <div class="romana_raise_goal clearfix">
-                                    <div class="romana_raise_left">
-                                        <p>Raised: <span th:text="'$' + ${disasterItems.donationSum} + '0'"></span></p>
-                                    </div>
-                                    <div class="romana_raise_right">
-                                        <p>goal: <span>$5000</span></p>
+            <div th:each="disasterItems : ${fieldsList}">
+                <div class="col-sm-4">
+                    <div class="romana_single_cause_text_img mh480">
+                        <div class="romana_single_cause_text">
+                            <div class="romana_raise_goal clearfix">
+                                <div class="romana_raise_left">
+                                    <p>Raised: <span th:text="'$' + ${disasterItems.donationSum} + '0'"></span></p>
+                                </div>
+                                <div class="romana_raise_right">
+                                    <p>goal: <span>$5000</span></p>
+                                </div>
+                            </div>
+                            <div id="bar3" class="barfiller">
+                                <div class="tipWrap">
+                                    <span class="tip"></span>
+                                </div>
+                                <span class="fill1 fill"
+                                      th:attr="data-percentage=${disasterItems.donationPercentage}"></span>
+                            </div>
+                            <h3 th:text="${disasterItems.name}"><a href="cause-detail.html">Build school
+                                for children</a></h3>
+                            <div><p th:text="${disasterItems.shortDescription}">Description Details</p>
+                                <div>
+                                    <div class="romana_cause_btn">
+                                        <a th:href="@{/details/} + ${disasterItems.id}" class="btn2">More Details</a>
                                     </div>
                                 </div>
-                                <div id="bar3" class="barfiller">
-                                    <div class="tipWrap">
-                                        <span class="tip"></span>
-                                    </div>
-                                    <span class="fill1 fill" th:attr="data-percentage=${disasterItems.donationPercentage}"></span>
-                                </div>
-                                <h3 th:text="${disasterItems.name}"><a href="cause-detail.html">Build school
-                                    for children</a></h3>
-                                <div><p th:text="${disasterItems.shortDescription}">Description Details</p>
-                                    <div>
-                                        <div class="romana_cause_btn">
-                                            <a th:href="@{/details/} + ${disasterItems.id}" class="btn2">More Details</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- column End -->
@@ -221,7 +204,7 @@
                     </div>
                     <!-- column End -->
                     <div class="col-sm-3">
-                        <a href="volunteer.html" class="hvr-box-shadow-outset common_btn">join with us<i
+                        <a th:href="@{/volunteer}" class="hvr-box-shadow-outset common_btn">Become A Volunteer<i
                                 class="fa fa-long-arrow-right"></i></a>
                     </div>
                     <!-- column End -->
@@ -235,124 +218,82 @@
             <div class="container">
                 <div class="row ">
                     <div class="col-md-6 col-sm-12">
-                    <!-- column End -->
-                    <div class="col-md-6 col-sm-12">
-                    </div>
-                    <!-- column End -->
-                </div>
-            </div>
-        </div>
-        <!-- ==========================================================
-        *romana_client_area start
-        ============================================================ -->
-        <!-- ==========================================================
-        *romana_blog_area start
-        ============================================================ -->
-        <!-- ==========================================================
-        *newsletter_area start
-        ============================================================ -->
-        <div class="newsletter_area">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="newsletter_text">
-                            <h2>Subscribe for newsletter</h2>
-                            <p>Duis autem vel eum iriure dolor in amader hendrerit in vulutate velit esse</p>
-                        </div>
-                    </div>
-                    <!-- column End -->
-                    <div class="col-md-4 col-sm-8">
-                        <form action="#">
-                            <input type="email" name="sub_email" placeholder="Email here...">
-                        </form>
-                    </div>
-                    <!-- column End -->
-                    <div class="col-md-2 col-sm-4">
-                        <a href="volunteer.html" class="hvr-box-shadow-outset common_btn">SUBSCRIBE NOW</a>
-                    </div>
-                    <!-- column End -->
-                </div>
-            </div>
-        </div>
-        <!-- ==================================================
-        *Footer_area start
-        =================================================== -->
-        <footer class="romana_footer_area romana_section_padding">
-            <div class="romana_footer_top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="footer_widget footer_widget_text">
-                                <a href="index-2.html"><img th:src="@{../images/logo-reversed.png}" alt="logo"></a>
-                                <p>Replanting hope, around the world and in your neighborhood.</p>
-                                <a href="#"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>Grant Ave.
-                                    Central New Road, 8360</a>
-                                <a href="mailto:gardenhouse@gmail.com"> <span><i class="fa fa-envelope-o"
-                                                                                 aria-hidden="true"></i></span>gardenhouse@gmail.com</a>
-                                <a href="tel:+88075975854"><span><i class="fa fa-phone" aria-hidden="true"></i></span>+88
-                                    075 975 854</a>
-                            </div>
-                        </div>
                         <!-- column End -->
-                        <div class="col-sm-3">
-                            <div class="footer_widget footer_widget_il">
-                                <h2>Inportant Links</h2>
-                                <ul>
-                                    <li><a href="#">Support Forums</a></li>
-                                    <li><a href="#">Product Support</a></li>
-                                    <li><a href="#">Knowladge Base</a></li>
-                                    <li><a href="#">Terms & Condation</a></li>
-                                    <li><a href="#">Requist a Quote</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- column End -->
-                        <div class="col-sm-2">
-                            <div class="footer_widget footer_widget_sl">
-                                <h2>Social Links</h2>
-                                <ul>
-                                    <li><a href="#">facebook</a></li>
-                                    <li><a href="#">Google+</a></li>
-                                    <li><a href="#">Dribbble</a></li>
-                                    <li><a href="#">Behance</a></li>
-                                    <li><a href="#">Themeforest</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- column End -->
-                        <div class="col-sm-3">
-                            <div class="footer_widget footer_widget_gl">
-                                <a href="gallery.html"><h2>our gallery</h2></a>
-                                <a href="gallery.html"><img src="../static/images/home_gallery.png" alt=""></a>
-                            </div>
+                        <div class="col-md-6 col-sm-12">
                         </div>
                         <!-- column End -->
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- ======================================================
-            ***Js Files***
-        =========================================================== -->
+            <!-- ==========================================================
+            *romana_client_area start
+            ============================================================ -->
+            <!-- ==========================================================
+            *romana_blog_area start
+            ============================================================ -->
+            <!-- ==========================================================
+            *newsletter_area start
+            ============================================================ -->
 
-        <!-- ================= Main Js ==================== -->
-        <script th:src="@{../js/jquery-3.1.0.min.js}"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <!-- ==================================================
+            *Footer_area start
+            =================================================== -->
+            <footer class="romana_footer_area romana_section_padding">
+                <div class="romana_footer_top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="footer_widget footer_widget_text">
+                                    <a href="index-2.html"><img th:src="@{../images/logo-reversed.png}" alt="logo"></a>
+                                    <p>Replanting hope, around the world and in your neighborhood.</p>
+                                    <a href="https://www.google.com/maps/place/Detroit+Labs/@42.3353386,-83.0493608,15z/data=!4m5!3m4!1s0x0:0xc187c33ee716e9d3!8m2!3d42.3353386!4d-83.0493608"><span><i
+                                            class="fa fa-map-marker" aria-hidden="true"></i></span>1520 Woodward Ave
+                                        #600, Detroit, MI 48226</a>
+                                    <a href="mailto:ReLeaf@ReLeaf.com"> <span><i class="fa fa-envelope-o"
+                                                                                     aria-hidden="true"></i></span>ReLeaf@ReLeaf.com</a>
+                                    <a href="tel:555-123-4567"><span><i class="fa fa-phone"
+                                                                        aria-hidden="true"></i></span>555-123-4567</a>
+                                </div>
+                            </div>
+                            <!-- column End -->
+                            <div class="col-sm-3 col-sm-offset-5">
+                                <div class="footer_widget footer_widget_il">
+                                    <h2>Social Links</h2>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/reliefweb">Facebook</a></li>
+                                        <li><a href="https://twitter.com/reliefweb">Twitter</a></li>
+                                        <li><a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQE4oBUsCa_MhgAAAWnaK1X4IgE6IyIX3XoPUh8p0UJEDGtMFYe4Ib7p4IcMWjI8Y_ejlQEU9JXAXKwy_o5McHD_tl-yzpzO5AFz2DHUkHWjUanDl_8qAtbc5oCD9MqhEF4nB20=&originalReferer=http://localhost:8080/#&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Freliefweb">LinkedIn</a></li>
+                                        <li><a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw">YouTube</a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
-        <!-- ================= Bootstrap min Js =========== -->
-        <script th:src="@{../js/bootstrap.min.js}"></script>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- ======================================================
+                ***Js Files***
+            =========================================================== -->
 
-        <!-- ================= Meanmenu Js =========== -->
-        <script th:src="@{../js/jquery.meanmenu.js}"></script>
+            <!-- ================= Main Js ==================== -->
+            <script th:src="@{../js/jquery-3.1.0.min.js}"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-        <!-- ================= owl carousel min Js ======== -->
-        <!--<script th:src="@{../js/owl.carousel.min.js}"></script>-->
+            <!-- ================= Bootstrap min Js =========== -->
+            <script th:src="@{../js/bootstrap.min.js}"></script>
 
-        <!-- ================= barfiller  Js ============== -->
-        <script th:src="@{../js/jquery.barfiller.js}"></script>
+            <!-- ================= Meanmenu Js =========== -->
+            <script th:src="@{../js/jquery.meanmenu.js}"></script>
 
-        <!-- ================= Active Js ================== -->
-        <script th:src="@{../js/active.js}"></script>
+            <!-- ================= owl carousel min Js ======== -->
+            <!--<script th:src="@{../js/owl.carousel.min.js}"></script>-->
+
+            <!-- ================= barfiller  Js ============== -->
+            <script th:src="@{../js/jquery.barfiller.js}"></script>
+
+            <!-- ================= Active Js ================== -->
+            <script th:src="@{../js/active.js}"></script>
 </body>
 
 

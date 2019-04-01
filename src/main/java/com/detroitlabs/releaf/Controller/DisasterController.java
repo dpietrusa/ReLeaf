@@ -59,18 +59,7 @@ public class DisasterController {
         modelMap.put("fields", fields);
         return "disasterdetails";
     }
-
-
-//    @RequestMapping ("/volunteer")
-//    public String displayVolunteerDetails(ModelMap modelMap){
-//        VolunteerWrapper volunteerWrapper = volunteerService.fetchAllVolunteers();
-//        modelMap.put("volunteerWrapper", volunteerWrapper);
-//
-//        for (Volunteer volunteer: volunteerWrapper) {
-//            System.out.println(volunteer.getName());
-//        }
-//        return "volunteeredit";
-//    }
+    
 
     @RequestMapping("donation")
     public String displayDonations(){

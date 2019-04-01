@@ -66,16 +66,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-7 col-xs-12 header-top-left">
-                        <a href="mailto:gardenhouse@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>gardenhouse@gmail.com</a>
-                        <a href="tel:+88075975854"><i class="fa fa-phone" aria-hidden="true"></i>+88 075 975 854</a>
+                        <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>ReLeaf@ReLeaf.com</a>
+                        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>555-123-4567</a>
                     </div>
-                    <!-- column End -->
+                    <!--&lt;!&ndash; column End &ndash;&gt;-->
                     <div class="col-sm-5 col-xs-12 text-right header-top-right">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        <a href="donation.html" class="common_btn hvr-sweep-to-bottom">DONATE NOW</a>
+                        <a href="https://www.facebook.com/reliefweb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/reliefweb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/company/reliefweb"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+
                     </div>
                     <!-- column End -->
                 </div>
@@ -89,50 +89,22 @@
                 <div class="row">
                     <div class="col-sm-2 col-xs-6">
                         <div class="romana_logo">
-                            <a href="index-2.html"><img src="../static/images/logo-original.png" alt=""></a>
+                            <a th:href="@{/}"><img th:src="@{../images/logo.png}" alt=""></a>
                         </div>
                     </div>
                     <!-- column End -->
                     <div class="col-sm-10">
                         <nav>
                             <ul class="main_menu">
-                                <li><a href="index-2.html">Home</a></li>
-                                <li><a href="#">causes</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="causes.html">cause page</a></li>
-                                        <li><a href="causes-detail.html">cause detail</a></li>
-                                    </ul>
+                                <li><a th:href="@{/}">Home</a></li>
+
+                                <li><a th:href="@{/volunteer}">Volunteer</a>
+
                                 </li>
-                                <li><a href="#">events</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="event.html">event page</a></li>
-                                        <li><a href="event-detail.html">events-detail</a></li>
-                                    </ul>
+                                <li><a href="https://reliefweb.int/blog">blog</a>
+
                                 </li>
-                                <li><a href="gallery.html">gallery</a></li>
-                                <li><a href="#">pages</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="about.html">about page</a></li>
-                                        <li><a href="volunteer.html">volunteer page</a></li>
-                                        <li><a href="donation.html">donation page</a></li>
-                                        <li><a href="testimonial.html">testimonial</a></li>
-                                        <li><a href="404.html">404 page</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">blog</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="blog.html">blog page</a></li>
-                                        <li><a href="disasterdetails.html">blog detail</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">contact</a></li>
-                                <li class="search_expand"><a href="#"><i class="fa fa-search"></i></a>
-                                    <div class="search">
-                                        <form action="#">
-                                            <input id="search" name="search" type="text" placeholder="Search...">
-                                        </form>
-                                    </div>
-                                </li>
+
                             </ul>
                         </nav>
                         <!-- nav End -->
@@ -145,7 +117,6 @@
         </div>
         <!-- Header Bottom End -->
     </header>
-    <!-- Header End -->
 <!-- ==========================================================
 *Hero_area start
 ============================================================ -->
