@@ -152,30 +152,19 @@
                 </div>
                 <!-- single_blog End -->
                 <div class="share_tag_area">
-                    <div class="share">
-                        <a href="#"><span>share:</span></a>
-                        <a href="#">Facebook,</a>
-                        <a href="#">Skype,</a>
-                        <a href="#">Google+</a>
-                    </div>
-                    <div class="tags">
-                        <a href="#"><span>Tags:</span></a>
-                        <a href="#"> Business,</a>
-                        <a href="#">Corporate,</a>
-                        <a href="#">Charity</a>
-                    </div>
+
                 </div>
                 <div class="romana_news_comments">
                     <h3>Comments</h3>
                     <div class="romana_single_comments">
+                            <div class="romana_comments_text" th:each="comment : ${commentList}">
                         <div class="romana_comments_img">
-                            <img src="../static/images/comment_img1.jpg" alt="">
+                                <img th:src="@{../images/avatar2.png}" alt="">
                         </div>
-                        <div class="romana_comments_text" th:each="comment : ${commentList}">
-                            <h4 th:text="${comment.firstName}">First Name<span>Graphic Designer</span></h4>
-                            <p th:text="${comment.message}">Message</p>
-                            <a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i>Reply</a>
-                        </div>
+                                <h4 th:text="${comment.firstName}">First Name<span>Graphic Designer</span></h4>
+                                <p th:text="${comment.message}">Message</p>
+                                <!--<a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i>Reply</a>-->
+                            </div>
                     </div>
                 </div>
                 <!-- romana_news_comments end -->

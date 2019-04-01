@@ -1916,7 +1916,7 @@ body {
 .share_tag_area {
   border-top: 1px solid #e2e2e2;
   overflow: hidden;
-  padding: 20px 0; }
+  padding: 0px 0; }
   .share_tag_area a {
     color: #818181;
     margin-right: 2px;
@@ -1976,11 +1976,11 @@ body {
     color: #969696;
     font-size: 13px;
     font-weight: 300;
-    margin-top: 5px;
+    margin-top: 20px;
     margin-bottom: 12px; }
 
 .romana_single_comments .romana_comments_text {
-  padding-left: 127px;
+  padding-left: 0px;
   position: relative; }
 
 .romana_single_comments.romana_single_comments:nth-child(odd) {
