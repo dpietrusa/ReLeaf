@@ -54,10 +54,6 @@
 </head>
 
 <body class="home">
-<!--<div id="preloader">-->
-<!--<div class="preloader_spinner"></div>-->
-<!--</div>-->
-<!-- preloader end -->
 <!-- ==========================================================
     *Header_area start
 ============================================================ -->
@@ -69,7 +65,6 @@
                     <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>ReLeaf@ReLeaf.com</a>
                     <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>555-123-4567</a>
                 </div>
-                <!--&lt;!&ndash; column End &ndash;&gt;-->
                 <div class="col-sm-5 col-xs-12 text-right header-top-right">
                     <a href="https://www.facebook.com/reliefweb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/reliefweb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -169,14 +164,6 @@
                         <div class="inner">
                             <form th:action="@{/donation}" th:object="${newDonation}" method="POST">
                                 <h3>How much would you like to donate?</h3>
-                                <!--<div class="custom_donate">-->
-                                    <!--<input type="text" placeholder="Custome donate">-->
-                                    <!--<a href="#" class="active">$50</a>-->
-                                    <!--<a href="#">$60</a>-->
-                                    <!--<a href="#">$70</a>-->
-                                    <!--<a href="#">$80</a>-->
-                                <!--</div>-->
-                                <!--<h3>Carefully fill up this form.</h3>-->
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <input type="text" th:name="amountToDonate" th:field="*{amountToDonate}" placeholder="Donation Amount?">
@@ -184,12 +171,6 @@
                                         <input type="text" th:name="lastName" th:field="*{lastName}" placeholder="Last Name">
                                         <input type="text" th:name="email" th:field="*{email}" placeholder="Email Address">
                                     </div>
-                                    <!--<div class="col-sm-6">-->
-                                        <!--<input type="text" name="lastName" id="lastName" placeholder="Ex:">-->
-                                        <!--<input type="email" name="email" id="email" placeholder="Ex:">-->
-                                        <!--<input type="email" name="postalCode" id="postalCode" placeholder="Ex:">-->
-                                        <!--<input type="text" name="address2" id="address2" placeholder="Ex:">-->
-                                    <!--</div>-->
                                     <div class="col-sm-12">
                                         <button type="submit" class="common_btn" name="sumit">DONATE NOW<i class="fa fa-long-arrow-right"></i></button>
                                         <div class="payment_img">

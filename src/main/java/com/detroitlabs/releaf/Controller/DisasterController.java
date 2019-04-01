@@ -35,7 +35,6 @@ public class DisasterController {
         ArrayList<DisasterData> disasterDataList = topTenDisastersWrapper.getDisasterDataList();
 
         ArrayList<Fields> fieldsList = new ArrayList<>();
-//        ArrayList<Integer> donationSum = new ArrayList<>();
 
         for (DisasterData disasterData: disasterDataList){
             String detailsUrl = disasterData.getDetailsUrl();
@@ -45,11 +44,9 @@ public class DisasterController {
             fields.setDonationSum(donationService.fetchDonationSum(fields.getId()));
 
             fields.setDonationPercentage(donationService.findPercentageOfDonationGoal(fields.getDonationSum()));
-//                fields.setDonationPercentage(20);
 
         }
 
-//        modelMap.put("donationSum", donationSum);
         modelMap.put("fieldsList", fieldsList);
         return "index";
     }
