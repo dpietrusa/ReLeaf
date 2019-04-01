@@ -10,4 +10,6 @@ public class VolunteerService {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject("http://localhost:8080/all", VolunteerWrapper.class);
     }
+
+
 }
