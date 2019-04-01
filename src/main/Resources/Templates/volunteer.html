@@ -12,7 +12,7 @@
         ***Favicon***
     ================================================================= -->
 
-    <link rel="shortcut icon" type="image/png" th:href="@{..//images/fevicon.png}">
+    <link rel="shortcut icon" type="image/png" th:href="@{../images/fevicon.png}">
 
     <!-- ================================================================
         ***CSS File***
@@ -144,13 +144,14 @@
             <div class="col-md-5 recent_volunteers">
                 <br>
                 <br>
-                <h2>Most Recent Volunteers...</h2>
+                <h2>Recent Volunteers...</h2>
+                <br>
 
                 <ul th:each="volunteer : ${volunteerWrapper}">
-                    <li><h4 class="volunteer_name" th:text="${volunteer.name}">Volunteer Name</h4>
-                    <!--<p th:text="${volunteer.email}">volunteer email</p>-->
-                        <!--<p th:text="${volunteer.state}">volunteer state</p>-->
-                        <p th:text="${volunteer.personalDescription}">volunteer personal desc.</p>
+                    <li><h4 class="volunteer_name" th:text="'Name: ' + ${volunteer.name}">Volunteer Name</h4>
+                        <p th:text="'About Me: ' + ${volunteer.personalDescription}">volunteer personal desc.</p>
+                        <p th:text="'Date Available: ' + ${volunteer.dateAvailable}">date available</p>
+                    <br>
                     </li>
 
                 </ul>
@@ -224,21 +225,7 @@
 <!-- ==========================================================
 *romana_cta_area start
 ============================================================ -->
-<div class="romana_cta_area">
-    <div class="container">
-        <div class="row ">
-            <div class="col-md-8 col-md-offset-1 col-sm-9">
-                <h2>Lest make the world better togethers.</h2>
-            </div>
-            <!-- column End -->
-            <div class="col-sm-3">
-                <a href="volunteer.html" class="hvr-box-shadow-outset common_btn">join with us<i class="fa fa-long-arrow-right"></i></a>
-            </div>
-            <!-- column End -->
-        </div>
-        <!-- row End -->
-    </div>
-</div>
+
 <!-- ==================================================
 *Footer_area start
 =================================================== -->

@@ -47,6 +47,8 @@ public class DisasterController {
 
         }
 
+
+
         modelMap.put("fieldsList", fieldsList);
         return "index";
     }
