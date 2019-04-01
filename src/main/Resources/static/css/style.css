@@ -742,7 +742,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 644px;
+  height: 500px;
   position: relative; }
   @media only screen and (min-width: 0px) and (max-width: 767px) {
     .hero_slider_bg {
@@ -767,7 +767,7 @@ body {
   .hero_slider_bg {
     height: 500px; } }
 .hero_homepage_bg:after {
-  background: rgba(0, 0, 0, 0.54); }
+  background: rgba(0, 0, 0, 0.45); }
 
 
 
