@@ -33,7 +33,6 @@ public class DonationController {
         String lastName = newDonation.getLastName();
         String email = newDonation.getEmail();
         int donationAmount = newDonation.getAmountToDonate();
-//      String disasterId = newDonation.getDisasterIdForDonation();
 
         Donation donationToAdd = new Donation(donationAmount, firstName, lastName, email, this.disasterId);
 
