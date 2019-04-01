@@ -61,12 +61,16 @@ public class DisasterController {
     }
 
 
-    @RequestMapping ("/testimonial")
-    public String displayVolunteerDetails(ModelMap modelMap){
-        VolunteerWrapper volunteerWrapper = volunteerService.fetchAllVolunteers();
-        modelMap.put("volunteerWrapper", volunteerWrapper);
-        return "testimonial";
-    }
+//    @RequestMapping ("/volunteer")
+//    public String displayVolunteerDetails(ModelMap modelMap){
+//        VolunteerWrapper volunteerWrapper = volunteerService.fetchAllVolunteers();
+//        modelMap.put("volunteerWrapper", volunteerWrapper);
+//
+//        for (Volunteer volunteer: volunteerWrapper) {
+//            System.out.println(volunteer.getName());
+//        }
+//        return "volunteeredit";
+//    }
 
     @RequestMapping("donation")
     public String displayDonations(){

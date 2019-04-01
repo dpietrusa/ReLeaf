@@ -160,11 +160,23 @@
     <div class="container">
         <div class="row">
 
-            <div class="recent_volunteers">
+            <div class="col-md-5 recent_volunteers">
+                <br>
+                <br>
                 <h2>Most Recent Volunteers...</h2>
+
+                <ul th:each="volunteer : ${volunteerWrapper}">
+                    <li><h4 class="volunteer_name" th:text="${volunteer.name}">Volunteer Name</h4>
+                    <!--<p th:text="${volunteer.email}">volunteer email</p>-->
+                        <!--<p th:text="${volunteer.state}">volunteer state</p>-->
+                        <p th:text="${volunteer.personalDescription}">volunteer personal desc.</p>
+                    </li>
+
+                </ul>
+
             </div>
 
-            <div class="col-md-7 col-md-offset-5 col-sm-12">
+            <div class="col-md-7 col-sm-12">
                 <div class="contact_form common_input">
                     <div class="inner">
 
