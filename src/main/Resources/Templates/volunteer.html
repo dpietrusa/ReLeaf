@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Title -->
-    <title>Re.Leaf || Home Page</title>
+    <title>Re.Leaf || Volunteer</title>
 
     <!-- ================================================================
         ***Favicon***
@@ -70,7 +70,8 @@
                     <a href="https://www.facebook.com/reliefweb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/reliefweb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     <a href="https://www.linkedin.com/company/reliefweb"><i class="fa fa-skype" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus"
+                                                                                          aria-hidden="true"></i></a>
 
                 </div>
                 <!-- column End -->
@@ -121,11 +122,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="romana_allPage_text wow zoomIn">
-                    <h1>Donate Form</h1>
-                    <ol class="breadcrumb">
-                        <li><a href="index-2.html">Home</a><span></span></li>
-                        <li class="active"><a href="#">pages</a></li>
-                    </ol>
+                    <h1>Volunteer Today</h1>
                 </div>
             </div>
             <!-- column End -->
@@ -151,7 +148,7 @@
                     <li><h4 class="volunteer_name" th:text="'Name: ' + ${volunteer.name}">Volunteer Name</h4>
                         <p th:text="'About Me: ' + ${volunteer.personalDescription}">volunteer personal desc.</p>
                         <p th:text="'Date Available: ' + ${volunteer.dateAvailable}">date available</p>
-                    <br>
+                        <br>
                     </li>
 
                 </ul>
@@ -159,7 +156,7 @@
             </div>
 
             <div class="col-md-7 col-sm-12">
-                <div class="contact_form common_input">
+                <div class="contact_form volunteer_form common_input">
                     <div class="inner">
 
 
@@ -174,25 +171,30 @@
 
                                         <input th:name="phone" th:field="*{phone}" type="text" placeholder="Phone">
 
-                                        <input th:name="personalDescription" th:field="*{personalDescription}" type="text" placeholder="Personal Description">
+                                        <input th:name="personalDescription" th:field="*{personalDescription}"
+                                               type="text" placeholder="Personal Description">
 
-                                        <input th:name="dateAvailable" th:field="*{dateAvailable}" type="text" placeholder="Date Available">
+                                        <input th:name="dateAvailable" th:field="*{dateAvailable}" type="text"
+                                               placeholder="Date Available">
                                     </div>
                                     <div class="col-sm-6">
-                                        <textarea style="height: 310px" th:name="volunteerOffering" th:field="*{volunteerOffering}" type="text" cols="30" rows="50" placeholder="What Would You Like To Contribute?"></textarea>
+                                        <textarea th:name="volunteerOffering" th:field="*{volunteerOffering}"
+                                                  type="text" cols="30" rows="50"
+                                                  placeholder="What Would You Like To Contribute?"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="sub_submit">
-                                        <button type="submit" class="common_btn hvr-sweep-to-bottom" name="sumit">Apply Now<i class="fa fa-long-arrow-right"></i></button>
+                                        <button type="submit" class="common_btn hvr-sweep-to-bottom" name="sumit">Apply
+                                            Now<i class="fa fa-long-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </div>
 
 
-                    </form>
+                        </form>
 
                     </div>
                 </div>
@@ -213,7 +215,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="footer_widget footer_widget_text">
-                        <a href="index-2.html"><img th:src="@{../images/logo-reversed.png}" alt="logo"></a>
+                        <a th:href="@{/}"><img th:src="@{../images/logo-reversed.png}" alt="logo"></a>
                         <p>Replanting hope, around the world and in your neighborhood.</p>
                         <a href="https://www.google.com/maps/place/Detroit+Labs/@42.3353386,-83.0493608,15z/data=!4m5!3m4!1s0x0:0xc187c33ee716e9d3!8m2!3d42.3353386!4d-83.0493608"><span><i
                                 class="fa fa-map-marker" aria-hidden="true"></i></span>1520 Woodward Ave
@@ -231,7 +233,9 @@
                         <ul>
                             <li><a href="https://www.facebook.com/reliefweb">Facebook</a></li>
                             <li><a href="https://twitter.com/reliefweb">Twitter</a></li>
-                            <li><a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQE4oBUsCa_MhgAAAWnaK1X4IgE6IyIX3XoPUh8p0UJEDGtMFYe4Ib7p4IcMWjI8Y_ejlQEU9JXAXKwy_o5McHD_tl-yzpzO5AFz2DHUkHWjUanDl_8qAtbc5oCD9MqhEF4nB20=&originalReferer=http://localhost:8080/#&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Freliefweb">LinkedIn</a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQE4oBUsCa_MhgAAAWnaK1X4IgE6IyIX3XoPUh8p0UJEDGtMFYe4Ib7p4IcMWjI8Y_ejlQEU9JXAXKwy_o5McHD_tl-yzpzO5AFz2DHUkHWjUanDl_8qAtbc5oCD9MqhEF4nB20=&originalReferer=http://localhost:8080/#&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Freliefweb">LinkedIn</a>
+                            </li>
                             <li><a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw">YouTube</a></li>
                         </ul>
                     </div>

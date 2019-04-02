@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Title -->
-    <title>Re.Leaf || Home Page</title>
+    <title>Re.Leaf || Donations</title>
 
     <!-- ================================================================
         ***Favicon***
@@ -70,7 +70,8 @@
                     <a href="https://www.facebook.com/reliefweb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/reliefweb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     <a href="https://www.linkedin.com/company/reliefweb"><i class="fa fa-skype" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw"><i class="fa fa-google-plus"
+                                                                                          aria-hidden="true"></i></a>
 
                 </div>
                 <!-- column End -->
@@ -116,79 +117,80 @@
 <!-- ==========================================================
 *Hero_area start
 ============================================================ -->
-    <div class="romana_allPage_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="romana_allPage_text wow zoomIn">
-                        <h1>Donate Form</h1>
-                        <ol class="breadcrumb">
-                            <li><a href="index-2.html">Home</a><span></span></li>
-                            <li class="active"><a href="#">pages</a></li>
-                        </ol>
-                    </div>
+<div class="romana_allPage_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="romana_allPage_text wow zoomIn">
+                    <h1>Plant a Seed</h1>
                 </div>
-                <!-- column End -->
             </div>
-            <!-- row End -->
+            <!-- column End -->
         </div>
-        <!-- container End -->
+        <!-- row End -->
     </div>
+    <!-- container End -->
+</div>
 <!-- ==================================================
 *romana_contact_form_area start
 =================================================== -->
-    <div class="romana_contact_form_area romana_donate_bg_area sp100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 col-md-offset-5 col-sm-12">
-                    <div class="contact_form common_input">
-                        <div class="inner">
-                            <form th:action="@{/donation}" th:object="${newDonation}" method="POST">
-                                <h3>How much would you like to donate?</h3>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <input type="text" th:name="amountToDonate" th:field="*{amountToDonate}" placeholder="Donation Amount?">
-                                        <input type="text" th:name="firstName" th:field="*{firstName}" placeholder="First Name">
-                                        <input type="text" th:name="lastName" th:field="*{lastName}" placeholder="Last Name">
-                                        <input type="text" th:name="email" th:field="*{email}" placeholder="Email Address">
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <button type="submit" class="common_btn" name="sumit">DONATE NOW<i class="fa fa-long-arrow-right"></i></button>
-                                        <div class="payment_img">
-                                            <label>Payment method:</label>
-                                            <br>
-                                            <img th:src="@{../images/p_logo1.jpg}" alt="">
-                                            <img th:src="@{../images/p_logo2.jpg}" alt="">
-                                            <img th:src="@{../images/p_logo3.jpg}" alt="">
-                                            <img th:src="@{../images/p_logo.jpg}" alt="">
-                                        </div>
+<div class="romana_contact_form_area romana_donate_bg_area sp100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-5 col-sm-12">
+                <div class="contact_form donation_input">
+                    <div class="inner">
+                        <form th:action="@{/donation}" th:object="${newDonation}" method="POST">
+                            <h3>How much would you like to donate?</h3>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" th:name="amountToDonate" th:field="*{amountToDonate}"
+                                           placeholder="Amount to Donate" value="Amount to Donate">
+                                    <input type="text" th:name="firstName" th:field="*{firstName}"
+                                           placeholder="First Name">
+                                    <input type="text" th:name="lastName" th:field="*{lastName}"
+                                           placeholder="Last Name">
+                                    <input type="text" th:name="email" th:field="*{email}" placeholder="Email Address">
+                                </div>
+                                <div class="col-sm-12">
+                                    <button type="submit" class="common_btn" name="sumit">DONATE NOW<i
+                                            class="fa fa-long-arrow-right"></i></button>
+                                    <div class="payment_img">
+                                        <label>Payment method:</label>
+                                        <br>
+                                        <img th:src="@{../images/p_logo1.jpg}" alt="">
+                                        <img th:src="@{../images/p_logo2.jpg}" alt="">
+                                        <img th:src="@{../images/p_logo3.jpg}" alt="">
+                                        <img th:src="@{../images/p_logo.jpg}" alt="">
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <!-- ==========================================================
 *romana_cta_area start
 ============================================================ -->
-    <div class="romana_cta_area">
-        <div class="container">
-            <div class="row ">
-                <div class="col-md-8 col-md-offset-1 col-sm-9">
-                    <h2>Lest make the world better togethers.</h2>
-                </div>
-                <!-- column End -->
-                <div class="col-sm-3">
-                    <a href="volunteer.html" class="hvr-box-shadow-outset common_btn">join with us<i class="fa fa-long-arrow-right"></i></a>
-                </div>
-                <!-- column End -->
+<div class="romana_cta_area">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-8 col-md-offset-1 col-sm-9">
+                <h2>Lest make the world better togethers.</h2>
             </div>
-            <!-- row End -->
+            <!-- column End -->
+            <div class="col-sm-3">
+                <a href="volunteer.html" class="hvr-box-shadow-outset common_btn">join with us<i
+                        class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <!-- column End -->
         </div>
+        <!-- row End -->
     </div>
+</div>
 <!-- ==================================================
 *Footer_area start
 =================================================== -->
@@ -216,7 +218,9 @@
                         <ul>
                             <li><a href="https://www.facebook.com/reliefweb">Facebook</a></li>
                             <li><a href="https://twitter.com/reliefweb">Twitter</a></li>
-                            <li><a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQE4oBUsCa_MhgAAAWnaK1X4IgE6IyIX3XoPUh8p0UJEDGtMFYe4Ib7p4IcMWjI8Y_ejlQEU9JXAXKwy_o5McHD_tl-yzpzO5AFz2DHUkHWjUanDl_8qAtbc5oCD9MqhEF4nB20=&originalReferer=http://localhost:8080/#&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Freliefweb">LinkedIn</a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQE4oBUsCa_MhgAAAWnaK1X4IgE6IyIX3XoPUh8p0UJEDGtMFYe4Ib7p4IcMWjI8Y_ejlQEU9JXAXKwy_o5McHD_tl-yzpzO5AFz2DHUkHWjUanDl_8qAtbc5oCD9MqhEF4nB20=&originalReferer=http://localhost:8080/#&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Freliefweb">LinkedIn</a>
+                            </li>
                             <li><a href="https://www.youtube.com/channel/UC4RQutFVU_1OSNtOzGyBfGw">YouTube</a></li>
                         </ul>
                     </div>
@@ -230,18 +234,18 @@
     ***Js Files***
 =========================================================== -->
 
-    <!-- ================= Main Js ==================== -->
-    <script src="../static/js/jquery-3.1.0.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- ================= Main Js ==================== -->
+<script src="../static/js/jquery-3.1.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
 
-    <!-- ================= Bootstrap min Js =========== -->
-    <script src="../static/js/bootstrap.min.js"></script>
+<!-- ================= Bootstrap min Js =========== -->
+<script src="../static/js/bootstrap.min.js"></script>
 
-    <!-- ================= Meanmenu min Js =========== -->
-    <script src="../static/js/jquery.meanmenu.js"></script>
+<!-- ================= Meanmenu min Js =========== -->
+<script src="../static/js/jquery.meanmenu.js"></script>
 
-    <!-- ================= Active Js ================== -->
-    <script src="../static/js/active.js"></script>
+<!-- ================= Active Js ================== -->
+<script src="../static/js/active.js"></script>
 </body>
 
 
