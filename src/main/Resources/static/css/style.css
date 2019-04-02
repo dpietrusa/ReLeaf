@@ -1266,7 +1266,7 @@ body {
   padding-bottom: 34px; }
 
 .single_blog {
-  margin-bottom: 51px; }
+  margin-bottom: 25px; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .single_blog {
       margin-bottom: 20px; } }
@@ -1952,9 +1952,9 @@ body {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 46px;
+  margin-bottom: 25px;
   text-transform: uppercase;
-  margin-top: 50px; }
+  margin-top: 25px; }
 
 .romana_single_comments .romana_comments_img {
   display: block;
@@ -2605,7 +2605,7 @@ body {
       top: auto;
       bottom: 0; }
   .contact_form .common_btn {
-    margin-top: 30px;
+    margin-top: 0px;
     border: none; }
   .contact_form input {
     margin-bottom: 15px; }
