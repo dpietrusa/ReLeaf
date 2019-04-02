@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @Controller
@@ -35,13 +36,17 @@ public class VolunteerController {
 
         List<Volunteer> topFiveVolunteers = new ArrayList<>();
 
-        Collections.reverse(volunteerWrapper);
+        Collections.sort(volunteerWrapper, new Comparator<Volunteer>() {
+            @Override
+            public int compare(Volunteer volunteer1, Volunteer volunteer2) {
+                return volunteer2.getId().compareTo(volunteer1.getId());
+            }
+        });
 
-        for (int i = 9; i >= 5; i--) {
+        for (int i = 0; i <= 4; i++) {
             topFiveVolunteers.add(volunteerWrapper.get(i));
         }
-
-        modelMap.put("volunteerWrapper", topFiveVolunteers);
+        modelMap.put("topFiveVolunteers", topFiveVolunteers);
 
         return "volunteer";
     }
@@ -56,7 +61,8 @@ public class VolunteerController {
         String dateAvailable = newVolunteer.getDateAvailable();
         String volunteerOffering = newVolunteer.getVolunteerOffering();
 
-        Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable, volunteerOffering);
+        Volunteer volunteerToAdd = new Volunteer(name, email, phone, personalDescription, dateAvailable,
+                volunteerOffering);
 
         volunteerToAdd.setName(name);
         volunteerToAdd.setEmail(email);

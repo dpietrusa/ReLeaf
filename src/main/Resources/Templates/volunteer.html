@@ -147,7 +147,7 @@
                 <h2>Recent Volunteers...</h2>
                 <br>
 
-                <ul th:each="volunteer : ${volunteerWrapper}">
+                <ul th:each="volunteer : ${topFiveVolunteers}">
                     <li><h4 class="volunteer_name" th:text="'Name: ' + ${volunteer.name}">Volunteer Name</h4>
                         <p th:text="'About Me: ' + ${volunteer.personalDescription}">volunteer personal desc.</p>
                         <p th:text="'Date Available: ' + ${volunteer.dateAvailable}">date available</p>
@@ -179,7 +179,7 @@
                                         <input th:name="dateAvailable" th:field="*{dateAvailable}" type="text" placeholder="Date Available">
                                     </div>
                                     <div class="col-sm-6">
-                                        <textarea th:name="volunteerOffering" th:field="*{volunteerOffering}" type="text" cols="30" rows="50" placeholder="What Would You Like To Contribute?"></textarea>
+                                        <textarea style="height: 310px" th:name="volunteerOffering" th:field="*{volunteerOffering}" type="text" cols="30" rows="50" placeholder="What Would You Like To Contribute?"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -194,28 +194,6 @@
 
                     </form>
 
-                        <!--<form th:action="@{/donation}" th:object="${newDonation}" method="POST">-->
-                            <!--<h3>How much would you like to donate?</h3>-->
-                            <!--<div class="row">-->
-                                <!--&lt;!&ndash;<div class="col-sm-6">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<input type="text" th:name="amountToDonate" th:field="*{amountToDonate}" placeholder="Donation Amount?">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<input type="text" th:name="firstName" th:field="*{firstName}" placeholder="First Name">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<input type="text" th:name="lastName" th:field="*{lastName}" placeholder="Last Name">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<input type="text" th:name="email" th:field="*{email}" placeholder="Email Address">&ndash;&gt;-->
-                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                                <!--<div class="col-sm-12">-->
-                                    <!--<button type="submit" class="common_btn" name="sumit">DONATE NOW<i class="fa fa-long-arrow-right"></i></button>-->
-                                    <!--<div class="payment_img">-->
-                                        <!--<label>Payment method:</label>-->
-                                        <!--<br>-->
-                                        <!--<img th:src="@{../images/p_logo1.jpg}" alt="">-->
-                                        <!--<img th:src="@{../images/p_logo2.jpg}" alt="">-->
-                                        <!--<img th:src="@{../images/p_logo3.jpg}" alt="">-->
-                                        <!--<img th:src="@{../images/p_logo.jpg}" alt="">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</form>-->
                     </div>
                 </div>
             </div>
